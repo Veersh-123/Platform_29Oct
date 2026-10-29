@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "test-analyzer": {
+      "command": "node",
+      "args": ["./dist/index.js"],
+      "env": {
+        "LLM_PROVIDER": "copilot",
+        "AI_PROVIDER": "copilot",
+        "ANTHROPIC_MODEL": "claude-3-5-haiku-20241022",
+        "LOG_LEVEL": "info",
+        "OBSERVABILITY_ENABLED": "true",
+        "FAILURE_ANALYSIS_ENABLED": "true",
+        "TEST_RECOVERY_ENABLED": "true"
+      },
+      "autoApprove": [
+        "cucumber-analyze",
+        "cucumber-get-summary",
+        "cucumber-get-detailed",
+        "junit-analyze",
+        "junit-get-summary",
+        "junit-get-detailed",
+        "dashboard-generate",
+        "dashboard-get-settings",
+        "ai-analyze",
+        "ai-generate-report",
+        "historic-store-results",
+        "historic-get-trends",
+        "utility-check-ollama-connection",
+        "utility-list-available-tools"
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Environment / credentials
+.env
+.env.*
+!.env.example
+IMPLEMENTATION_GUIDE.md
+
+# Playwright and test output
+.playwright/
+test-results/
+playwright-report/
+
+# Generated Playwright HTML reports
+playwright-reports/
+
+# Logs
+logs/
+healing-logs/
+*.log
+
+# Screenshots / generated images
+screenshots/
+debug-volume-selector.png
+deep-inspection-screenshot.png
+final-workflow-result.png
+workflow-screenshot.png
+
+# Sensitive authentication/session files
+storageState.json
+*.auth.json
+
+# Certificates and private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Application generated data
+AppContext/knowledge-graph.json

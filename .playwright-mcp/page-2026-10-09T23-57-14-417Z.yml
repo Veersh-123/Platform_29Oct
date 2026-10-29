@@ -1,0 +1,75 @@
+- generic [ref=f91e19]:
+  - generic [ref=f91e20]:
+    - generic [ref=f91e21]:
+      - generic [ref=f91e22]: T
+      - generic [ref=f91e23]:
+        - generic [ref=f91e24]: TEST DASHBOARD
+        - generic [ref=f91e25]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f91e26]:
+      - generic [ref=f91e27]:
+        - generic [ref=f91e28]: Browser
+        - combobox [ref=f91e29] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f91e30]:
+        - generic [ref=f91e31]: Environment
+        - combobox [ref=f91e32] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Backend server status" [ref=f91e33] [cursor=pointer]: Server :4000
+  - generic [ref=f91e36]:
+    - generic [ref=f91e37]:
+      - generic [ref=f91e38]: TEST DASHBOARD
+      - generic [ref=f91e39]:
+        - generic [ref=f91e40] [cursor=pointer]: Dashboard
+        - generic [ref=f91e41] [cursor=pointer]: Requirements
+        - generic [ref=f91e42] [cursor=pointer]: Test Cases
+        - generic [ref=f91e43] [cursor=pointer]: Test Design
+        - generic [ref=f91e44] [cursor=pointer]: Test Execution
+        - generic [ref=f91e45] [cursor=pointer]: History & Trends
+        - generic [ref=f91e46] [cursor=pointer]: Test Data
+        - generic [ref=f91e47] [cursor=pointer]: Defects
+        - generic [ref=f91e48] [cursor=pointer]: Value Added Services
+    - generic [ref=f91e219]:
+      - generic [ref=f91e220]:
+        - generic [ref=f91e221]:
+          - generic [ref=f91e222]: 📋 Work Items
+          - generic [ref=f91e223]: AIR-1 Hotel Search
+          - combobox [ref=f91e225] [cursor=pointer]:
+            - option "— Select Tool —" [selected]
+            - option "☁️ Azure DevOps"
+            - option "🟦 Jira"
+            - option "🖥️ Local Host"
+        - generic [ref=f91e239] [cursor=pointer]:
+          - generic [ref=f91e240]: AIR-1
+          - generic [ref=f91e241]: Hotel Search
+          - generic [ref=f91e242]:
+            - generic [ref=f91e243]: To Do
+            - generic [ref=f91e244]: Medium
+            - generic [ref=f91e245]: Task
+      - generic [ref=f91e247]:
+        - generic [ref=f91e248]:
+          - generic [ref=f91e249]:
+            - generic [ref=f91e250]: AIR-1
+            - generic [ref=f91e251]: Hotel Search
+            - generic [ref=f91e252]:
+              - generic [ref=f91e253]:
+                - generic [ref=f91e254]: "Type:"
+                - text: Task
+              - generic [ref=f91e255]:
+                - generic [ref=f91e256]: "Status:"
+                - text: To Do
+              - generic [ref=f91e257]:
+                - generic [ref=f91e258]: "Priority:"
+                - generic [ref=f91e259]: Medium
+              - generic [ref=f91e260]:
+                - generic [ref=f91e261]: "Assignee:"
+                - text: jittest user
+          - button "🧪 Generate Test Cases" [ref=f91e262] [cursor=pointer]
+        - generic [ref=f91e263]:
+          - generic [ref=f91e264] [cursor=pointer]:
+            - generic [ref=f91e265]: 📝 Acceptance Criteria / Description
+            - generic [ref=f91e266]: ▾
+          - generic [ref=f91e267]: "As an AirBnb website user, I want to search for destination using the search bar, So that I can quickly find relevant hotel room according to the check-in/check-out dates. Destination search Bar : When I navigate to https://www.airbnb.co.in/, The destination search bar should be visible and functional on the website. Then I enter \"Chennai, Tamil Nadu\" as my destination. Check-in, Check-out dates : When I enter check-in date as 01-12-2026, Then I select 04-12-2026 as check-out date. The dates provided should be selected seamlessly. Adding guests : When I click on add guests button, Then the corresponding section should be expanded along with multiple options to select. And I select 3 adults as guests. Acceptance Criteria: Multiple search results should be populated in the screen, When I select first option from the results, wait for the page to load properly. Then validate selected search result should be relevant for provided destination, along with selected check-in/check-out dates and exact guests count."

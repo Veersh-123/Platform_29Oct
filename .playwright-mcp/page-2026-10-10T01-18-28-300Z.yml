@@ -1,0 +1,254 @@
+- generic [ref=f50e2]:
+  - generic [ref=f50e3]:
+    - generic [ref=f50e4]:
+      - generic [ref=f50e5]: T
+      - generic [ref=f50e6]:
+        - generic [ref=f50e7]: TEST DASHBOARD
+        - generic [ref=f50e8]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f50e9]:
+      - generic [ref=f50e10]:
+        - generic [ref=f50e11]: Browser
+        - combobox [ref=f50e12] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f50e13]:
+        - generic [ref=f50e14]: Environment
+        - combobox [ref=f50e15] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Signed in" [ref=f50e16] [cursor=pointer]:
+        - generic [ref=f50e17]: A
+        - generic [ref=f50e18]: Admin User
+        - button "✕" [ref=f50e19]
+      - generic "Backend server status" [ref=f50e20] [cursor=pointer]: Server Offline
+  - generic [ref=f50e23]:
+    - generic [ref=f50e24]:
+      - generic [ref=f50e25]: TEST DASHBOARD
+      - generic [ref=f50e26]:
+        - generic [ref=f50e27] [cursor=pointer]: Dashboard
+        - generic [ref=f50e28] [cursor=pointer]: Requirements
+        - generic [ref=f50e29] [cursor=pointer]: Test Cases
+        - generic [ref=f50e30] [cursor=pointer]: Test Design
+        - generic [ref=f50e31] [cursor=pointer]: Test Execution
+        - generic [ref=f50e32] [cursor=pointer]: History & Trends
+        - generic [ref=f50e33] [cursor=pointer]: Test Data
+        - generic [ref=f50e34] [cursor=pointer]: Defects
+        - generic [ref=f50e35] [cursor=pointer]: Value Added Services
+    - generic [ref=f50e37]:
+      - generic [ref=f50e38]:
+        - generic [ref=f50e39]: Data Files
+        - generic [ref=f50e40]:
+          - generic [ref=f50e41] [cursor=pointer]: 📄 AFS-33-test-data.json
+          - generic [ref=f50e42] [cursor=pointer]: 📄 AIR-1-test-data.json
+          - generic [ref=f50e43] [cursor=pointer]: 📄 AIR-1.json
+          - generic [ref=f50e44] [cursor=pointer]: 📄 AS-55.json
+          - generic [ref=f50e45] [cursor=pointer]: 📄 BANKING-6-test-data.json
+          - generic [ref=f50e46] [cursor=pointer]: 📄 BANKING-6.json
+          - generic [ref=f50e47] [cursor=pointer]: 📄 BANKING-9.json
+          - generic [ref=f50e48] [cursor=pointer]: 📄 GUID-8-test-data.json
+          - generic [ref=f50e49] [cursor=pointer]: 📄 KAN-1-test-data.json
+          - generic [ref=f50e50] [cursor=pointer]: 📄 KAN-8-test-data.json
+          - generic [ref=f50e51] [cursor=pointer]: 📄 META-1-test-data.json
+          - generic [ref=f50e52] [cursor=pointer]: 📄 mobile-login-test-data.json
+          - generic [ref=f50e53] [cursor=pointer]: 📄 VB-3-test-data.json
+      - generic [ref=f50e54]:
+        - generic [ref=f50e55]:
+          - button "📥 Download Template" [ref=f50e56] [cursor=pointer]
+          - button "📤 Export JSON" [ref=f50e57] [cursor=pointer]
+          - generic [ref=f50e58] [cursor=pointer]: 📎 Upload Data
+          - button "➕ Add Data Set" [ref=f50e59] [cursor=pointer]
+        - generic [ref=f50e60]:
+          - generic [ref=f50e61]: Test_Data/AFS-33-test-data.json
+          - generic [ref=f50e62]: 📊 8 Data Set(s)
+          - generic [ref=f50e63]:
+            - generic [ref=f50e64]:
+              - generic [ref=f50e65]: Data Set 1
+              - generic [ref=f50e66]: AFS-33-TC_P01 — User performs complete search with all criteria
+              - generic [ref=f50e67]:
+                - button "✏️ Edit" [ref=f50e68] [cursor=pointer]
+                - button "🗑 Delete" [ref=f50e69] [cursor=pointer]
+            - generic [ref=f50e70]:
+              - generic [ref=f50e71]: type
+              - generic [ref=f50e72]: Positive
+            - generic [ref=f50e73]:
+              - generic [ref=f50e74]: testCaseId
+              - generic [ref=f50e75]: AFS-33-TC_P01
+            - generic [ref=f50e76]:
+              - generic [ref=f50e77]: destination
+              - generic [ref=f50e78]: destination
+            - generic [ref=f50e79]: checkInDate
+            - generic [ref=f50e82]: checkOutDate
+            - generic [ref=f50e85]:
+              - generic [ref=f50e86]: adultsCount
+              - generic [ref=f50e87]: "3"
+            - generic [ref=f50e88]:
+              - generic [ref=f50e89]: childrenCount
+              - generic [ref=f50e90]: "0"
+            - generic [ref=f50e91]:
+              - generic [ref=f50e92]: petsCount
+              - generic [ref=f50e93]: "0"
+          - generic [ref=f50e94]:
+            - generic [ref=f50e95]:
+              - generic [ref=f50e96]: Data Set 2
+              - generic [ref=f50e97]: AFS-33-TC_P02 — User searches with valid destination and future dates
+              - generic [ref=f50e98]:
+                - button "✏️ Edit" [ref=f50e99] [cursor=pointer]
+                - button "🗑 Delete" [ref=f50e100] [cursor=pointer]
+            - generic [ref=f50e101]:
+              - generic [ref=f50e102]: type
+              - generic [ref=f50e103]: Positive
+            - generic [ref=f50e104]:
+              - generic [ref=f50e105]: testCaseId
+              - generic [ref=f50e106]: AFS-33-TC_P02
+            - generic [ref=f50e107]:
+              - generic [ref=f50e108]: destination
+              - generic [ref=f50e109]: destination
+            - generic [ref=f50e110]: checkInDate
+            - generic [ref=f50e113]: checkOutDate
+            - generic [ref=f50e116]:
+              - generic [ref=f50e117]: guests
+              - generic [ref=f50e118]: "3"
+          - generic [ref=f50e119]:
+            - generic [ref=f50e120]:
+              - generic [ref=f50e121]: Data Set 3
+              - generic [ref=f50e122]: AFS-33-TC_P03 — User can modify search criteria and perform new search
+              - generic [ref=f50e123]:
+                - button "✏️ Edit" [ref=f50e124] [cursor=pointer]
+                - button "🗑 Delete" [ref=f50e125] [cursor=pointer]
+            - generic [ref=f50e126]:
+              - generic [ref=f50e127]: type
+              - generic [ref=f50e128]: Positive
+            - generic [ref=f50e129]:
+              - generic [ref=f50e130]: testCaseId
+              - generic [ref=f50e131]: AFS-33-TC_P03
+            - generic [ref=f50e132]:
+              - generic [ref=f50e133]: newDestination
+              - generic [ref=f50e134]: Bangalore
+            - generic [ref=f50e135]:
+              - generic [ref=f50e136]: newCheckIn
+              - generic [ref=f50e137]: 05-12-2026
+            - generic [ref=f50e138]:
+              - generic [ref=f50e139]: newCheckOut
+              - generic [ref=f50e140]: 08-12-2026
+          - generic [ref=f50e141]:
+            - generic [ref=f50e142]:
+              - generic [ref=f50e143]: Data Set 4
+              - generic [ref=f50e144]: AFS-33-TC_N01 — User attempts search with invalid destination
+              - generic [ref=f50e145]:
+                - button "✏️ Edit" [ref=f50e146] [cursor=pointer]
+                - button "🗑 Delete" [ref=f50e147] [cursor=pointer]
+            - generic [ref=f50e148]:
+              - generic [ref=f50e149]: type
+              - generic [ref=f50e150]: Negative
+            - generic [ref=f50e151]:
+              - generic [ref=f50e152]: testCaseId
+              - generic [ref=f50e153]: AFS-33-TC_N01
+            - generic [ref=f50e154]:
+              - generic [ref=f50e155]: invalidDestination
+              - generic [ref=f50e156]: XYZ12345InvalidPlace
+            - generic [ref=f50e157]:
+              - generic [ref=f50e158]: checkInDate
+              - generic [ref=f50e159]: 01-12-2026
+            - generic [ref=f50e160]:
+              - generic [ref=f50e161]: checkOutDate
+              - generic [ref=f50e162]: 04-12-2026
+          - generic [ref=f50e163]:
+            - generic [ref=f50e164]:
+              - generic [ref=f50e165]: Data Set 5
+              - generic [ref=f50e166]: AFS-33-TC_N02 — User attempts search with check-out date before check-in date
+              - generic [ref=f50e167]:
+                - button "✏️ Edit" [ref=f50e168] [cursor=pointer]
+                - button "🗑 Delete" [ref=f50e169] [cursor=pointer]
+            - generic [ref=f50e170]:
+              - generic [ref=f50e171]: type
+              - generic [ref=f50e172]: Negative
+            - generic [ref=f50e173]:
+              - generic [ref=f50e174]: testCaseId
+              - generic [ref=f50e175]: AFS-33-TC_N02
+            - generic [ref=f50e176]:
+              - generic [ref=f50e177]: destination
+              - generic [ref=f50e178]: destination
+            - generic [ref=f50e179]:
+              - generic [ref=f50e180]: checkInDate
+              - generic [ref=f50e181]: 04-12-2026
+            - generic [ref=f50e182]:
+              - generic [ref=f50e183]: invalidCheckOutDate
+              - generic [ref=f50e184]: 01-12-2026
+          - generic [ref=f50e185]:
+            - generic [ref=f50e186]:
+              - generic [ref=f50e187]: Data Set 6
+              - generic [ref=f50e188]: AFS-33-TC_N03 — User attempts search without filling mandatory fields
+              - generic [ref=f50e189]:
+                - button "✏️ Edit" [ref=f50e190] [cursor=pointer]
+                - button "🗑 Delete" [ref=f50e191] [cursor=pointer]
+            - generic [ref=f50e192]:
+              - generic [ref=f50e193]: type
+              - generic [ref=f50e194]: Negative
+            - generic [ref=f50e195]:
+              - generic [ref=f50e196]: testCaseId
+              - generic [ref=f50e197]: AFS-33-TC_N03
+            - generic [ref=f50e198]: missingDestination
+            - generic [ref=f50e201]:
+              - generic [ref=f50e202]: checkInDate
+              - generic [ref=f50e203]: 01-12-2026
+            - generic [ref=f50e204]:
+              - generic [ref=f50e205]: checkOutDate
+              - generic [ref=f50e206]: 04-12-2026
+          - generic [ref=f50e207]:
+            - generic [ref=f50e208]:
+              - generic [ref=f50e209]: Data Set 7
+              - generic [ref=f50e210]: AFS-33-TC_E01 — User searches with minimum and maximum guest combinations
+              - generic [ref=f50e211]:
+                - button "✏️ Edit" [ref=f50e212] [cursor=pointer]
+                - button "🗑 Delete" [ref=f50e213] [cursor=pointer]
+            - generic [ref=f50e214]:
+              - generic [ref=f50e215]: type
+              - generic [ref=f50e216]: Edge
+            - generic [ref=f50e217]:
+              - generic [ref=f50e218]: testCaseId
+              - generic [ref=f50e219]: AFS-33-TC_E01
+            - generic [ref=f50e220]:
+              - generic [ref=f50e221]: destination
+              - generic [ref=f50e222]: destination
+            - generic [ref=f50e223]:
+              - generic [ref=f50e224]: checkInDate
+              - generic [ref=f50e225]: 01-12-2026
+            - generic [ref=f50e226]:
+              - generic [ref=f50e227]: checkOutDate
+              - generic [ref=f50e228]: 04-12-2026
+            - generic [ref=f50e229]:
+              - generic [ref=f50e230]: minGuests
+              - generic [ref=f50e231]: "1"
+            - generic [ref=f50e232]:
+              - generic [ref=f50e233]: maxGuests
+              - generic [ref=f50e234]: "8"
+          - generic [ref=f50e235]:
+            - generic [ref=f50e236]:
+              - generic [ref=f50e237]: Data Set 8
+              - generic [ref=f50e238]: AFS-33-TC_E02 — User searches for next day check-out (1-night stay)
+              - generic [ref=f50e239]:
+                - button "✏️ Edit" [ref=f50e240] [cursor=pointer]
+                - button "🗑 Delete" [ref=f50e241] [cursor=pointer]
+            - generic [ref=f50e242]:
+              - generic [ref=f50e243]: type
+              - generic [ref=f50e244]: Edge
+            - generic [ref=f50e245]:
+              - generic [ref=f50e246]: testCaseId
+              - generic [ref=f50e247]: AFS-33-TC_E02
+            - generic [ref=f50e248]:
+              - generic [ref=f50e249]: destination
+              - generic [ref=f50e250]: destination
+            - generic [ref=f50e251]:
+              - generic [ref=f50e252]: checkInDate
+              - generic [ref=f50e253]: 01-12-2026
+            - generic [ref=f50e254]:
+              - generic [ref=f50e255]: checkOutDate
+              - generic [ref=f50e256]: 02-12-2026
+            - generic [ref=f50e257]:
+              - generic [ref=f50e258]: nightsDuration
+              - generic [ref=f50e259]: "1"
+            - generic [ref=f50e260]:
+              - generic [ref=f50e261]: guests
+              - generic [ref=f50e262]: "2"

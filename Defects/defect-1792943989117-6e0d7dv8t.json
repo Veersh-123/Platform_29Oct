@@ -1,0 +1,14 @@
+{
+  "id": "defect-1792943989117-6e0d7dv8t",
+  "defectNumber": 1,
+  "date": "10/25/2026, 9:29:49 PM",
+  "timestamp": 1792943989117,
+  "testCaseName": "LocalHost\\LoanApplication\\LoanApplication-Script.spec.ts › LoanApplication-TC_P01 | Complete a new personal loan application and save and close",
+  "severity": "High",
+  "defectType": "Test Execution Failure",
+  "description": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=button[name=\"Electronic Disclosure and Content\"]')\u001b[22m\n\n\n   at ..\\pages\\LocalHost\\L",
+  "expectedResult": "Not specified",
+  "actualResult": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=button[name=\"Electronic Disclosure and Content\"]')\u001b[22m\n\n\n   at ..\\pages\\LocalHost\\LoanApplication\\LoanApplication-Page.ts:32\n\n  30 |   async openElectronicDisclosure(): Promise<void> {\n  31 |     const button = this.page.locator(Locators.electronicDisclosureButton);\n> 32 |     await button.scrollIntoViewIfNeeded();\n     |                  ^\n  33 |     await button.click();\n  34 |   }\n  35 |\n    at LoanapplicationPage.openElectronicDisclosure (C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\pages\\LocalHost\\LoanApplication\\LoanApplication-Page.ts:32:18)\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\LocalHost\\LoanApplication\\LoanApplication-Script.spec.ts:36:22\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\LocalHost\\LoanApplication\\LoanApplication-Script.spec.ts:35:3",
+  "status": "Open",
+  "comments": ""
+}

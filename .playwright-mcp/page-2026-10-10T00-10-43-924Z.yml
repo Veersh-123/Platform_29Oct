@@ -1,0 +1,56 @@
+- generic [ref=f4e19]:
+  - generic [ref=f4e20]:
+    - generic [ref=f4e21]:
+      - generic [ref=f4e22]: T
+      - generic [ref=f4e23]:
+        - generic [ref=f4e24]: TEST DASHBOARD
+        - generic [ref=f4e25]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f4e26]:
+      - generic [ref=f4e27]:
+        - generic [ref=f4e28]: Browser
+        - combobox [ref=f4e29] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f4e30]:
+        - generic [ref=f4e31]: Environment
+        - combobox [ref=f4e32] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Backend server status" [ref=f4e33] [cursor=pointer]: Server :4000
+  - generic [ref=f4e36]:
+    - generic [ref=f4e37]:
+      - generic [ref=f4e38]: TEST DASHBOARD
+      - generic [ref=f4e39]:
+        - generic [ref=f4e40] [cursor=pointer]: Dashboard
+        - generic [ref=f4e41] [cursor=pointer]: Requirements
+        - generic [ref=f4e42] [cursor=pointer]: Test Cases
+        - generic [ref=f4e43] [cursor=pointer]: Test Design
+        - generic [ref=f4e44] [cursor=pointer]: Test Execution
+        - generic [ref=f4e45] [cursor=pointer]: History & Trends
+        - generic [ref=f4e46] [cursor=pointer]: Test Data
+        - generic [ref=f4e47] [cursor=pointer]: Defects
+        - generic [ref=f4e48] [cursor=pointer]: Value Added Services
+    - generic [ref=f4e219]:
+      - generic [ref=f4e220]:
+        - generic [ref=f4e221]:
+          - generic [ref=f4e222]: 📋 Work Items
+          - generic [ref=f4e223]: Click a ticket from the board, or select one below to generate tests
+          - combobox [ref=f4e225] [cursor=pointer]:
+            - option "— Select Tool —" [selected]
+            - option "☁️ Azure DevOps"
+            - option "🟦 Jira"
+            - option "🖥️ Local Host"
+        - generic [ref=f4e228] [cursor=pointer]:
+          - generic [ref=f4e229]: ▶
+          - generic [ref=f4e230]:
+            - generic [ref=f4e231]: AIR-1
+            - generic [ref=f4e232]: Hotel Search
+            - generic [ref=f4e233]:
+              - generic [ref=f4e234]: To Do
+              - generic [ref=f4e235]: Medium
+      - generic [ref=f4e237]:
+        - generic [ref=f4e238]: 🎯
+        - generic [ref=f4e239]: No ticket selected
+        - generic [ref=f4e240]: Select a Jira ticket from the left panelor click any card on the Jira Board

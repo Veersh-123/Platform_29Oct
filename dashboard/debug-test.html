@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Test</title>
+    <style>
+        body { font-family: monospace; background: #0a1628; color: #e0e0e0; padding: 20px; }
+        button { padding: 10px 20px; margin: 10px; cursor: pointer; font-size: 14px; background: #3b82f6; color: white; border: none; border-radius: 4px; }
+        .console { background: #0f1f35; border: 1px solid #1a2f4a; padding: 10px; margin-top: 20px; height: 400px; overflow-y: auto; white-space: pre-wrap; font-size: 12px; }
+        .log { margin: 3px 0; }
+        .success { color: #10b981; }
+        .error { color: #f87171; }
+        .info { color: #60a5fa; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Debug Test</h1>
+    <button onclick="testDebugEndpoint()">Test Debug Endpoint</button>
+    <button onclick="testRunEndpoint()">Test Run Endpoint</button>
+    <button onclick="clearConsole()">Clear</button>
+    <div class="console" id="console"></div>
+
+    <script>
+        const console_el = document.getElementById('console');
+
+        function addLog(msg, type = 'info') {
+            const log = document.createElement('div');
+            log.className = `log ${type}`;
+            log.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            console_el.appendChild(log);
+            console_el.scrollTop = console_el.scrollHeight;
+            console.log(msg);
+        }
+
+        function clearConsole() {
+            console_el.innerHTML = '';
+        }
+
+        async function testDebugEndpoint() {
+            addLog('=== Testing Debug Endpoint ===', 'info');
+            try {
+                const payload = {
+                    file: 'tests/VB-3/VB-3-Script.spec.ts',
+                    testName: 'TC_VB3_001: Successful User Login to Bank Dashboard'
+                };
+                
+                addLog('Sending POST to http://localhost:4000/api/test-debug', 'info');
+                addLog('Payload: ' + JSON.stringify(payload), 'info');
+                
+                const res = await fetch('http://localhost:4000/api/test-debug', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                addLog('Response status: ' + res.status, 'info');
+                
+                if (!res.ok) {
+                    addLog('ERROR: HTTP ' + res.status, 'error');
+                    return;
+                }
+                
+                const data = await res.json();
+                addLog('Response: ' + JSON.stringify(data, null, 2), 'success');
+                
+            } catch (e) {
+                addLog('CAUGHT ERROR: ' + e.message, 'error');
+                addLog(e.stack, 'error');
+            }
+        }
+
+        async function testRunEndpoint() {
+            addLog('=== Testing Run Endpoint ===', 'info');
+            try {
+                const payload = {
+                    file: 'tests/VB-3/VB-3-Script.spec.ts',
+                    testName: 'TC_VB3_001: Successful User Login to Bank Dashboard'
+                };
+                
+                addLog('Sending POST to http://localhost:4000/api/run-tests/file', 'info');
+                addLog('Payload: ' + JSON.stringify(payload), 'info');
+                
+                const res = await fetch('http://localhost:4000/api/run-tests/file', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                addLog('Response status: ' + res.status, 'info');
+                addLog('Response headers Content-Type: ' + res.headers.get('content-type'), 'info');
+                
+                if (!res.ok) {
+                    const text = await res.text();
+                    addLog('ERROR: HTTP ' + res.status + ' - ' + text.substring(0, 200), 'error');
+                    return;
+                }
+                
+                if (!res.body) {
+                    addLog('ERROR: No response body', 'error');
+                    return;
+                }
+                
+                addLog('Starting to read SSE stream...', 'info');
+                const reader = res.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '';
+                let messageCount = 0;
+
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) {
+                        addLog('Stream ended. Received ' + messageCount + ' messages', 'success');
+                        break;
+                    }
+
+                    buffer += decoder.decode(value, { stream: true });
+                    const parts = buffer.split('\n\n');
+                    buffer = parts.pop();
+
+                    for (const part of parts) {
+                        if (!part.trim()) continue;
+                        messageCount++;
+                        
+                        const dl = part.split('\n').find(l => l.startsWith('data:'));
+                        if (!dl) {
+                            addLog('Skipped part (no data): ' + part.substring(0, 50), 'info');
+                            continue;
+                        }
+
+                        try {
+                            const msg = JSON.parse(dl.slice(5));
+                            addLog(`Message ${messageCount}: type=${msg.type}, data=${typeof msg.data === 'string' ? msg.data.substring(0, 80) : JSON.stringify(msg.data).substring(0, 80)}`, 'info');
+                        } catch (e) {
+                            addLog('Parse error: ' + e.message + ' for part: ' + part.substring(0, 50), 'error');
+                        }
+                    }
+                }
+                
+            } catch (e) {
+                addLog('CAUGHT ERROR: ' + e.message, 'error');
+                addLog(e.stack, 'error');
+            }
+        }
+
+        addLog('Debug Test Page Ready', 'success');
+        addLog('Click buttons above to test endpoints', 'info');
+    </script>
+</body>
+</html>

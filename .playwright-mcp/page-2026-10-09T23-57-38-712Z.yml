@@ -1,0 +1,246 @@
+- generic [ref=f91e19]:
+  - generic [ref=f91e20]:
+    - generic [ref=f91e21]:
+      - generic [ref=f91e22]: T
+      - generic [ref=f91e23]:
+        - generic [ref=f91e24]: TEST DASHBOARD
+        - generic [ref=f91e25]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f91e26]:
+      - generic [ref=f91e27]:
+        - generic [ref=f91e28]: Browser
+        - combobox [ref=f91e29] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f91e30]:
+        - generic [ref=f91e31]: Environment
+        - combobox [ref=f91e32] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Backend server status" [ref=f91e33] [cursor=pointer]: Server :4000
+  - generic [ref=f91e36]:
+    - generic [ref=f91e37]:
+      - generic [ref=f91e38]: TEST DASHBOARD
+      - generic [ref=f91e39]:
+        - generic [ref=f91e40] [cursor=pointer]: Dashboard
+        - generic [ref=f91e41] [cursor=pointer]: Requirements
+        - generic [ref=f91e42] [cursor=pointer]: Test Cases
+        - generic [ref=f91e43] [cursor=pointer]: Test Design
+        - generic [ref=f91e44] [cursor=pointer]: Test Execution
+        - generic [ref=f91e45] [cursor=pointer]: History & Trends
+        - generic [ref=f91e46] [cursor=pointer]: Test Data
+        - generic [ref=f91e47] [cursor=pointer]: Defects
+        - generic [ref=f91e48] [cursor=pointer]: Value Added Services
+    - generic [ref=f91e797]:
+      - generic [ref=f91e798]:
+        - generic [ref=f91e799]:
+          - generic [ref=f91e800]: 📋 Work Items
+          - generic [ref=f91e801]: AIR-1 Hotel Search
+          - combobox [ref=f91e803] [cursor=pointer]:
+            - option "— Select Tool —" [selected]
+            - option "☁️ Azure DevOps"
+            - option "🟦 Jira"
+            - option "🖥️ Local Host"
+        - generic [ref=f91e812] [cursor=pointer]:
+          - generic [ref=f91e813]: ▶
+          - generic [ref=f91e814]:
+            - generic [ref=f91e815]: AIR-1
+            - generic [ref=f91e816]: Hotel Search
+            - generic [ref=f91e817]:
+              - generic [ref=f91e818]: To Do
+              - generic [ref=f91e819]: Medium
+      - generic [ref=f91e820]:
+        - generic [ref=f91e821]:
+          - generic [ref=f91e822]:
+            - generic [ref=f91e823]: AIR-1
+            - generic [ref=f91e824]: Hotel Search
+            - generic [ref=f91e825]:
+              - generic [ref=f91e826]:
+                - generic [ref=f91e827]: "Type:"
+                - text: Task
+              - generic [ref=f91e828]:
+                - generic [ref=f91e829]: "Status:"
+                - text: To Do
+              - generic [ref=f91e830]:
+                - generic [ref=f91e831]: "Priority:"
+                - generic [ref=f91e832]: Medium
+              - generic [ref=f91e833]:
+                - generic [ref=f91e834]: "Assignee:"
+                - text: jittest user
+          - button "⚡ Generate Test Scripts" [ref=f91e835] [cursor=pointer]
+        - generic [ref=f91e837] [cursor=pointer]:
+          - generic [ref=f91e838]: ▼
+          - text: 📋 Ticket ID
+        - generic [ref=f91e839]:
+          - generic [ref=f91e840] [cursor=pointer]:
+            - generic [ref=f91e841]: ▼
+            - generic [ref=f91e842]: 💻 Code Editor
+            - button "↻ Refresh" [ref=f91e843]
+          - generic [ref=f91e845]:
+            - generic [ref=f91e847]:
+              - generic [ref=f91e848] [cursor=pointer]:
+                - generic [ref=f91e849]: ▾
+                - generic [ref=f91e850]: 📂
+                - generic [ref=f91e851]: Project
+              - generic [ref=f91e852]:
+                - generic [ref=f91e853]:
+                  - generic [ref=f91e854] [cursor=pointer]:
+                    - generic [ref=f91e855]: ▾
+                    - generic [ref=f91e856]: 📁
+                    - generic [ref=f91e857]: Locators
+                  - generic [ref=f91e858]:
+                    - generic [ref=f91e859] [cursor=pointer]:
+                      - generic [ref=f91e860]: 🔷
+                      - generic [ref=f91e861]: Air1.locators.ts
+                    - generic [ref=f91e862] [cursor=pointer]:
+                      - generic [ref=f91e863]: 🔷
+                      - generic [ref=f91e864]: AirbnbSearchPage.locators.ts
+                    - generic [ref=f91e865] [cursor=pointer]:
+                      - generic [ref=f91e866]: 🔷
+                      - generic [ref=f91e867]: Banking9.locators.ts
+                    - generic [ref=f91e868] [cursor=pointer]:
+                      - generic [ref=f91e869]: 🔷
+                      - generic [ref=f91e870]: CSXCarbonEstimatorPage.locators.ts
+                    - generic [ref=f91e871] [cursor=pointer]:
+                      - generic [ref=f91e872]: 🔷
+                      - generic [ref=f91e873]: index.ts
+                    - generic [ref=f91e874] [cursor=pointer]:
+                      - generic [ref=f91e875]: 🔷
+                      - generic [ref=f91e876]: ProductFormPage.locators.ts
+                    - generic [ref=f91e877] [cursor=pointer]:
+                      - generic [ref=f91e878]: 📃
+                      - generic [ref=f91e879]: README.md
+                    - generic [ref=f91e880] [cursor=pointer]:
+                      - generic [ref=f91e881]: 🔷
+                      - generic [ref=f91e882]: UMBLoanPage.locators.ts
+                    - generic [ref=f91e883] [cursor=pointer]:
+                      - generic [ref=f91e884]: 🔷
+                      - generic [ref=f91e885]: VBBankFundsTransferPage.locators.ts
+                - generic [ref=f91e886]:
+                  - generic [ref=f91e887] [cursor=pointer]:
+                    - generic [ref=f91e888]: ▾
+                    - generic [ref=f91e889]: 📁
+                    - generic [ref=f91e890]: pages
+                  - generic [ref=f91e891]:
+                    - generic [ref=f91e892] [cursor=pointer]:
+                      - generic [ref=f91e893]: 🔷
+                      - generic [ref=f91e894]: Air1Page.ts
+                    - generic [ref=f91e895] [cursor=pointer]:
+                      - generic [ref=f91e896]: 🔷
+                      - generic [ref=f91e897]: AirbnbSearchPage.ts
+                    - generic [ref=f91e898] [cursor=pointer]:
+                      - generic [ref=f91e899]: 🔷
+                      - generic [ref=f91e900]: Banking9Page.ts
+                    - generic [ref=f91e901] [cursor=pointer]:
+                      - generic [ref=f91e902]: 🔷
+                      - generic [ref=f91e903]: BasePage.ts
+                    - generic [ref=f91e904] [cursor=pointer]:
+                      - generic [ref=f91e905]: 🔷
+                      - generic [ref=f91e906]: CSXCarbonEstimatorPage.ts
+                    - generic [ref=f91e907] [cursor=pointer]:
+                      - generic [ref=f91e908]: 🔷
+                      - generic [ref=f91e909]: MobileSwagLabsPage.ts
+                    - generic [ref=f91e910] [cursor=pointer]:
+                      - generic [ref=f91e911]: 🔷
+                      - generic [ref=f91e912]: VBBankFundsTransferPage.ts
+                - generic [ref=f91e913]:
+                  - generic [ref=f91e914] [cursor=pointer]:
+                    - generic [ref=f91e915]: ▾
+                    - generic [ref=f91e916]: 📁
+                    - generic [ref=f91e917]: tests
+                  - generic [ref=f91e918]:
+                    - generic [ref=f91e919]:
+                      - generic [ref=f91e920] [cursor=pointer]:
+                        - generic [ref=f91e921]: ▾
+                        - generic [ref=f91e922]: 📁
+                        - generic [ref=f91e923]: AIR-1
+                      - generic [ref=f91e925] [cursor=pointer]:
+                        - generic [ref=f91e926]: 🔷
+                        - generic [ref=f91e927]: AIR-1-Script.spec.ts
+                    - generic [ref=f91e928]:
+                      - generic [ref=f91e929] [cursor=pointer]:
+                        - generic [ref=f91e930]: ▾
+                        - generic [ref=f91e931]: 📁
+                        - generic [ref=f91e932]: BANKING-9
+                      - generic [ref=f91e934] [cursor=pointer]:
+                        - generic [ref=f91e935]: 🔷
+                        - generic [ref=f91e936]: BANKING-9-Script.spec.ts
+                    - generic [ref=f91e937]:
+                      - generic [ref=f91e938] [cursor=pointer]:
+                        - generic [ref=f91e939]: ▾
+                        - generic [ref=f91e940]: 📁
+                        - generic [ref=f91e941]: KAN-1
+                      - generic [ref=f91e943] [cursor=pointer]:
+                        - generic [ref=f91e944]: 🔷
+                        - generic [ref=f91e945]: KAN-1-Script.spec.ts
+                    - generic [ref=f91e946]:
+                      - generic [ref=f91e947] [cursor=pointer]:
+                        - generic [ref=f91e948]: ▾
+                        - generic [ref=f91e949]: 📁
+                        - generic [ref=f91e950]: KAN-8
+                      - generic [ref=f91e952] [cursor=pointer]:
+                        - generic [ref=f91e953]: 🔷
+                        - generic [ref=f91e954]: KAN-8-Script.spec.ts
+                    - generic [ref=f91e955]:
+                      - generic [ref=f91e956] [cursor=pointer]:
+                        - generic [ref=f91e957]: ▾
+                        - generic [ref=f91e958]: 📁
+                        - generic [ref=f91e959]: mobile
+                      - generic [ref=f91e960]:
+                        - generic [ref=f91e961] [cursor=pointer]:
+                          - generic [ref=f91e962]: 🔷
+                          - generic [ref=f91e963]: login.spec.ts
+                        - generic [ref=f91e964] [cursor=pointer]:
+                          - generic [ref=f91e965]: 📃
+                          - generic [ref=f91e966]: login.test.js
+                        - generic [ref=f91e967] [cursor=pointer]:
+                          - generic [ref=f91e968]: 📃
+                          - generic [ref=f91e969]: MOBILE_TESTS_README.md
+                        - generic [ref=f91e970] [cursor=pointer]:
+                          - generic [ref=f91e971]: 🔷
+                          - generic [ref=f91e972]: swag-labs-login.spec.ts
+                    - generic [ref=f91e973]:
+                      - generic [ref=f91e974] [cursor=pointer]:
+                        - generic [ref=f91e975]: ▾
+                        - generic [ref=f91e976]: 📁
+                        - generic [ref=f91e977]: VB-3
+                      - generic [ref=f91e979] [cursor=pointer]:
+                        - generic [ref=f91e980]: 🔷
+                        - generic [ref=f91e981]: VB-3-Script.spec.ts
+                - generic [ref=f91e982]:
+                  - generic [ref=f91e983] [cursor=pointer]:
+                    - generic [ref=f91e984]: ▾
+                    - generic [ref=f91e985]: 📁
+                    - generic [ref=f91e986]: utils
+                  - generic [ref=f91e987]:
+                    - generic [ref=f91e988] [cursor=pointer]:
+                      - generic [ref=f91e989]: 🔷
+                      - generic [ref=f91e990]: CommonUtils.ts
+                    - generic [ref=f91e991] [cursor=pointer]:
+                      - generic [ref=f91e992]: 🔷
+                      - generic [ref=f91e993]: FailureRecoveryManager.ts
+                    - generic [ref=f91e994] [cursor=pointer]:
+                      - generic [ref=f91e995]: 🔷
+                      - generic [ref=f91e996]: FailureReportAnalyzer.ts
+                    - generic [ref=f91e997] [cursor=pointer]:
+                      - generic [ref=f91e998]: 🔷
+                      - generic [ref=f91e999]: LocatorFactory.ts
+                    - generic [ref=f91e1000] [cursor=pointer]:
+                      - generic [ref=f91e1001]: 🔷
+                      - generic [ref=f91e1002]: LocatorHealer.ts
+                    - generic [ref=f91e1003] [cursor=pointer]:
+                      - generic [ref=f91e1004]: 🔷
+                      - generic [ref=f91e1005]: SelfHealing.ts
+                    - generic [ref=f91e1006] [cursor=pointer]:
+                      - generic [ref=f91e1007]: 🔷
+                      - generic [ref=f91e1008]: TensaiExecutor.ts
+                    - generic [ref=f91e1009] [cursor=pointer]:
+                      - generic [ref=f91e1010]: 🔷
+                      - generic [ref=f91e1011]: TestRecoveryHooks.ts
+            - generic [ref=f91e1012]:
+              - generic [ref=f91e1013]: Select a file
+              - textbox "← Select a file from the tree to view its content" [ref=f91e1015]
+        - generic [ref=f91e1018] [cursor=pointer]:
+          - generic [ref=f91e1019]: ▼
+          - generic [ref=f91e1020]: GENERATION LOG

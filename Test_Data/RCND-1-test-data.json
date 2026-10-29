@@ -1,0 +1,60 @@
+{
+  "storyId": "RCND-1",
+  "summary": "FlightSearch",
+  "generatedOn": "2026-10-26T10:02:35.901Z",
+  "baseUrl": "https://www.aircanada.com/home/ca/en/aco/flight-status./",
+  "testCases": [
+    {
+      "testCaseId": "RCND-1-TC_P01",
+      "label": "RCND-1-TC_P01 — Search YYZ to YHZ and verify first flight is On Time",
+      "title": "Search YYZ to YHZ and verify first flight is On Time",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.aircanada.com/home/ca/en/aco/flight-status",
+        "searchMode": "By Route",
+        "fromCode": "YYZ",
+        "toCode": "YHZ",
+        "departureDateLabel": "Wed Oct 28",
+        "waitAfterOriginSelectionSeconds": 5,
+        "waitAfterDestinationSelectionSeconds": 5,
+        "flightDetailStatusText": "On Time"
+      }
+    },
+    {
+      "testCaseId": "RCND-1-TC_P02",
+      "label": "RCND-1-TC_P02 — Search the reverse route using the displayed airport suggestions",
+      "title": "Search the reverse route using the displayed airport suggestions",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.aircanada.com/home/ca/en/aco/flight-status",
+        "searchMode": "By Route",
+        "fromCode": "YHZ",
+        "toCode": "YYZ",
+        "departureDateLabel": "Fri Oct 16",
+        "waitAfterOriginSelectionSeconds": 5,
+        "waitAfterDestinationSelectionSeconds": 5
+      }
+    },
+    {
+      "testCaseId": "RCND-1-TC_N01",
+      "label": "RCND-1-TC_N01 — Prevent a route search when the From field is empty",
+      "title": "Prevent a route search when the From field is empty",
+      "type": "Negative",
+      "data": {
+        "url": "https://www.aircanada.com/home/ca/en/aco/flight-status",
+        "searchMode": "By Route",
+        "fromCode": "",
+        "toCode": "YHZ",
+        "departureDateLabel": "Fri Oct 16",
+        "waitAfterDestinationSelectionSeconds": 5
+      }
+    }
+  ],
+  "metadata": {
+    "generatedOn": "2026-10-26T10:02:35.901Z",
+    "totalCases": 3,
+    "positive": 2,
+    "negative": 1,
+    "edge": 0
+  }
+}

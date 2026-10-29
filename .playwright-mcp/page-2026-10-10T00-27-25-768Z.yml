@@ -1,0 +1,106 @@
+- generic [ref=f4e3]:
+  - banner [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - generic [ref=f4e6]:
+        - generic [ref=f4e7]: H
+        - generic [ref=f4e8]:
+          - generic [ref=f4e9]: Hexaware
+          - generic [ref=f4e10]: Project 10
+      - generic [ref=f4e11]:
+        - generic [ref=f4e12]:
+          - generic [ref=f4e13]: Specs
+          - generic [ref=f4e14]: "7"
+        - generic [ref=f4e15]:
+          - generic [ref=f4e16]: Tests
+          - generic [ref=f4e17]: "27"
+        - generic [ref=f4e18]:
+          - generic [ref=f4e19]: Passed
+          - generic [ref=f4e20]: "2"
+        - generic [ref=f4e21]:
+          - generic [ref=f4e22]: Failed
+          - generic [ref=f4e23]: "6"
+      - generic [ref=f4e24]:
+        - generic [ref=f4e25]: 🟣 Jira
+        - combobox [ref=f4e26] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+        - combobox [ref=f4e27] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGE"
+          - option "PROD"
+        - button "Logout" [ref=f4e28] [cursor=pointer]
+  - navigation [ref=f4e29]:
+    - generic [ref=f4e30]:
+      - button "Dashboard" [ref=f4e31] [cursor=pointer]
+      - button "Requirements" [ref=f4e32] [cursor=pointer]
+      - button "Test Explorer" [ref=f4e33] [cursor=pointer]
+      - button "Test Cases" [ref=f4e34] [cursor=pointer]
+      - button "Test Scripts" [ref=f4e35] [cursor=pointer]
+      - button "Reports" [ref=f4e36] [cursor=pointer]
+      - button "Test Data" [ref=f4e37] [cursor=pointer]
+      - button "Value Added Services" [ref=f4e38] [cursor=pointer]
+      - button "Project Structure" [ref=f4e39] [cursor=pointer]
+  - generic [ref=f4e42]:
+    - generic [ref=f4e43]:
+      - generic [ref=f4e44]:
+        - generic [ref=f4e45]: Spec Files
+        - button "▶ Run All" [ref=f4e46] [cursor=pointer]
+      - combobox [ref=f4e48]:
+        - option "All Suites" [selected]
+        - option "Regression"
+        - option "Smoke"
+        - option "Sanity"
+      - generic [ref=f4e49] [cursor=pointer]:
+        - generic [ref=f4e50]: AIR-1/AIR-1-Script.spec.ts
+        - generic [ref=f4e52]: 0 tests
+      - generic [ref=f4e53] [cursor=pointer]:
+        - generic [ref=f4e54]: BANKING-9/BANKING-9-Script.spec.ts
+        - generic [ref=f4e56]: 4 tests
+      - generic [ref=f4e57] [cursor=pointer]:
+        - generic [ref=f4e58]: KAN-1/KAN-1-Script.spec.ts
+        - generic [ref=f4e60]: 10 tests
+      - generic [ref=f4e61] [cursor=pointer]:
+        - generic [ref=f4e62]: KAN-8/KAN-8-Script.spec.ts
+        - generic [ref=f4e64]: 3 tests
+      - generic [ref=f4e65] [cursor=pointer]:
+        - generic [ref=f4e66]: mobile/login.spec.ts
+        - generic [ref=f4e68]: 0 tests
+      - generic [ref=f4e69] [cursor=pointer]:
+        - generic [ref=f4e70]: mobile/swag-labs-login.spec.ts
+        - generic [ref=f4e72]: 3 tests
+      - generic [ref=f4e73] [cursor=pointer]:
+        - generic [ref=f4e74]: VB-3/VB-3-Script.spec.ts
+        - generic [ref=f4e76]: 7 tests
+    - generic [ref=f4e77]:
+      - generic [ref=f4e78]:
+        - generic [ref=f4e79]:
+          - generic [ref=f4e80]:
+            - generic [ref=f4e81]: tests/AIR-1/AIR-1-Script.spec.ts
+            - 'heading "AIR-1: Hotel Search" [level=3] [ref=f4e82]'
+            - generic [ref=f4e83]: "Page Object: Air1Page"
+          - generic [ref=f4e84]:
+            - button "⏱ Schedule" [ref=f4e85] [cursor=pointer]
+            - button "▶ Run Suite" [ref=f4e86] [cursor=pointer]
+        - generic [ref=f4e87]:
+          - generic [ref=f4e88]: Test Data
+          - generic [ref=f4e89]:
+            - generic [ref=f4e90]:
+              - generic [ref=f4e91]: "storyId:"
+              - generic [ref=f4e92]: "\"AIR-1\""
+            - generic [ref=f4e93]:
+              - generic [ref=f4e94]: "summary:"
+              - generic [ref=f4e95]: "\"Hotel Search\""
+            - generic [ref=f4e96]:
+              - generic [ref=f4e97]: "appUrl:"
+              - generic [ref=f4e98]: "\"https://vb-bank-demo.vercel.app/\""
+            - generic [ref=f4e99]:
+              - generic [ref=f4e100]: "credentials:"
+              - generic [ref=f4e101]: "{\"valid\":{\"username\":\"john.doe\",\"password\":\"user123\"},\"invalid\":{\"username\":\"invalid.user\",\"password\":\"wrongpassword\"},\"empty\":{\"username\":\"\",\"password\":\"\"}}"
+            - generic [ref=f4e102]:
+              - generic [ref=f4e103]: "testCases:"
+              - generic [ref=f4e104]: "[]"
+            - generic [ref=f4e105]:
+              - generic [ref=f4e106]: "metadata:"
+              - generic [ref=f4e107]: "{\"generatedOn\":\"2026-10-08T17:11:44.598Z\",\"totalCases\":0,\"positive\":0,\"negative\":0,\"edge\":0}"
+      - button "▸ View source" [ref=f4e109] [cursor=pointer]

@@ -1,0 +1,270 @@
+- generic [ref=f4e19]:
+  - generic [ref=f4e20]:
+    - generic [ref=f4e21]:
+      - generic [ref=f4e22]: T
+      - generic [ref=f4e23]:
+        - generic [ref=f4e24]: TEST DASHBOARD
+        - generic [ref=f4e25]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f4e26]:
+      - generic [ref=f4e27]:
+        - generic [ref=f4e28]: Browser
+        - combobox [ref=f4e29] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f4e30]:
+        - generic [ref=f4e31]: Environment
+        - combobox [ref=f4e32] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Backend server status" [ref=f4e33] [cursor=pointer]: Server :4000
+  - generic [ref=f4e36]:
+    - generic [ref=f4e37]:
+      - generic [ref=f4e38]: TEST DASHBOARD
+      - generic [ref=f4e39]:
+        - generic [ref=f4e40] [cursor=pointer]: Dashboard
+        - generic [ref=f4e41] [cursor=pointer]: Requirements
+        - generic [ref=f4e42] [cursor=pointer]: Test Cases
+        - generic [ref=f4e43] [cursor=pointer]: Test Design
+        - generic [ref=f4e44] [cursor=pointer]: Test Execution
+        - generic [ref=f4e45] [cursor=pointer]: History & Trends
+        - generic [ref=f4e46] [cursor=pointer]: Test Data
+        - generic [ref=f4e47] [cursor=pointer]: Defects
+        - generic [ref=f4e48] [cursor=pointer]: Value Added Services
+    - generic [ref=f4e219]:
+      - generic [ref=f4e220]:
+        - generic [ref=f4e221]:
+          - generic [ref=f4e222]: 📋 Work Items
+          - generic [ref=f4e223]: AIR-1 Hotel Search
+          - combobox [ref=f4e225] [cursor=pointer]:
+            - option "— Select Tool —" [selected]
+            - option "☁️ Azure DevOps"
+            - option "🟦 Jira"
+            - option "🖥️ Local Host"
+        - generic [ref=f4e228] [cursor=pointer]:
+          - generic [ref=f4e229]: ▶
+          - generic [ref=f4e230]:
+            - generic [ref=f4e231]: AIR-1
+            - generic [ref=f4e232]: Hotel Search
+            - generic [ref=f4e233]:
+              - generic [ref=f4e234]: To Do
+              - generic [ref=f4e235]: Medium
+      - generic [ref=f4e241]:
+        - generic [ref=f4e242]:
+          - generic [ref=f4e243]:
+            - generic [ref=f4e244]: AIR-1
+            - generic [ref=f4e245]: Hotel Search
+            - generic [ref=f4e246]:
+              - generic [ref=f4e247]:
+                - generic [ref=f4e248]: "Type:"
+                - text: Task
+              - generic [ref=f4e249]:
+                - generic [ref=f4e250]: "Status:"
+                - text: To Do
+              - generic [ref=f4e251]:
+                - generic [ref=f4e252]: "Priority:"
+                - generic [ref=f4e253]: Medium
+              - generic [ref=f4e254]:
+                - generic [ref=f4e255]: "Assignee:"
+                - text: jittest user
+          - button "⚡ Generate Test Scripts" [ref=f4e256] [cursor=pointer]
+        - generic [ref=f4e257]:
+          - generic [ref=f4e258] [cursor=pointer]:
+            - generic [ref=f4e259]: ▼
+            - text: 📋 Ticket ID
+          - generic [ref=f4e260]: AIR-1
+        - generic [ref=f4e262]:
+          - generic [ref=f4e263] [cursor=pointer]:
+            - generic [ref=f4e264]: ▼
+            - text: 📝 Description
+          - generic [ref=f4e265]: "As an AirBnb website user, I want to search for destination using the search bar, So that I can quickly find relevant hotel room according to the check-in/check-out dates. Destination search Bar : When I navigate to https://www.airbnb.co.in/, The destination search bar should be visible and functional on the website. Then I enter \"Chennai, Tamil Nadu\" as my destination. Check-in, Check-out dates : When I enter check-in date as 01-12-2026, Then I select 04-12-2026 as check-out date. The dates provided should be selected seamlessly. Adding guests : When I click on add guests button, Then the corresponding section should be expanded along with multiple options to select. And I select 3 adults as guests. Acceptance Criteria: Multiple search results should be populated in the screen, When I select first option from the results, wait for the page to load properly. Then validate selected search result should be relevant for provided destination, along with selected check-in/check-out dates and exact guests count."
+        - generic [ref=f4e267]:
+          - generic [ref=f4e268] [cursor=pointer]:
+            - generic [ref=f4e269]: ▼
+            - text: ✅ Acceptance Criteria
+          - generic [ref=f4e270]: "As an AirBnb website user, I want to search for destination using the search bar, So that I can quickly find relevant hotel room according to the check-in/check-out dates. Destination search Bar : When I navigate to https://www.airbnb.co.in/, The destination search bar should be visible and functional on the website. Then I enter \"Chennai, Tamil Nadu\" as my destination. Check-in, Check-out dates : When I enter check-in date as 01-12-2026, Then I select 04-12-2026 as check-out date. The dates provided should be selected seamlessly. Adding guests : When I click on add guests button, Then the corresponding section should be expanded along with multiple options to select. And I select 3 adults as guests. Acceptance Criteria: Multiple search results should be populated in the screen, When I select first option from the results, wait for the page to load properly. Then validate selected search result should be relevant for provided destination, along with selected check-in/check-out dates and exact guests count."
+        - generic [ref=f4e273] [cursor=pointer]:
+          - generic [ref=f4e274]: ▼
+          - generic [ref=f4e275]: 📋 Saved Test Cases
+          - generic [ref=f4e276]: "8"
+          - generic [ref=f4e277]:
+            - generic [ref=f4e278]: from specs/
+            - button "☁️ Upload to Jira" [ref=f4e279]:
+              - text: ☁️
+              - generic [ref=f4e280]: Upload to Jira
+        - generic [ref=f4e339]:
+          - generic [ref=f4e340] [cursor=pointer]:
+            - generic [ref=f4e341]: ▼
+            - generic [ref=f4e342]: 💻 Code Editor
+            - button "↻ Refresh" [ref=f4e343]
+          - generic [ref=f4e345]:
+            - generic [ref=f4e347]:
+              - generic [ref=f4e348] [cursor=pointer]:
+                - generic [ref=f4e349]: ▾
+                - generic [ref=f4e350]: 📂
+                - generic [ref=f4e351]: Project
+                - generic [ref=f4e523]:
+                  - generic "New File" [ref=f4e524]: +📄
+                  - generic "New Folder" [ref=f4e525]: +📁
+              - generic [ref=f4e352]:
+                - generic [ref=f4e353]:
+                  - generic [ref=f4e354] [cursor=pointer]:
+                    - generic [ref=f4e355]: ▾
+                    - generic [ref=f4e356]: 📁
+                    - generic [ref=f4e357]: Locators
+                  - generic [ref=f4e358]:
+                    - generic [ref=f4e359] [cursor=pointer]:
+                      - generic [ref=f4e360]: 🔷
+                      - generic [ref=f4e361]: Air1.locators.ts
+                    - generic [ref=f4e362] [cursor=pointer]:
+                      - generic [ref=f4e363]: 🔷
+                      - generic [ref=f4e364]: AirbnbSearchPage.locators.ts
+                    - generic [ref=f4e365] [cursor=pointer]:
+                      - generic [ref=f4e366]: 🔷
+                      - generic [ref=f4e367]: Banking9.locators.ts
+                    - generic [ref=f4e368] [cursor=pointer]:
+                      - generic [ref=f4e369]: 🔷
+                      - generic [ref=f4e370]: CSXCarbonEstimatorPage.locators.ts
+                    - generic [ref=f4e371] [cursor=pointer]:
+                      - generic [ref=f4e372]: 🔷
+                      - generic [ref=f4e373]: index.ts
+                    - generic [ref=f4e374] [cursor=pointer]:
+                      - generic [ref=f4e375]: 🔷
+                      - generic [ref=f4e376]: ProductFormPage.locators.ts
+                    - generic [ref=f4e377] [cursor=pointer]:
+                      - generic [ref=f4e378]: 📃
+                      - generic [ref=f4e379]: README.md
+                    - generic [ref=f4e380] [cursor=pointer]:
+                      - generic [ref=f4e381]: 🔷
+                      - generic [ref=f4e382]: UMBLoanPage.locators.ts
+                    - generic [ref=f4e383] [cursor=pointer]:
+                      - generic [ref=f4e384]: 🔷
+                      - generic [ref=f4e385]: VBBankFundsTransferPage.locators.ts
+                - generic [ref=f4e386]:
+                  - generic [ref=f4e387] [cursor=pointer]:
+                    - generic [ref=f4e388]: ▾
+                    - generic [ref=f4e389]: 📁
+                    - generic [ref=f4e390]: pages
+                  - generic [ref=f4e391]:
+                    - generic [ref=f4e392] [cursor=pointer]:
+                      - generic [ref=f4e393]: 🔷
+                      - generic [ref=f4e394]: Air1Page.ts
+                    - generic [ref=f4e395] [cursor=pointer]:
+                      - generic [ref=f4e396]: 🔷
+                      - generic [ref=f4e397]: AirbnbSearchPage.ts
+                    - generic [ref=f4e398] [cursor=pointer]:
+                      - generic [ref=f4e399]: 🔷
+                      - generic [ref=f4e400]: Banking9Page.ts
+                    - generic [ref=f4e401] [cursor=pointer]:
+                      - generic [ref=f4e402]: 🔷
+                      - generic [ref=f4e403]: BasePage.ts
+                    - generic [ref=f4e404] [cursor=pointer]:
+                      - generic [ref=f4e405]: 🔷
+                      - generic [ref=f4e406]: CSXCarbonEstimatorPage.ts
+                    - generic [ref=f4e407] [cursor=pointer]:
+                      - generic [ref=f4e408]: 🔷
+                      - generic [ref=f4e409]: MobileSwagLabsPage.ts
+                    - generic [ref=f4e410] [cursor=pointer]:
+                      - generic [ref=f4e411]: 🔷
+                      - generic [ref=f4e412]: VBBankFundsTransferPage.ts
+                - generic [ref=f4e413]:
+                  - generic [ref=f4e414] [cursor=pointer]:
+                    - generic [ref=f4e415]: ▾
+                    - generic [ref=f4e416]: 📁
+                    - generic [ref=f4e417]: tests
+                  - generic [ref=f4e418]:
+                    - generic [ref=f4e419]:
+                      - generic [ref=f4e420] [cursor=pointer]:
+                        - generic [ref=f4e421]: ▾
+                        - generic [ref=f4e422]: 📁
+                        - generic [ref=f4e423]: AIR-1
+                      - generic [ref=f4e425] [cursor=pointer]:
+                        - generic [ref=f4e426]: 🔷
+                        - generic [ref=f4e427]: AIR-1-Script.spec.ts
+                    - generic [ref=f4e428]:
+                      - generic [ref=f4e429] [cursor=pointer]:
+                        - generic [ref=f4e430]: ▾
+                        - generic [ref=f4e431]: 📁
+                        - generic [ref=f4e432]: BANKING-9
+                      - generic [ref=f4e434] [cursor=pointer]:
+                        - generic [ref=f4e435]: 🔷
+                        - generic [ref=f4e436]: BANKING-9-Script.spec.ts
+                    - generic [ref=f4e437]:
+                      - generic [ref=f4e438] [cursor=pointer]:
+                        - generic [ref=f4e439]: ▾
+                        - generic [ref=f4e440]: 📁
+                        - generic [ref=f4e441]: KAN-1
+                      - generic [ref=f4e443] [cursor=pointer]:
+                        - generic [ref=f4e444]: 🔷
+                        - generic [ref=f4e445]: KAN-1-Script.spec.ts
+                    - generic [ref=f4e446]:
+                      - generic [ref=f4e447] [cursor=pointer]:
+                        - generic [ref=f4e448]: ▾
+                        - generic [ref=f4e449]: 📁
+                        - generic [ref=f4e450]: KAN-8
+                      - generic [ref=f4e452] [cursor=pointer]:
+                        - generic [ref=f4e453]: 🔷
+                        - generic [ref=f4e454]: KAN-8-Script.spec.ts
+                    - generic [ref=f4e455]:
+                      - generic [ref=f4e456] [cursor=pointer]:
+                        - generic [ref=f4e457]: ▾
+                        - generic [ref=f4e458]: 📁
+                        - generic [ref=f4e459]: mobile
+                      - generic [ref=f4e460]:
+                        - generic [ref=f4e461] [cursor=pointer]:
+                          - generic [ref=f4e462]: 🔷
+                          - generic [ref=f4e463]: login.spec.ts
+                        - generic [ref=f4e464] [cursor=pointer]:
+                          - generic [ref=f4e465]: 📃
+                          - generic [ref=f4e466]: login.test.js
+                        - generic [ref=f4e467] [cursor=pointer]:
+                          - generic [ref=f4e468]: 📃
+                          - generic [ref=f4e469]: MOBILE_TESTS_README.md
+                        - generic [ref=f4e470] [cursor=pointer]:
+                          - generic [ref=f4e471]: 🔷
+                          - generic [ref=f4e472]: swag-labs-login.spec.ts
+                    - generic [ref=f4e473]:
+                      - generic [ref=f4e474] [cursor=pointer]:
+                        - generic [ref=f4e475]: ▾
+                        - generic [ref=f4e476]: 📁
+                        - generic [ref=f4e477]: VB-3
+                      - generic [ref=f4e479] [cursor=pointer]:
+                        - generic [ref=f4e480]: 🔷
+                        - generic [ref=f4e481]: VB-3-Script.spec.ts
+                - generic [ref=f4e482]:
+                  - generic [ref=f4e483] [cursor=pointer]:
+                    - generic [ref=f4e484]: ▾
+                    - generic [ref=f4e485]: 📁
+                    - generic [ref=f4e486]: utils
+                  - generic [ref=f4e487]:
+                    - generic [ref=f4e488] [cursor=pointer]:
+                      - generic [ref=f4e489]: 🔷
+                      - generic [ref=f4e490]: CommonUtils.ts
+                    - generic [ref=f4e491] [cursor=pointer]:
+                      - generic [ref=f4e492]: 🔷
+                      - generic [ref=f4e493]: FailureRecoveryManager.ts
+                    - generic [ref=f4e494] [cursor=pointer]:
+                      - generic [ref=f4e495]: 🔷
+                      - generic [ref=f4e496]: FailureReportAnalyzer.ts
+                    - generic [ref=f4e497] [cursor=pointer]:
+                      - generic [ref=f4e498]: 🔷
+                      - generic [ref=f4e499]: LocatorFactory.ts
+                    - generic [ref=f4e500] [cursor=pointer]:
+                      - generic [ref=f4e501]: 🔷
+                      - generic [ref=f4e502]: LocatorHealer.ts
+                    - generic [ref=f4e503] [cursor=pointer]:
+                      - generic [ref=f4e504]: 🔷
+                      - generic [ref=f4e505]: SelfHealing.ts
+                    - generic [ref=f4e506] [cursor=pointer]:
+                      - generic [ref=f4e507]: 🔷
+                      - generic [ref=f4e508]: TensaiExecutor.ts
+                    - generic [ref=f4e509] [cursor=pointer]:
+                      - generic [ref=f4e510]: 🔷
+                      - generic [ref=f4e511]: TestRecoveryHooks.ts
+            - generic [ref=f4e512]:
+              - generic [ref=f4e513]: Select a file
+              - textbox "← Select a file from the tree to view its content" [ref=f4e515]
+        - generic [ref=f4e518] [cursor=pointer]:
+          - generic [ref=f4e519]: ▼
+          - generic [ref=f4e520]: GENERATION LOG

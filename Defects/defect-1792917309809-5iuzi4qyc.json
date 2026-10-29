@@ -1,0 +1,14 @@
+{
+  "id": "defect-1792917309809-5iuzi4qyc",
+  "defectNumber": 69,
+  "date": "10/25/2026, 2:05:09 PM",
+  "timestamp": 1792917309809,
+  "testCaseName": "LocalHost\\FundsTransfer\\FundsTransfer-Script.spec.ts › FundsTransfer-TC_P01 | End-to-end USD 250 transfer updates balance and appears in filtered history",
+  "severity": "Medium",
+  "defectType": "Test Execution Failure",
+  "description": "Error: locator.fill: Unknown engine \"label\" while parsing selector label=Recipient Account Number\nCall log:\n\u001b[2m  - waiting for locator('label=Recipient Account Number')\u001b[22m\n\n\n   at ..\\pages\\LocalHos",
+  "expectedResult": "Not specified",
+  "actualResult": "Error: locator.fill: Unknown engine \"label\" while parsing selector label=Recipient Account Number\nCall log:\n\u001b[2m  - waiting for locator('label=Recipient Account Number')\u001b[22m\n\n\n   at ..\\pages\\LocalHost\\FundsTransfer\\FundsTransfer-Page.ts:35\n\n  33 |\n  34 |   async enterRecipientAccountNumber(accountNumber: string): Promise<void> {\n> 35 |     await this.page.locator(Locators.recipientAccountNumberInput).fill(accountNumber);\n     |                                                                   ^\n  36 |   }\n  37 |\n  38 |   async enterTransferAmount(amount: string): Promise<void> {\n    at FundstransferPage.enterRecipientAccountNumber (C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\pages\\LocalHost\\FundsTransfer\\FundsTransfer-Page.ts:35:67)\n    at FundstransferPage.enterTransferDetails (C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\pages\\LocalHost\\FundsTransfer\\FundsTransfer-Page.ts:47:16)\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\LocalHost\\FundsTransfer\\FundsTransfer-Script.spec.ts:56:22\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\LocalHost\\FundsTransfer\\FundsTransfer-Script.spec.ts:55:3",
+  "status": "Open",
+  "comments": ""
+}

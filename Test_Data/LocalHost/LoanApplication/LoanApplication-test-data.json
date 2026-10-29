@@ -1,0 +1,74 @@
+{
+  "storyId": "LoanApplication",
+  "summary": "LoanApplication",
+  "generatedOn": "2026-10-25T15:51:20.008Z",
+  "baseUrl": "https://www.umb.com/personal-banking/loans/personal-loans./",
+  "testCases": [
+    {
+      "testCaseId": "LoanApplication-TC_P01",
+      "label": "LoanApplication-TC_P01 — Complete a new personal loan application and save and close",
+      "title": "Complete a new personal loan application and save and close",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.umb.com/personal-banking/loans/personal-loans",
+        "accountHolder": "No",
+        "firstName": "Mak",
+        "lastName": "Tyson",
+        "suffix": "I",
+        "dateOfBirth": "02/16/1990",
+        "socialSecurityNumber": "1234567012",
+        "applicantZipCode": "64106",
+        "branch": "Internet Application 1010",
+        "usCitizen": "Yes",
+        "photoId": "U.S Driver's License",
+        "issueState": "Alaska",
+        "licenseNumber": "1234567",
+        "issueDate": "08/20/2024",
+        "expirationDate": "08/19/2028",
+        "maritalStatus": "Married",
+        "physicalAddress1": "34 Banking Street",
+        "physicalZipCode": "64106",
+        "city": "Kansas City",
+        "state": "Missouri",
+        "housingStatus": "Buying Residence",
+        "mortgageRentPayment": "2000",
+        "yearsAtPhysicalAddress": "10",
+        "monthsAtPhysicalAddress": "5",
+        "mailingAddressSameAsPhysical": "Yes",
+        "homePhone": "985-654-1236",
+        "emailAddress": "makTyson@live.com",
+        "confirmEmailAddress": "makTyson@live.com",
+        "preferredContactMethod": "Email",
+        "bestTimeToContact": "Afternoon",
+        "employmentStatus": "Unemployed",
+        "previousEmploymentStatus": "Unemployed",
+        "additionalHomeIncome": "No",
+        "jointApplication": "No"
+      }
+    },
+    {
+      "testCaseId": "LoanApplication-TC_P02",
+      "label": "LoanApplication-TC_P02 — Accept the electronic disclosure and proceed to applicant details",
+      "title": "Accept the electronic disclosure and proceed to applicant details",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.umb.com/personal-banking/loans/personal-loans",
+        "accountHolder": "No",
+        "firstName": "Mak",
+        "lastName": "Tyson",
+        "suffix": "I",
+        "dateOfBirth": "02/16/1990",
+        "socialSecurityNumber": "1234567012",
+        "zipCode": "64106",
+        "branch": "Internet Application 1010"
+      }
+    }
+  ],
+  "metadata": {
+    "generatedOn": "2026-10-25T15:51:20.008Z",
+    "totalCases": 2,
+    "positive": 2,
+    "negative": 0,
+    "edge": 0
+  }
+}

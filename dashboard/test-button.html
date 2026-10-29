@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Run Button</title>
+    <style>
+        body { font-family: monospace; background: #0a1628; color: #e0e0e0; padding: 20px; }
+        button { padding: 10px 20px; margin: 10px; cursor: pointer; font-size: 14px; }
+        .console { background: #0f1f35; border: 1px solid #1a2f4a; padding: 10px; margin-top: 20px; height: 300px; overflow-y: auto; white-space: pre-wrap; font-size: 12px; }
+        .log { margin: 5px 0; }
+        .success { color: #10b981; }
+        .error { color: #f87171; }
+        .info { color: #60a5fa; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Test Run Button</h1>
+    <button id="runBtn" onclick="runTest()" style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 4px; font-weight: 700;">▶ Run TC_VB3_001</button>
+    <div class="console" id="console"></div>
+
+    <script>
+        const SERVER = 'http://localhost:4000';
+        const console_el = document.getElementById('console');
+        const runBtn = document.getElementById('runBtn');
+
+        function addLog(msg, type = 'info') {
+            const log = document.createElement('div');
+            log.className = `log ${type}`;
+            log.textContent = msg;
+            console_el.appendChild(log);
+            console_el.scrollTop = console_el.scrollHeight;
+            console.log(msg);
+        }
+
+        async function runTest() {
+            addLog('[runTest] Starting test execution...', 'info');
+            runBtn.disabled = true;
+            runBtn.textContent = '⏳ Running…';
+
+            try {
+                const file = 'tests/VB-3/VB-3-Script.spec.ts';
+                const testName = 'TC_VB3_001: Successful User Login to Bank Dashboard';
+
+                addLog(`[runTest] File: ${file}`, 'info');
+                addLog(`[runTest] Test: ${testName}`, 'info');
+                addLog(`[runTest] Server: ${SERVER}`, 'info');
+
+                const res = await fetch(`${SERVER}/api/run-tests/file`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ file, testName })
+                });
+
+                addLog(`[runTest] Response status: ${res.status}`, 'info');
+
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    addLog(`[runTest] HTTP Error: ${res.status} - ${errorText}`, 'error');
+                    throw new Error(`HTTP ${res.status}`);
+                }
+
+                const reader = res.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '';
+                let doneData = null;
+
+                addLog('[runTest] Streaming test output...', 'info');
+
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+                    const parts = buffer.split('\n\n');
+                    buffer = parts.pop();
+
+                    for (const part of parts) {
+                        const dl = part.split('\n').find(l => l.startsWith('data:'));
+                        if (!dl) continue;
+
+                        try {
+                            const msg = JSON.parse(dl.slice(5));
+                            if (msg.type === 'log') {
+                                addLog(`[LOG] ${msg.data}`, 'info');
+                            } else if (msg.type === 'error') {
+                                addLog(`[ERROR] ${msg.data}`, 'error');
+                            } else if (msg.type === 'done') {
+                                doneData = msg.data;
+                                addLog(`[DONE] Exit code: ${msg.data.exitCode}`, 'info');
+                            }
+                        } catch (e) {
+                            addLog(`[PARSE ERROR] ${e.message}`, 'error');
+                        }
+                    }
+                }
+
+                const ok = doneData && doneData.exitCode === 0;
+                if (ok) {
+                    addLog('[runTest] ✅ TEST PASSED', 'success');
+                    runBtn.textContent = '✅ Passed';
+                    runBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                } else {
+                    addLog('[runTest] ❌ TEST FAILED', 'error');
+                    runBtn.textContent = '❌ Failed';
+                    runBtn.style.background = 'linear-gradient(135deg, #f87171, #ef4444)';
+                }
+
+                setTimeout(() => {
+                    runBtn.disabled = false;
+                    runBtn.textContent = '▶ Run TC_VB3_001';
+                    runBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                }, 2500);
+
+            } catch (e) {
+                addLog(`[runTest] Error: ${e.message}`, 'error');
+                runBtn.disabled = false;
+                runBtn.textContent = '❌ Error';
+                runBtn.style.background = 'linear-gradient(135deg, #f87171, #ef4444)';
+                setTimeout(() => {
+                    runBtn.disabled = false;
+                    runBtn.textContent = '▶ Run TC_VB3_001';
+                    runBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                }, 2500);
+            }
+        }
+
+        addLog('Ready to run tests. Click button to start.', 'success');
+    </script>
+</body>
+</html>

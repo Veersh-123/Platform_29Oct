@@ -1,0 +1,14 @@
+{
+  "id": "defect-1793245075409-ihjaawfzk",
+  "defectNumber": 14,
+  "date": "10/29/2026, 9:07:55 AM",
+  "timestamp": 1793245075409,
+  "testCaseName": "AIR-1\\AIR-1-Script.spec.ts › AIR-1-TC_P02 | Complete the search with dates and guests before destination",
+  "severity": "Medium",
+  "defectType": "Test Execution Failure",
+  "description": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\PC\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe\n╔════════════════════════════════════════════════════════════╗\n║ Lo",
+  "expectedResult": "Not specified",
+  "actualResult": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\PC\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
+  "status": "Open",
+  "comments": ""
+}

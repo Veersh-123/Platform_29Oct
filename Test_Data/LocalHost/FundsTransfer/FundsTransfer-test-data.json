@@ -1,0 +1,60 @@
+{
+  "storyId": "FundsTransfer",
+  "summary": "FundsTransfer",
+  "generatedOn": "2026-10-25T06:59:12.211Z",
+  "baseUrl": "https://vb-bank-demo.vercel.app/",
+  "testCases": [
+    {
+      "testCaseId": "FundsTransfer-TC_P01",
+      "label": "FundsTransfer-TC_P01 — End-to-end USD 250 transfer to account 3456789012 updates balance and appears in filtered history",
+      "title": "End-to-end USD 250 transfer to account 3456789012 updates balance and appears in filtered history",
+      "type": "Positive",
+      "data": {
+        "url": "https://vb-bank-demo.vercel.app/",
+        "username": "john.doe",
+        "password": "user123",
+        "recipientAccountNumber": "3456789012",
+        "amountUSD": "250",
+        "description": "Towards trip to Orlando",
+        "historyFilter": "Expense",
+        "historySearch": "Orlando",
+        "expectedStatus": "completed"
+      }
+    },
+    {
+      "testCaseId": "FundsTransfer-TC_P02",
+      "label": "FundsTransfer-TC_P02 — Left-menu Transfer opens Transfer Money screen with the required input fields",
+      "title": "Left-menu Transfer opens Transfer Money screen with the required input fields",
+      "type": "Positive",
+      "data": {
+        "username": "john.doe",
+        "password": "user123",
+        "menuItem": "Transfer",
+        "screenName": "Transfer Money",
+        "fields": [
+          "Recipient Account Number",
+          "Amount (USD)",
+          "Description"
+        ]
+      }
+    },
+    {
+      "testCaseId": "FundsTransfer-TC_N01",
+      "label": "FundsTransfer-TC_N01 — Login is rejected when password is incorrect for username john.doe",
+      "title": "Login is rejected when password is incorrect for username john.doe",
+      "type": "Negative",
+      "data": {
+        "url": "https://vb-bank-demo.vercel.app/",
+        "username": "john.doe",
+        "password": "incorrect-password"
+      }
+    }
+  ],
+  "metadata": {
+    "generatedOn": "2026-10-25T06:59:12.211Z",
+    "totalCases": 3,
+    "positive": 2,
+    "negative": 1,
+    "edge": 0
+  }
+}

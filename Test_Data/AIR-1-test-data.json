@@ -1,0 +1,59 @@
+{
+  "storyId": "AIR-1",
+  "summary": "Hotel Search",
+  "generatedOn": "2026-10-28T15:54:07.459Z",
+  "baseUrl": "https://www.airbnb.co.in/",
+  "testCases": [
+    {
+      "testCaseId": "AIR-1-TC_P01",
+      "label": "AIR-1-TC_P01 — Search Chennai for the specified dates and three adults",
+      "title": "Search Chennai for the specified dates and three adults",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.airbnb.co.in/",
+        "destination": "Chennai, Tamil Nadu",
+        "checkIn": "01-12-2026",
+        "checkOut": "04-12-2026",
+        "adults": 3
+      }
+    },
+    {
+      "testCaseId": "AIR-1-TC_P02",
+      "label": "AIR-1-TC_P02 — Complete the search with dates and guests before destination",
+      "title": "Complete the search with dates and guests before destination",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.airbnb.co.in/",
+        "destination": "Chennai, Tamil Nadu",
+        "checkIn": "01-12-2026",
+        "checkOut": "04-12-2026",
+        "adults": 3,
+        "entryOrder": [
+          "dates",
+          "guests",
+          "destination"
+        ]
+      }
+    },
+    {
+      "testCaseId": "AIR-1-TC_P03",
+      "label": "AIR-1-TC_P03 — Verify the guest options expand and retain three adults through search",
+      "title": "Verify the guest options expand and retain three adults through search",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.airbnb.co.in/",
+        "destination": "Chennai, Tamil Nadu",
+        "checkIn": "01-12-2026",
+        "checkOut": "04-12-2026",
+        "adults": 3
+      }
+    }
+  ],
+  "metadata": {
+    "generatedOn": "2026-10-28T15:54:07.459Z",
+    "totalCases": 3,
+    "positive": 3,
+    "negative": 0,
+    "edge": 0
+  }
+}

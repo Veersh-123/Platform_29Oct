@@ -1,0 +1,35 @@
+{
+  "name": "gemini-test-case-generator",
+  "version": "1.0.0",
+  "description": "AI-powered test case generation using Google Gemini LLM integrated with Orchestrator Platform",
+  "main": "server-setup.js",
+  "scripts": {
+    "start": "node server-setup.js",
+    "dev": "nodemon server-setup.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test-case-generation",
+    "gemini",
+    "llm",
+    "ai",
+    "qa",
+    "testing",
+    "orchestrator",
+    "jira"
+  ],
+  "author": "Test Automation Platform",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.3.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

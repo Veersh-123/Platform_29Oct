@@ -1,0 +1,59 @@
+- generic [ref=f1e19]:
+  - generic [ref=f1e20]:
+    - generic [ref=f1e21]:
+      - generic [ref=f1e22]: H
+      - generic [ref=f1e23]:
+        - generic [ref=f1e24]: Hexaware
+        - generic [ref=f1e25]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f1e26]:
+      - generic [ref=f1e27]:
+        - generic [ref=f1e28]: Browser
+        - combobox [ref=f1e29] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f1e30]:
+        - generic [ref=f1e31]: Environment
+        - combobox [ref=f1e32] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Signed in" [ref=f1e214] [cursor=pointer]:
+        - generic [ref=f1e215]: J
+        - generic [ref=f1e216]: Jitendra
+        - button "✕" [ref=f1e217]
+      - generic "Backend server status" [ref=f1e33] [cursor=pointer]: Server :4000
+  - generic [ref=f1e36]:
+    - generic [ref=f1e37]:
+      - generic [ref=f1e38]: Hexaware
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40] [cursor=pointer]: Dashboard
+        - generic [ref=f1e41] [cursor=pointer]: Requirements
+        - generic [ref=f1e42] [cursor=pointer]: Test Cases
+        - generic [ref=f1e43] [cursor=pointer]: Test Design
+        - generic [ref=f1e44] [cursor=pointer]: Test Execution
+        - generic [ref=f1e45] [cursor=pointer]: History & Trends
+        - generic [ref=f1e46] [cursor=pointer]: Test Data
+        - generic [ref=f1e47] [cursor=pointer]: Defects
+        - generic [ref=f1e48] [cursor=pointer]: Value Added Services
+    - generic [ref=f1e218]:
+      - generic [ref=f1e219]:
+        - generic [ref=f1e220]:
+          - generic [ref=f1e221]: 📋 Work Items
+          - generic [ref=f1e222]: Click a ticket from the board, or select one below to generate tests
+          - combobox [ref=f1e224] [cursor=pointer]:
+            - option "— Select Tool —" [selected]
+            - option "☁️ Azure DevOps"
+            - option "🟦 Jira"
+            - option "🖥️ Local Host"
+        - generic [ref=f1e226] [cursor=pointer]:
+          - generic [ref=f1e227]: AIR-1
+          - generic [ref=f1e228]: Hotel Search
+          - generic [ref=f1e229]:
+            - generic [ref=f1e230]: To Do
+            - generic [ref=f1e231]: Medium
+            - generic [ref=f1e232]: Task
+      - generic [ref=f1e234]:
+        - generic [ref=f1e235]: 📋
+        - generic [ref=f1e236]: No ticket selected
+        - generic [ref=f1e237]: Select a Jira ticket from the left panelto view its details and generate test cases

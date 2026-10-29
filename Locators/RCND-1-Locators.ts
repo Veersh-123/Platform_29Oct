@@ -1,0 +1,15 @@
+export const Rcnd1PageLocators = {
+  // byRouteRadio: 'role=radio[name="By Route"]',
+  byRouteRadio: 'role=radio[name="By route"]',
+  // fromField: 'role=textbox[name="From"]',
+  fromField: 'role=combobox[name="From"]',
+  // toField: 'role=textbox[name="To"]',
+  toField: 'role=combobox[name="To"]',
+  airportSuggestion: 'role=option',
+  departureDateSelector: 'role=combobox[name="Departure date"]',
+  departureDate: 'text="Fri Oct 16"',
+  searchButton: 'role=button[name="Search"]',
+  flightResults: 'text=/^AC\\s+\\d+/',
+  firstFlightDetails: 'text=/^AC\\s+\\d+/',
+  onTimeStatus: 'text="On Time"',
+};

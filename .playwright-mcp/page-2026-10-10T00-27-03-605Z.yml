@@ -1,0 +1,26 @@
+- generic [ref=f3e6]:
+  - generic [ref=f3e7]:
+    - generic [ref=f3e8]: H
+    - heading "Hexaware" [level=1] [ref=f3e11]
+    - paragraph [ref=f3e12]: Test Orchestration Platform
+    - generic [ref=f3e13]: Enterprise Testing
+  - generic [ref=f3e17]:
+    - generic [ref=f3e18]:
+      - heading "Welcome Back" [level=2] [ref=f3e19]
+      - paragraph [ref=f3e20]: Enter your credentials to get started
+    - generic [ref=f3e21]:
+      - generic [ref=f3e22]: Username
+      - generic [ref=f3e23]:
+        - generic [ref=f3e24]: 👤
+        - textbox "Enter your username" [ref=f3e25]
+    - generic [ref=f3e26]:
+      - generic [ref=f3e27]: Password
+      - generic [ref=f3e28]:
+        - generic [ref=f3e29]: 🔐
+        - textbox "Enter your password" [ref=f3e30]
+    - button "Continue →" [ref=f3e31] [cursor=pointer]:
+      - generic [ref=f3e33]:
+        - text: Continue
+        - generic [ref=f3e34]: →
+    - generic [ref=f3e35]: Secure login with enterprise credentials
+  - paragraph [ref=f3e37]: 🔒 Your credentials are securely processed and encrypted

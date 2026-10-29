@@ -1,0 +1,14 @@
+{
+  "id": "defect-1793017475122-x7jal0ufg",
+  "defectNumber": 66,
+  "date": "10/26/2026, 5:54:35 PM",
+  "timestamp": 1793017475122,
+  "testCaseName": "RCND-1\\RCND-1-Script.spec.ts › RCND-1-TC_P01 | Search YYZ to YHZ and verify first flight is On Time",
+  "severity": "High",
+  "defectType": "Test Execution Failure",
+  "description": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Fri Oct 16\"') to be visible\u001b[22m\n\n\n   at ..\\pages\\RCND-1-Page.ts:110\n\n  108 |     await this.page.",
+  "expectedResult": "Not specified",
+  "actualResult": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Fri Oct 16\"') to be visible\u001b[22m\n\n\n   at ..\\pages\\RCND-1-Page.ts:110\n\n  108 |     await this.page.locator(Locators.departureDateSelector).click();\n  109 |     const departureDate = this.page.locator(Locators.departureDate);\n> 110 |     await departureDate.waitFor({ state: 'visible' });\n      |                         ^\n  111 |     await departureDate.click();\n  112 |   }\n  113 |\n    at Rcnd1Page.selectDepartureDate (C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\pages\\RCND-1-Page.ts:110:25)\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\RCND-1\\RCND-1-Script.spec.ts:30:5\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\RCND-1\\RCND-1-Script.spec.ts:29:3",
+  "status": "Open",
+  "comments": ""
+}

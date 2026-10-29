@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+:root {
+  --bg:     #071426;
+  --panel:  #0d2030;
+  --muted:  rgba(255, 255, 255, 0.55);
+  --card:   #0b1b2a;
+  --accent: #0ea5a0;
+}
+
+body {
+  background: var(--bg);
+  color: #e6eef6;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* ── Shared card ── */
+.dashboard-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border-radius: 12px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dashboard-card h2 {
+  font-size: 26px;
+  margin: 6px 0;
+  color: #fff;
+}
+
+.dashboard-card .subtitle {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+}
+
+/* ── Controls (select / btn in header) ── */
+.controls .select,
+.controls .btn,
+.select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #dfe9f5;
+  padding: 6px 10px;
+  border-radius: 7px;
+  outline: none;
+  cursor: pointer;
+}
+
+.controls .select:hover,
+.select:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ── Monospace file paths ── */
+.file-path {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+}
+
+/* ── Path list block ── */
+.path-list {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+/* ── Chart placeholder ── */
+.chart-placeholder {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.005));
+  border-radius: 48px;
+  height: 320px;
+  border: 4px solid rgba(239, 68, 68, 0.95);
+}
+
+/* ── Scrollbars ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }

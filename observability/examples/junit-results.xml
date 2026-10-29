@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Test Suite Results" tests="12" failures="2" skipped="1" time="45.23">
+  <testsuite name="LoginTests" tests="4" failures="1" skipped="0" time="12.45">
+    <testcase classname="com.example.LoginTest" name="testValidLogin" time="2.45" />
+    <testcase classname="com.example.LoginTest" name="testInvalidLogin" time="2.15">
+      <failure message="Expected login to fail but succeeded" type="AssertionError">
+        java.lang.AssertionError: Expected login to fail but succeeded
+        at com.example.LoginTest.testInvalidLogin(LoginTest.java:45)
+      </failure>
+    </testcase>
+    <testcase classname="com.example.LoginTest" name="testPasswordReset" time="3.50" />
+    <testcase classname="com.example.LoginTest" name="testMultiFactorAuth" time="4.35" />
+  </testsuite>
+  
+  <testsuite name="SearchTests" tests="5" failures="1" skipped="1" time="18.67">
+    <testcase classname="com.example.SearchTest" name="testBasicSearch" time="3.20" />
+    <testcase classname="com.example.SearchTest" name="testAdvancedSearch" time="4.10">
+      <skipped message="Feature not yet implemented" />
+    </testcase>
+    <testcase classname="com.example.SearchTest" name="testSearchFilters" time="3.85" />
+    <testcase classname="com.example.SearchTest" name="testEmptySearchResults" time="4.20">
+      <failure message="Element not found: Results message container" type="TimeoutException">
+        org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for element
+        at com.example.SearchTest.testEmptySearchResults(SearchTest.java:67)
+      </failure>
+    </testcase>
+    <testcase classname="com.example.SearchTest" name="testPaginatedSearch" time="3.32" />
+  </testsuite>
+
+  <testsuite name="UserProfileTests" tests="3" failures="0" skipped="0" time="14.11">
+    <testcase classname="com.example.UserProfileTest" name="testUpdateProfile" time="4.25" />
+    <testcase classname="com.example.UserProfileTest" name="testChangePassword" time="5.10" />
+    <testcase classname="com.example.UserProfileTest" name="testUploadProfilePicture" time="4.76" />
+  </testsuite>
+</testsuites>

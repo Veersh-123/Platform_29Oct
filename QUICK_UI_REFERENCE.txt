@@ -1,0 +1,103 @@
+═══════════════════════════════════════════════════════════════════
+  WHERE TO SEE LLM FEATURES IN DASHBOARD - QUICK REFERENCE
+═══════════════════════════════════════════════════════════════════
+
+🌐 DASHBOARD URL: http://localhost:5173
+
+─────────────────────────────────────────────────────────────────
+
+📍 LOCATION 1: TOP-RIGHT HEADER (Most Visible!)
+  ├─ Look for: ⚡ groq | Ready | openai/gpt-oss | 🟢
+  ├─ Size: Small box (~120px)
+  ├─ Position: Far right of header
+  ├─ Updates: Every 30 seconds
+  └─ This is: LLMStatusWidget (shows current provider status)
+
+─────────────────────────────────────────────────────────────────
+
+📍 LOCATION 2: NEW "LLM Settings" TAB
+  ├─ Look for: Tab labeled "LLM Settings"
+  ├─ Position: Navigation bar (row of tabs below header)
+  ├─ Scroll right if needed to find it
+  ├─ Click to see: Provider selection cards
+  └─ Features:
+      • 4 provider cards (Groq, Claude, OpenAI, Copilot)
+      • Groq card: Blue border (currently selected)
+      • Other cards: Gray/dimmed
+      • Click any card to switch providers
+      • Shows auth status for each
+      • Current settings info box below
+
+─────────────────────────────────────────────────────────────────
+
+📍 LOCATION 3: TEST CASES TAB
+  ├─ Look for: Tab labeled "Test Cases"
+  ├─ Find button: "Generate with AI"
+  ├─ Click to: Generate AI test cases
+  └─ Uses: Current LLM provider (Groq by default)
+
+─────────────────────────────────────────────────────────────────
+
+🎯 STEP-BY-STEP TO SEE IT ALL
+
+1. Open browser: http://localhost:5173
+2. Look at top-right corner → See ⚡ groq status widget
+3. Find "LLM Settings" tab in navigation
+4. Click it → See provider cards
+5. Observe Groq highlighted in blue
+6. Try clicking other cards (optional)
+7. Go to Test Cases tab
+8. Click "Generate with AI" button
+9. Done! You're seeing the LLM integration in action
+
+─────────────────────────────────────────────────────────────────
+
+✅ WHAT YOU SHOULD SEE
+
+Status Widget (Header):
+┌──────────────────────────┐
+│ ⚡ groq                  │
+│ Ready                    │
+│ openai/gpt-oss          │
+│ 🟢                       │
+└──────────────────────────┘
+
+Provider Cards (LLM Settings Tab):
+┌─────────────────────────────────────────┐
+│ ⚡ Groq (Selected - Blue Border)    🟢 │
+│ 🧠 Claude (Not Configured - Gray)   ○ │
+│ 🤖 OpenAI (Not Configured - Gray)   ○ │
+│ 🚀 Copilot (Not Configured - Gray)  ○ │
+└─────────────────────────────────────────┘
+
+─────────────────────────────────────────────────────────────────
+
+⚡ QUICK FACTS
+
+• Status Widget: Updates every 30 seconds
+• Provider Switching: Instant (no page refresh)
+• Groq Provider: Working now (free, no setup)
+• Claude Support: Ready (needs API key to enable)
+• Test Generation: Uses selected LLM provider
+• UI Interaction: Click cards to switch providers
+
+─────────────────────────────────────────────────────────────────
+
+🔧 SERVERS STATUS
+
+✅ Backend: http://localhost:4000 (running)
+✅ Frontend: http://localhost:5173 (running)
+✅ Both servers ready to use
+
+─────────────────────────────────────────────────────────────────
+
+📚 DETAILED DOCS
+
+See these files for more info:
+├─ SEE_LLM_UI_NOW.md (detailed visual guide)
+├─ WHERE_TO_FIND_LLM_UI.md (step-by-step)
+├─ LLM_QUICK_START.md (30-second setup)
+├─ CLAUDE_LLM_INTEGRATION.md (complete guide)
+└─ VISUAL_GUIDE.md (UI reference with diagrams)
+
+═══════════════════════════════════════════════════════════════════

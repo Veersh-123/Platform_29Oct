@@ -1,0 +1,75 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#site-content"
+    - text: Skip to content
+    - img [ref=e3]
+  - alert
+  - generic [ref=e15]:
+    - heading "Airbnb homepage" [level=1] [ref=e16]
+    - banner [ref=e20]:
+      - link "Airbnb homepage" [ref=e21] [cursor=pointer]:
+        - /url: /
+        - img [ref=e23]
+      - search [ref=e25]:
+        - generic [ref=e27]:
+          - tablist [ref=e29]:
+            - tab "All" [selected] [ref=e30] [cursor=pointer]:
+              - generic [ref=e36]: All
+            - tab "Homes" [ref=e37] [cursor=pointer]:
+              - generic [ref=e43]: Homes
+            - tab "Experiences" [ref=e44] [cursor=pointer]:
+              - generic [ref=e50]: Experiences
+            - tab "Services" [ref=e51] [cursor=pointer]:
+              - generic [ref=e57]: Services
+          - generic [ref=e58]:
+            - generic [ref=e62]:
+              - button [ref=e69] [cursor=pointer]
+              - button [ref=e75] [cursor=pointer]
+            - button "Search" [ref=e80] [cursor=pointer]:
+              - img [ref=e83]
+      - navigation "Profile" [ref=e87]:
+        - generic [ref=e88]:
+          - link "Become a host" [ref=e89] [cursor=pointer]:
+            - /url: "#guest-header-become-a-host-menu"
+            - generic [ref=e90]: Become a host
+          - link "Choose a language and currency" [ref=e92] [cursor=pointer]:
+            - /url: "#simple-header-locale-menu-combined"
+            - img [ref=e94]
+        - generic [ref=e97]:
+          - link "Main navigation menu" [ref=e98] [cursor=pointer]:
+            - /url: "#guest-header-dropdownmenu"
+            - img [ref=e100]
+          - link "Close":
+            - /url: "#"
+    - main [ref=e104]:
+      - generic [ref=e105]:
+        - group [ref=e110]:
+          - generic [ref=e114]: 0 of 0 items showing
+          - generic [ref=e119]:
+            - group [ref=e121]
+            - group [ref=e127]
+            - group [ref=e133]
+            - group [ref=e139]
+            - group [ref=e145]
+            - group [ref=e151]
+            - group [ref=e157]
+        - group [ref=e166]:
+          - generic [ref=e170]: 0 of 0 items showing
+          - generic [ref=e175]:
+            - group [ref=e177]
+            - group [ref=e183]
+            - group [ref=e189]
+            - group [ref=e195]
+            - group [ref=e201]
+            - group [ref=e207]
+            - group [ref=e213]
+        - group [ref=e222]:
+          - generic [ref=e226]: 0 of 0 items showing
+          - generic [ref=e231]:
+            - group [ref=e233]
+            - group [ref=e239]
+            - group [ref=e245]
+            - group [ref=e251]
+            - group [ref=e257]
+            - group [ref=e263]
+            - group [ref=e269]

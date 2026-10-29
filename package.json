@@ -1,0 +1,32 @@
+{
+  "name": "orchestrator-platform-llm-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Orchestrator Platform with Groq LLM test case generation",
+  "main": "backend-server.js",
+  "scripts": {
+    "start": "node backend-server.js",
+    "dev": "nodemon backend-server.js"
+  },
+  "keywords": [
+    "test-case-generation",
+    "groq",
+    "llm",
+    "orchestrator",
+    "jira"
+  ],
+  "author": "Orchestrator Platform",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,62 @@
+Launch the browser and open the url -https://www.umb.com/personal-banking/loans/personal-loans 
+Scroll down and click on Apply Now link.
+Activate and navigate to the new tab opened.
+
+Click on I'd like to start a new application button.
+Scroll down and click on Electronic Disclosure and Content button.
+A new pop up will be opened.
+Click inside the pop up and scroll to the end and click on "I Agree" button.
+Click on Next button.
+Enter the details as below
+Do you already have an account ? : No
+First Name : Mak
+Last Name : Tyson
+Suffix : I
+Date of Birth : 02/16/1990
+Social Security Number : 1234567012
+Zip Code : 64106  
+Branch : Internet Application 1010
+Click on Next button and wait till page is navigated to Next page.
+In the displayed page, Enter the details as below
+Are you a U.S citizen? Yes
+Photo Id : U.S Driver's License
+Issue State : Alaska
+License Number : 1234567
+Issue Date : 08/20/2024
+Expiration Date : 08/19/2028
+Marital Status : Married
+
+Click on Next button and wait till page is navigated to Next page.
+
+Physical Address 1  (P.O. Box not allowed): 34 Banking Street
+Zip Code :64106
+City : Kansas City
+State : Missouri
+Housing Status : Buying Residence
+Mortgage/Rent Payment: 2000
+Year(s) at physical address:10
+Month(s) at physical address:5
+Mailing address same as physical address? : Yes
+
+Click on Next button and wait till page is navigated to Next page.
+
+Home Phone : 985-654-1236
+E-mail Address : makTyson@live.com
+Confirm E-mail address : makTyson@live.com
+Preferred Contact Method : Email
+Best time to Contact : Afternoon
+
+Click on Next button and wait till page is navigated to Next page.
+
+Employment Status : Unemployed
+Previous employment Status : Unemployed
+
+Do you want to add additional Home income?: No
+
+
+Click on Next button and wait till page is navigated to Next page.
+
+Would you like to add Joint application? :No
+
+Click on Save and close.
+

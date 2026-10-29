@@ -1,0 +1,56 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - heading "🎯 Orchestrator Dashboard" [level=1] [ref=e4]
+    - paragraph [ref=e5]: Real-time Test Execution and Monitoring
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: Total Tests
+        - generic [ref=e10]: "10"
+      - generic [ref=e11]:
+        - generic [ref=e12]: ✓ Passed
+        - generic [ref=e13]: "0"
+      - generic [ref=e14]:
+        - generic [ref=e15]: ✗ Failed
+        - generic [ref=e16]: "0"
+      - generic [ref=e17]:
+        - generic [ref=e18]: ⊙ Pending
+        - generic [ref=e19]: "10"
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - button "▶ Run All Tests" [ref=e22] [cursor=pointer]
+        - button "⏹ Stop" [disabled] [ref=e23] [cursor=pointer]
+        - button "🔄 Refresh" [ref=e24] [cursor=pointer]
+      - generic [ref=e25]: Test Cases
+      - generic [ref=e26]:
+        - generic [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: "TC_VB3_001: Successful User Login to Bank Dashboard"
+          - generic [ref=e29]: ⊙ Pending
+        - generic [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: "TC_VB3_002: Navigate to Transfer Money Screen"
+          - generic [ref=e33]: ⊙ Pending
+        - generic [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: "TC_VB3_003: Complete Money Transfer with All Required Details"
+          - generic [ref=e37]: ⊙ Pending
+        - generic [ref=e39] [cursor=pointer]:
+          - generic [ref=e40]: "TC_VB3_004: Verify Account Balance Updated After Transfer"
+          - generic [ref=e41]: ⊙ Pending
+        - generic [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: "TC_VB3_005: Verify Transfer Appears in Transaction History"
+          - generic [ref=e45]: ⊙ Pending
+        - generic [ref=e47] [cursor=pointer]:
+          - generic [ref=e48]: "TC_VB3_006: Login Fails with Incorrect Password"
+          - generic [ref=e49]: ⊙ Pending
+        - generic [ref=e51] [cursor=pointer]:
+          - generic [ref=e52]: "TC_VB3_007: Transfer Fails with Invalid Recipient Account"
+          - generic [ref=e53]: ⊙ Pending
+        - generic [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: "TC_VB3_008: Transfer Fails with Insufficient Balance"
+          - generic [ref=e57]: ⊙ Pending
+        - generic [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: "TC_VB3_009: Transfer Fails with Empty Recipient Account"
+          - generic [ref=e61]: ⊙ Pending
+        - generic [ref=e63] [cursor=pointer]:
+          - generic [ref=e64]: "TC_VB3_010: Transfer Fails with Invalid Amount"
+          - generic [ref=e65]: ⊙ Pending
+  - paragraph [ref=e68]: "Last updated: Never | Server: ✓ Connected"

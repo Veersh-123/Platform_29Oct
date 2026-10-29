@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "browser_click",
+        "browser_wait_for"
+      ]
+    },
+    "playwright-ai-healer": {
+      "command": "node",
+      "args": [
+        "C:/Users/Jitendra/Downloads/Plaform/MCP/AugmentHeal/playwright-ai-healer/dist/mcp/server.js"
+      ],
+      "env": {
+        "AI_PROVIDER": "openai",
+        "OPENAI_API_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICYih4keEZ6x1xWWKuSvnpyySyGTAhkDFZ3fbX1J+APB",
+        "HEALER_MAX_RETRIES": "3",
+        "HEALER_LOG_DIR": "./healing-logs"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "get_page_snapshot"
+      ]
+    },
+    "token-tracker": {
+      "command": "node",
+      "args": [
+        "C:/Users/Jitendra/Downloads/Plaform/MCP/Token_2-main/dist/mcp/server.js"
+      ],
+      "env": {
+        "TOKEN_USAGE_FILE": "C:/Users/Jitendra/Downloads/Plaform/MCP/Token_2-main/reports/token-usage.jsonl",
+        "TOKEN_BUDGET_CONFIG": "C:/Users/Jitendra/Downloads/Plaform/MCP/Token_2-main/config/token-budget.json"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}

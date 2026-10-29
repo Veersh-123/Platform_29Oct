@@ -1,0 +1,8 @@
+{
+  "storyName": "JiraStory1",
+  "scrumNumber": "",
+  "epic": "",
+  "storyNumber": "AIR-1",
+  "description": "As an AirBnb website user, I want to search for destination using the search bar, So that I can quickly find relevant hotel room according to the check-in/check-out dates.\n\nDestination search Bar :\n\nWhen I navigate to [+https://www.airbnb.co.in/,+|https://www.airbnb.co.in/,] The destination search bar should be visible and functional on the website.\nThen I enter \"Chennai, Tamil Nadu\" as my destination.\n\nCheck-in, Check-out dates :\n\nWhen I enter check-in date as 01-12-2026, Then I select 04-12-2026 as check-out date.\nThe dates provided should be selected seamlessly.\n\nAdding guests :\n\nWhen I click on add guests button, Then the corresponding section should be expanded along with multiple options to select.\nAnd I select 3 adults as guests.\n\nAcceptance Criteria:\n\nMultiple search results should be populated in the screen, When I select first option from the results, wait for the page to load properly.\nThen validate selected search result should be relevant for provided destination, along with selected check-in/check-out dates and exact guests count.",
+  "jiraUrl": "https://jittestuser.atlassian.net//browse/AIR-1"
+}

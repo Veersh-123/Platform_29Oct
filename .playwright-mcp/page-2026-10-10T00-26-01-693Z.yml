@@ -1,0 +1,36 @@
+- generic [ref=e6]:
+  - generic [ref=e7]:
+    - generic [ref=e8]: H
+    - heading "Hexaware" [level=1] [ref=e11]
+    - paragraph [ref=e12]: Test Orchestration Platform
+    - generic [ref=e13]: Enterprise Testing
+  - generic [ref=e69]:
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]: 🟣
+        - heading "Jira Credentials" [level=2] [ref=e73]
+      - paragraph [ref=e74]: Enter your credentials to validate access
+    - generic [ref=e95]:
+      - generic [ref=e96]: ⚠️
+      - generic [ref=e97]: Failed to validate JIRA credentials
+    - generic [ref=e75]:
+      - generic [ref=e76]: Jira URL
+      - generic [ref=e77]:
+        - generic [ref=e78]: 🔗
+        - textbox "https://your-jira.atlassian.net" [ref=e79]: https://jittestuser.atlasssian.net/
+    - generic [ref=e80]:
+      - generic [ref=e81]: Username
+      - generic [ref=e82]:
+        - generic [ref=e83]: 👤
+        - textbox "Enter your username" [ref=e84]: jittestuser@gmail.com
+    - generic [ref=e85]:
+      - generic [ref=e86]: Password or API Token
+      - generic [ref=e87]:
+        - generic [ref=e88]: 🔐
+        - textbox "Enter your password or API token" [ref=e89]: ATATT3xFfGF0ZUvHPg8KhIDAm2e5bOYsYPBjsj74RizIWJ3dgoCJImZeRwINC5b8
+    - button "Login to Jira →" [ref=e90] [cursor=pointer]:
+      - generic [ref=e92]:
+        - text: Login to Jira
+        - generic [ref=e98]: →
+    - button "← Back to Tool Selection" [ref=e94] [cursor=pointer]
+  - paragraph [ref=e37]: 🔒 Your credentials are securely processed and encrypted

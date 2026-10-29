@@ -1,0 +1,580 @@
+- generic [ref=f1e19]:
+  - generic [ref=f1e20]:
+    - generic [ref=f1e21]:
+      - generic [ref=f1e22]: H
+      - generic [ref=f1e23]:
+        - generic [ref=f1e24]: Hexaware
+        - generic [ref=f1e25]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f1e26]:
+      - generic [ref=f1e27]:
+        - generic [ref=f1e28]: Browser
+        - combobox [ref=f1e29] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f1e30]:
+        - generic [ref=f1e31]: Environment
+        - combobox [ref=f1e32] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Signed in" [ref=f1e214] [cursor=pointer]:
+        - generic [ref=f1e215]: J
+        - generic [ref=f1e216]: Jitendra
+        - button "✕" [ref=f1e217]
+      - generic "Backend server status" [ref=f1e33] [cursor=pointer]: Server :4000
+  - generic [ref=f1e36]:
+    - generic [ref=f1e37]:
+      - generic [ref=f1e38]: Hexaware
+      - generic [ref=f1e39]:
+        - generic [ref=f1e40] [cursor=pointer]: Dashboard
+        - generic [ref=f1e41] [cursor=pointer]: Requirements
+        - generic [ref=f1e42] [cursor=pointer]: Test Cases
+        - generic [ref=f1e43] [cursor=pointer]: Test Design
+        - generic [ref=f1e44] [cursor=pointer]: Test Execution
+        - generic [ref=f1e45] [cursor=pointer]: History & Trends
+        - generic [ref=f1e46] [cursor=pointer]: Test Data
+        - generic [ref=f1e47] [cursor=pointer]: Defects
+        - generic [ref=f1e48] [cursor=pointer]: Value Added Services
+    - generic [ref=f1e218]:
+      - generic [ref=f1e219]:
+        - generic [ref=f1e220]:
+          - generic [ref=f1e221]: 📋 Work Items
+          - generic [ref=f1e222]: AIR-1 Hotel Search
+          - combobox [ref=f1e224] [cursor=pointer]:
+            - option "— Select Tool —" [selected]
+            - option "☁️ Azure DevOps"
+            - option "🟦 Jira"
+            - option "🖥️ Local Host"
+        - generic [ref=f1e283] [cursor=pointer]:
+          - generic [ref=f1e284]: AIR-1
+          - generic [ref=f1e285]: Hotel Search
+          - generic [ref=f1e286]:
+            - generic [ref=f1e287]: To Do
+            - generic [ref=f1e288]: Medium
+            - generic [ref=f1e289]: Task
+      - generic [ref=f1e238]:
+        - generic [ref=f1e239]:
+          - generic [ref=f1e240]:
+            - generic [ref=f1e241]:
+              - generic [ref=f1e242]: AIR-1
+              - generic [ref=f1e243]: Hotel Search
+              - generic [ref=f1e244]:
+                - generic [ref=f1e245]:
+                  - generic [ref=f1e246]: "Type:"
+                  - text: Task
+                - generic [ref=f1e247]:
+                  - generic [ref=f1e248]: "Status:"
+                  - text: To Do
+                - generic [ref=f1e249]:
+                  - generic [ref=f1e250]: "Priority:"
+                  - generic [ref=f1e251]: Medium
+                - generic [ref=f1e252]:
+                  - generic [ref=f1e253]: "Assignee:"
+                  - text: jittest user
+            - button "🧪 Generate Test Cases" [ref=f1e294] [cursor=pointer]
+          - generic [ref=f1e256] [cursor=pointer]:
+            - generic [ref=f1e257]: 📝 Acceptance Criteria / Description
+            - generic [ref=f1e258]: ▸
+          - generic [ref=f1e295]: ✨ AI-powered generation
+        - generic [ref=f1e297]:
+          - generic [ref=f1e298] [cursor=pointer]:
+            - generic [ref=f1e299]: 🧪
+            - generic [ref=f1e300]: Generated Tests
+            - generic [ref=f1e301]: 8 total
+            - generic [ref=f1e302]: ▾
+          - generic [ref=f1e303]:
+            - generic [ref=f1e305]:
+              - generic "Select / deselect all" [ref=f1e306] [cursor=pointer]:
+                - checkbox "Select All" [ref=f1e307]
+                - generic [ref=f1e308]: Select All
+              - generic [ref=f1e309]: ✅ 3 Positive
+              - generic [ref=f1e310]: ❌ 3 Negative
+              - generic [ref=f1e311]: ⚡ 2 Edge
+              - button "💾 Save to Specs" [disabled] [ref=f1e312]
+              - button "Clear All" [ref=f1e313] [cursor=pointer]
+            - generic [ref=f1e314]:
+              - generic [ref=f1e315] [cursor=pointer]:
+                - generic [ref=f1e316]: ✅
+                - generic [ref=f1e317]: Positive
+                - generic [ref=f1e318]: "3"
+                - generic [ref=f1e319]: ▾
+              - generic [ref=f1e320]:
+                - generic [ref=f1e321]:
+                  - generic [ref=f1e322] [cursor=pointer]:
+                    - checkbox "Select test case AIR-1-TC_P01" [ref=f1e323]
+                    - generic [ref=f1e324]: AIR-1-TC_P01
+                    - generic [ref=f1e325]: Successful hotel search with valid destination, dates, and guests
+                    - generic [ref=f1e326]: Positive
+                    - generic [ref=f1e327]: Critical
+                    - button "✏️ Edit" [ref=f1e328]
+                    - button "✕ Delete" [ref=f1e329]
+                    - generic [ref=f1e330]: ▾
+                  - generic [ref=f1e332]:
+                    - generic [ref=f1e333]:
+                      - generic [ref=f1e334]:
+                        - generic [ref=f1e335]: Component
+                        - text: Search Page
+                      - generic [ref=f1e336]:
+                        - generic [ref=f1e337]: Automation Priority
+                        - text: P0
+                    - generic [ref=f1e338]:
+                      - generic [ref=f1e339]: Preconditions
+                      - generic [ref=f1e340]: User navigates to https://www.airbnb.co.in/ and the homepage loads completely
+                    - generic [ref=f1e341]:
+                      - generic [ref=f1e342]: Test Steps
+                      - table [ref=f1e344]:
+                        - rowgroup [ref=f1e345]:
+                          - row [ref=f1e346]:
+                            - columnheader "Step" [ref=f1e347]
+                            - columnheader "Action" [ref=f1e348]
+                            - columnheader "Expected Result" [ref=f1e349]
+                        - rowgroup [ref=f1e350]:
+                          - row [ref=f1e351]:
+                            - cell "1" [ref=f1e352]
+                            - cell "Click the destination search bar" [ref=f1e354]
+                            - cell "Destination search bar receives focus" [ref=f1e355]
+                          - row [ref=f1e356]:
+                            - cell "2" [ref=f1e357]
+                            - cell "Enter \"Chennai, Tamil Nadu\"" [ref=f1e359]
+                            - cell "Destination field displays \"Chennai, Tamil Nadu\"" [ref=f1e360]
+                          - row [ref=f1e361]:
+                            - cell "3" [ref=f1e362]
+                            - cell "Select check‑in date 01-12-2026" [ref=f1e364]
+                            - cell "Check‑in field shows 01 Dec 2026" [ref=f1e365]
+                          - row [ref=f1e366]:
+                            - cell "4" [ref=f1e367]
+                            - cell "Select check‑out date 04-12-2026" [ref=f1e369]
+                            - cell "Check‑out field shows 04 Dec 2026" [ref=f1e370]
+                          - row [ref=f1e371]:
+                            - cell "5" [ref=f1e372]
+                            - cell "Click the add guests button" [ref=f1e374]
+                            - cell "Guest selector panel expands" [ref=f1e375]
+                          - row [ref=f1e376]:
+                            - cell "6" [ref=f1e377]
+                            - cell "Set adults to 3" [ref=f1e379]
+                            - cell "Adults count updates to 3" [ref=f1e380]
+                          - row [ref=f1e381]:
+                            - cell "7" [ref=f1e382]
+                            - cell "Click the Search button" [ref=f1e384]
+                            - cell "Search request is submitted" [ref=f1e385]
+                          - row [ref=f1e386]:
+                            - cell "8" [ref=f1e387]
+                            - cell "Wait for the results list to appear" [ref=f1e389]
+                            - cell "A list of listings is displayed" [ref=f1e390]
+                          - row [ref=f1e391]:
+                            - cell "9" [ref=f1e392]
+                            - cell "Click the first listing in the results" [ref=f1e394]
+                            - cell "Navigation to the listing detail page" [ref=f1e395]
+                - generic [ref=f1e396]:
+                  - generic [ref=f1e397] [cursor=pointer]:
+                    - checkbox "Select test case AIR-1-TC_P02" [ref=f1e398]
+                    - generic [ref=f1e399]: AIR-1-TC_P02
+                    - generic [ref=f1e400]: Update search dates after initial results and verify refreshed listings
+                    - generic [ref=f1e401]: Positive
+                    - generic [ref=f1e402]: High
+                    - button "✏️ Edit" [ref=f1e403]
+                    - button "✕ Delete" [ref=f1e404]
+                    - generic [ref=f1e405]: ▾
+                  - generic [ref=f1e407]:
+                    - generic [ref=f1e408]:
+                      - generic [ref=f1e409]:
+                        - generic [ref=f1e410]: Component
+                        - text: Search Page
+                      - generic [ref=f1e411]:
+                        - generic [ref=f1e412]: Automation Priority
+                        - text: P1
+                    - generic [ref=f1e413]:
+                      - generic [ref=f1e414]: Preconditions
+                      - generic [ref=f1e415]: User has performed a successful search as in TC_P01 and is on the results page
+                    - generic [ref=f1e416]:
+                      - generic [ref=f1e417]: Test Steps
+                      - table [ref=f1e419]:
+                        - rowgroup [ref=f1e420]:
+                          - row [ref=f1e421]:
+                            - columnheader "Step" [ref=f1e422]
+                            - columnheader "Action" [ref=f1e423]
+                            - columnheader "Expected Result" [ref=f1e424]
+                        - rowgroup [ref=f1e425]:
+                          - row [ref=f1e426]:
+                            - cell "1" [ref=f1e427]
+                            - cell "Click the destination search bar to edit dates" [ref=f1e429]
+                            - cell "Date fields become editable" [ref=f1e430]
+                          - row [ref=f1e431]:
+                            - cell "2" [ref=f1e432]
+                            - cell "Change check‑out date to 05-12-2026" [ref=f1e434]
+                            - cell "Check‑out field updates to 05 Dec 2026" [ref=f1e435]
+                          - row [ref=f1e436]:
+                            - cell "3" [ref=f1e437]
+                            - cell "Click the Apply/Update button" [ref=f1e439]
+                            - cell "Search request with new dates is submitted" [ref=f1e440]
+                          - row [ref=f1e441]:
+                            - cell "4" [ref=f1e442]
+                            - cell "Wait for the refreshed results list" [ref=f1e444]
+                            - cell "Results list refreshes showing listings for the new date range" [ref=f1e445]
+                - generic [ref=f1e446]:
+                  - generic [ref=f1e447] [cursor=pointer]:
+                    - checkbox "Select test case AIR-1-TC_P03" [ref=f1e448]
+                    - generic [ref=f1e449]: AIR-1-TC_P03
+                    - generic [ref=f1e450]: One‑night stay search with single adult
+                    - generic [ref=f1e451]: Positive
+                    - generic [ref=f1e452]: Medium
+                    - button "✏️ Edit" [ref=f1e453]
+                    - button "✕ Delete" [ref=f1e454]
+                    - generic [ref=f1e455]: ▾
+                  - generic [ref=f1e457]:
+                    - generic [ref=f1e458]:
+                      - generic [ref=f1e459]:
+                        - generic [ref=f1e460]: Component
+                        - text: Search Page
+                      - generic [ref=f1e461]:
+                        - generic [ref=f1e462]: Automation Priority
+                        - text: P2
+                    - generic [ref=f1e463]:
+                      - generic [ref=f1e464]: Preconditions
+                      - generic [ref=f1e465]: User is on the Airbnb homepage
+                    - generic [ref=f1e466]:
+                      - generic [ref=f1e467]: Test Steps
+                      - table [ref=f1e469]:
+                        - rowgroup [ref=f1e470]:
+                          - row [ref=f1e471]:
+                            - columnheader "Step" [ref=f1e472]
+                            - columnheader "Action" [ref=f1e473]
+                            - columnheader "Expected Result" [ref=f1e474]
+                        - rowgroup [ref=f1e475]:
+                          - row [ref=f1e476]:
+                            - cell "1" [ref=f1e477]
+                            - cell "Click the destination search bar" [ref=f1e479]
+                            - cell "Search bar receives focus" [ref=f1e480]
+                          - row [ref=f1e481]:
+                            - cell "2" [ref=f1e482]
+                            - cell "Enter \"Chennai, Tamil Nadu\"" [ref=f1e484]
+                            - cell "Destination field shows \"Chennai, Tamil Nadu\"" [ref=f1e485]
+                          - row [ref=f1e486]:
+                            - cell "3" [ref=f1e487]
+                            - cell "Select check‑in date 01-12-2026" [ref=f1e489]
+                            - cell "Check‑in field shows 01 Dec 2026" [ref=f1e490]
+                          - row [ref=f1e491]:
+                            - cell "4" [ref=f1e492]
+                            - cell "Select check‑out date 02-12-2026" [ref=f1e494]
+                            - cell "Check‑out field shows 02 Dec 2026" [ref=f1e495]
+                          - row [ref=f1e496]:
+                            - cell "5" [ref=f1e497]
+                            - cell "Click the add guests button" [ref=f1e499]
+                            - cell "Guest selector expands" [ref=f1e500]
+                          - row [ref=f1e501]:
+                            - cell "6" [ref=f1e502]
+                            - cell "Set adults to 1" [ref=f1e504]
+                            - cell "Adults count updates to 1" [ref=f1e505]
+                          - row [ref=f1e506]:
+                            - cell "7" [ref=f1e507]
+                            - cell "Click the Search button" [ref=f1e509]
+                            - cell "Search request submitted" [ref=f1e510]
+                          - row [ref=f1e511]:
+                            - cell "8" [ref=f1e512]
+                            - cell "Verify that results are displayed" [ref=f1e514]
+                            - cell "At least one listing appears" [ref=f1e515]
+            - generic [ref=f1e516]:
+              - generic [ref=f1e517] [cursor=pointer]:
+                - generic [ref=f1e518]: ❌
+                - generic [ref=f1e519]: Negative
+                - generic [ref=f1e520]: "3"
+                - generic [ref=f1e521]: ▾
+              - generic [ref=f1e522]:
+                - generic [ref=f1e523]:
+                  - generic [ref=f1e524] [cursor=pointer]:
+                    - checkbox "Select test case AIR-1-TC_N01" [ref=f1e525]
+                    - generic [ref=f1e526]: AIR-1-TC_N01
+                    - generic [ref=f1e527]: Search with invalid destination should show no results message
+                    - generic [ref=f1e528]: Negative
+                    - generic [ref=f1e529]: High
+                    - button "✏️ Edit" [ref=f1e530]
+                    - button "✕ Delete" [ref=f1e531]
+                    - generic [ref=f1e532]: ▾
+                  - generic [ref=f1e534]:
+                    - generic [ref=f1e535]:
+                      - generic [ref=f1e536]:
+                        - generic [ref=f1e537]: Component
+                        - text: Search Page
+                      - generic [ref=f1e538]:
+                        - generic [ref=f1e539]: Automation Priority
+                        - text: P1
+                    - generic [ref=f1e540]:
+                      - generic [ref=f1e541]: Preconditions
+                      - generic [ref=f1e542]: User is on the Airbnb homepage
+                    - generic [ref=f1e543]:
+                      - generic [ref=f1e544]: Test Steps
+                      - table [ref=f1e546]:
+                        - rowgroup [ref=f1e547]:
+                          - row [ref=f1e548]:
+                            - columnheader "Step" [ref=f1e549]
+                            - columnheader "Action" [ref=f1e550]
+                            - columnheader "Expected Result" [ref=f1e551]
+                        - rowgroup [ref=f1e552]:
+                          - row [ref=f1e553]:
+                            - cell "1" [ref=f1e554]
+                            - cell "Click the destination search bar" [ref=f1e556]
+                            - cell "Search bar receives focus" [ref=f1e557]
+                          - row [ref=f1e558]:
+                            - cell "2" [ref=f1e559]
+                            - cell "Enter \"AtlantisXYZ\"" [ref=f1e561]
+                            - cell "Destination field shows \"AtlantisXYZ\"" [ref=f1e562]
+                          - row [ref=f1e563]:
+                            - cell "3" [ref=f1e564]
+                            - cell "Select check‑in date 01-12-2026" [ref=f1e566]
+                            - cell "Check‑in field shows 01 Dec 2026" [ref=f1e567]
+                          - row [ref=f1e568]:
+                            - cell "4" [ref=f1e569]
+                            - cell "Select check‑out date 04-12-2026" [ref=f1e571]
+                            - cell "Check‑out field shows 04 Dec 2026" [ref=f1e572]
+                          - row [ref=f1e573]:
+                            - cell "5" [ref=f1e574]
+                            - cell "Click the add guests button" [ref=f1e576]
+                            - cell "Guest selector expands" [ref=f1e577]
+                          - row [ref=f1e578]:
+                            - cell "6" [ref=f1e579]
+                            - cell "Set adults to 2" [ref=f1e581]
+                            - cell "Adults count updates to 2" [ref=f1e582]
+                          - row [ref=f1e583]:
+                            - cell "7" [ref=f1e584]
+                            - cell "Click the Search button" [ref=f1e586]
+                            - cell "Search request submitted" [ref=f1e587]
+                - generic [ref=f1e588]:
+                  - generic [ref=f1e589] [cursor=pointer]:
+                    - checkbox "Select test case AIR-1-TC_N02" [ref=f1e590]
+                    - generic [ref=f1e591]: AIR-1-TC_N02
+                    - generic [ref=f1e592]: Check‑out date earlier than check‑in date triggers validation error
+                    - generic [ref=f1e593]: Negative
+                    - generic [ref=f1e594]: Critical
+                    - button "✏️ Edit" [ref=f1e595]
+                    - button "✕ Delete" [ref=f1e596]
+                    - generic [ref=f1e597]: ▾
+                  - generic [ref=f1e599]:
+                    - generic [ref=f1e600]:
+                      - generic [ref=f1e601]:
+                        - generic [ref=f1e602]: Component
+                        - text: Search Page
+                      - generic [ref=f1e603]:
+                        - generic [ref=f1e604]: Automation Priority
+                        - text: P0
+                    - generic [ref=f1e605]:
+                      - generic [ref=f1e606]: Preconditions
+                      - generic [ref=f1e607]: User is on the Airbnb homepage
+                    - generic [ref=f1e608]:
+                      - generic [ref=f1e609]: Test Steps
+                      - table [ref=f1e611]:
+                        - rowgroup [ref=f1e612]:
+                          - row [ref=f1e613]:
+                            - columnheader "Step" [ref=f1e614]
+                            - columnheader "Action" [ref=f1e615]
+                            - columnheader "Expected Result" [ref=f1e616]
+                        - rowgroup [ref=f1e617]:
+                          - row [ref=f1e618]:
+                            - cell "1" [ref=f1e619]
+                            - cell "Click the destination search bar" [ref=f1e621]
+                            - cell "Search bar receives focus" [ref=f1e622]
+                          - row [ref=f1e623]:
+                            - cell "2" [ref=f1e624]
+                            - cell "Enter \"Chennai, Tamil Nadu\"" [ref=f1e626]
+                            - cell "Destination field shows \"Chennai, Tamil Nadu\"" [ref=f1e627]
+                          - row [ref=f1e628]:
+                            - cell "3" [ref=f1e629]
+                            - cell "Select check‑in date 05-12-2026" [ref=f1e631]
+                            - cell "Check‑in field shows 05 Dec 2026" [ref=f1e632]
+                          - row [ref=f1e633]:
+                            - cell "4" [ref=f1e634]
+                            - cell "Select check‑out date 04-12-2026" [ref=f1e636]
+                            - cell "Check‑out field shows 04 Dec 2026" [ref=f1e637]
+                          - row [ref=f1e638]:
+                            - cell "5" [ref=f1e639]
+                            - cell "Click the add guests button" [ref=f1e641]
+                            - cell "Guest selector expands" [ref=f1e642]
+                          - row [ref=f1e643]:
+                            - cell "6" [ref=f1e644]
+                            - cell "Set adults to 2" [ref=f1e646]
+                            - cell "Adults count updates to 2" [ref=f1e647]
+                          - row [ref=f1e648]:
+                            - cell "7" [ref=f1e649]
+                            - cell "Click the Search button" [ref=f1e651]
+                            - cell "Search request submitted" [ref=f1e652]
+                - generic [ref=f1e653]:
+                  - generic [ref=f1e654] [cursor=pointer]:
+                    - checkbox "Select test case AIR-1-TC_N03" [ref=f1e655]
+                    - generic [ref=f1e656]: AIR-1-TC_N03
+                    - generic [ref=f1e657]: Attempt search without entering a destination shows required field error
+                    - generic [ref=f1e658]: Negative
+                    - generic [ref=f1e659]: Critical
+                    - button "✏️ Edit" [ref=f1e660]
+                    - button "✕ Delete" [ref=f1e661]
+                    - generic [ref=f1e662]: ▾
+                  - generic [ref=f1e664]:
+                    - generic [ref=f1e665]:
+                      - generic [ref=f1e666]:
+                        - generic [ref=f1e667]: Component
+                        - text: Search Page
+                      - generic [ref=f1e668]:
+                        - generic [ref=f1e669]: Automation Priority
+                        - text: P0
+                    - generic [ref=f1e670]:
+                      - generic [ref=f1e671]: Preconditions
+                      - generic [ref=f1e672]: User is on the Airbnb homepage
+                    - generic [ref=f1e673]:
+                      - generic [ref=f1e674]: Test Steps
+                      - table [ref=f1e676]:
+                        - rowgroup [ref=f1e677]:
+                          - row [ref=f1e678]:
+                            - columnheader "Step" [ref=f1e679]
+                            - columnheader "Action" [ref=f1e680]
+                            - columnheader "Expected Result" [ref=f1e681]
+                        - rowgroup [ref=f1e682]:
+                          - row [ref=f1e683]:
+                            - cell "1" [ref=f1e684]
+                            - cell "Leave the destination search bar empty" [ref=f1e686]
+                            - cell "Destination field remains blank" [ref=f1e687]
+                          - row [ref=f1e688]:
+                            - cell "2" [ref=f1e689]
+                            - cell "Select check‑in date 01-12-2026" [ref=f1e691]
+                            - cell "Check‑in field shows 01 Dec 2026" [ref=f1e692]
+                          - row [ref=f1e693]:
+                            - cell "3" [ref=f1e694]
+                            - cell "Select check‑out date 04-12-2026" [ref=f1e696]
+                            - cell "Check‑out field shows 04 Dec 2026" [ref=f1e697]
+                          - row [ref=f1e698]:
+                            - cell "4" [ref=f1e699]
+                            - cell "Click the add guests button" [ref=f1e701]
+                            - cell "Guest selector expands" [ref=f1e702]
+                          - row [ref=f1e703]:
+                            - cell "5" [ref=f1e704]
+                            - cell "Set adults to 2" [ref=f1e706]
+                            - cell "Adults count updates to 2" [ref=f1e707]
+                          - row [ref=f1e708]:
+                            - cell "6" [ref=f1e709]
+                            - cell "Click the Search button" [ref=f1e711]
+                            - cell "Search request submitted" [ref=f1e712]
+            - generic [ref=f1e713]:
+              - generic [ref=f1e714] [cursor=pointer]:
+                - generic [ref=f1e715]: ⚡
+                - generic [ref=f1e716]: Edge / Boundary
+                - generic [ref=f1e717]: "2"
+                - generic [ref=f1e718]: ▾
+              - generic [ref=f1e719]:
+                - generic [ref=f1e720]:
+                  - generic [ref=f1e721] [cursor=pointer]:
+                    - checkbox "Select test case AIR-1-TC_E01" [ref=f1e722]
+                    - generic [ref=f1e723]: AIR-1-TC_E01
+                    - generic [ref=f1e724]: Select zero adults and verify guest count validation
+                    - generic [ref=f1e725]: Edge
+                    - generic [ref=f1e726]: High
+                    - button "✏️ Edit" [ref=f1e727]
+                    - button "✕ Delete" [ref=f1e728]
+                    - generic [ref=f1e729]: ▾
+                  - generic [ref=f1e731]:
+                    - generic [ref=f1e732]:
+                      - generic [ref=f1e733]:
+                        - generic [ref=f1e734]: Component
+                        - text: Guest Selector
+                      - generic [ref=f1e735]:
+                        - generic [ref=f1e736]: Automation Priority
+                        - text: P1
+                    - generic [ref=f1e737]:
+                      - generic [ref=f1e738]: Preconditions
+                      - generic [ref=f1e739]: User is on the Airbnb homepage
+                    - generic [ref=f1e740]:
+                      - generic [ref=f1e741]: Test Steps
+                      - table [ref=f1e743]:
+                        - rowgroup [ref=f1e744]:
+                          - row [ref=f1e745]:
+                            - columnheader "Step" [ref=f1e746]
+                            - columnheader "Action" [ref=f1e747]
+                            - columnheader "Expected Result" [ref=f1e748]
+                        - rowgroup [ref=f1e749]:
+                          - row [ref=f1e750]:
+                            - cell "1" [ref=f1e751]
+                            - cell "Click the destination search bar" [ref=f1e753]
+                            - cell "Search bar receives focus" [ref=f1e754]
+                          - row [ref=f1e755]:
+                            - cell "2" [ref=f1e756]
+                            - cell "Enter \"Chennai, Tamil Nadu\"" [ref=f1e758]
+                            - cell "Destination field shows \"Chennai, Tamil Nadu\"" [ref=f1e759]
+                          - row [ref=f1e760]:
+                            - cell "3" [ref=f1e761]
+                            - cell "Select check‑in date 01-12-2026" [ref=f1e763]
+                            - cell "Check‑in field shows 01 Dec 2026" [ref=f1e764]
+                          - row [ref=f1e765]:
+                            - cell "4" [ref=f1e766]
+                            - cell "Select check‑out date 04-12-2026" [ref=f1e768]
+                            - cell "Check‑out field shows 04 Dec 2026" [ref=f1e769]
+                          - row [ref=f1e770]:
+                            - cell "5" [ref=f1e771]
+                            - cell "Click the add guests button" [ref=f1e773]
+                            - cell "Guest selector expands" [ref=f1e774]
+                          - row [ref=f1e775]:
+                            - cell "6" [ref=f1e776]
+                            - cell "Set adults to 0" [ref=f1e778]
+                            - cell "Adults count updates to 0" [ref=f1e779]
+                          - row [ref=f1e780]:
+                            - cell "7" [ref=f1e781]
+                            - cell "Click the Search button" [ref=f1e783]
+                            - cell "Search request submitted" [ref=f1e784]
+                - generic [ref=f1e785]:
+                  - generic [ref=f1e786] [cursor=pointer]:
+                    - checkbox "Select test case AIR-1-TC_E02" [ref=f1e787]
+                    - generic [ref=f1e788]: AIR-1-TC_E02
+                    - generic [ref=f1e789]: Search with maximum allowed adults (16) and verify results load
+                    - generic [ref=f1e790]: Edge
+                    - generic [ref=f1e791]: Medium
+                    - button "✏️ Edit" [ref=f1e792]
+                    - button "✕ Delete" [ref=f1e793]
+                    - generic [ref=f1e794]: ▾
+                  - generic [ref=f1e796]:
+                    - generic [ref=f1e797]:
+                      - generic [ref=f1e798]:
+                        - generic [ref=f1e799]: Component
+                        - text: Guest Selector
+                      - generic [ref=f1e800]:
+                        - generic [ref=f1e801]: Automation Priority
+                        - text: P2
+                    - generic [ref=f1e802]:
+                      - generic [ref=f1e803]: Preconditions
+                      - generic [ref=f1e804]: User is on the Airbnb homepage
+                    - generic [ref=f1e805]:
+                      - generic [ref=f1e806]: Test Steps
+                      - table [ref=f1e808]:
+                        - rowgroup [ref=f1e809]:
+                          - row [ref=f1e810]:
+                            - columnheader "Step" [ref=f1e811]
+                            - columnheader "Action" [ref=f1e812]
+                            - columnheader "Expected Result" [ref=f1e813]
+                        - rowgroup [ref=f1e814]:
+                          - row [ref=f1e815]:
+                            - cell "1" [ref=f1e816]
+                            - cell "Click the destination search bar" [ref=f1e818]
+                            - cell "Search bar receives focus" [ref=f1e819]
+                          - row [ref=f1e820]:
+                            - cell "2" [ref=f1e821]
+                            - cell "Enter \"Chennai, Tamil Nadu\"" [ref=f1e823]
+                            - cell "Destination field shows \"Chennai, Tamil Nadu\"" [ref=f1e824]
+                          - row [ref=f1e825]:
+                            - cell "3" [ref=f1e826]
+                            - cell "Select check‑in date 01-12-2026" [ref=f1e828]
+                            - cell "Check‑in field shows 01 Dec 2026" [ref=f1e829]
+                          - row [ref=f1e830]:
+                            - cell "4" [ref=f1e831]
+                            - cell "Select check‑out date 04-12-2026" [ref=f1e833]
+                            - cell "Check‑out field shows 04 Dec 2026" [ref=f1e834]
+                          - row [ref=f1e835]:
+                            - cell "5" [ref=f1e836]
+                            - cell "Click the add guests button" [ref=f1e838]
+                            - cell "Guest selector expands" [ref=f1e839]
+                          - row [ref=f1e840]:
+                            - cell "6" [ref=f1e841]
+                            - cell "Set adults to 16" [ref=f1e843]
+                            - cell "Adults count updates to 16" [ref=f1e844]
+                          - row [ref=f1e845]:
+                            - cell "7" [ref=f1e846]
+                            - cell "Click the Search button" [ref=f1e848]
+                            - cell "Search request submitted" [ref=f1e849]
+                          - row [ref=f1e850]:
+                            - cell "8" [ref=f1e851]
+                            - cell "Verify that results are displayed" [ref=f1e853]
+                            - cell "Results list appears with listings supporting 16 guests" [ref=f1e854]

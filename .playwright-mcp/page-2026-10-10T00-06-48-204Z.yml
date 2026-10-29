@@ -1,0 +1,55 @@
+- generic [ref=e19]:
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]: T
+      - generic [ref=e23]:
+        - generic [ref=e24]: TEST DASHBOARD
+        - generic [ref=e25]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: Browser
+        - combobox [ref=e29] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=e30]:
+        - generic [ref=e31]: Environment
+        - combobox [ref=e32] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Backend server status" [ref=e33] [cursor=pointer]: Server :4000
+  - generic [ref=e36]:
+    - generic [ref=e37]:
+      - generic [ref=e38]: TEST DASHBOARD
+      - generic [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]: Dashboard
+        - generic [ref=e41] [cursor=pointer]: Requirements
+        - generic [ref=e42] [cursor=pointer]: Test Cases
+        - generic [ref=e43] [cursor=pointer]: Test Design
+        - generic [ref=e44] [cursor=pointer]: Test Execution
+        - generic [ref=e45] [cursor=pointer]: History & Trends
+        - generic [ref=e46] [cursor=pointer]: Test Data
+        - generic [ref=e47] [cursor=pointer]: Defects
+        - generic [ref=e48] [cursor=pointer]: Value Added Services
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - generic [ref=e222]: 📋 Work Items
+          - generic [ref=e223]: Click a ticket from the board, or select one below to generate tests
+          - combobox [ref=e225] [cursor=pointer]:
+            - option "— Select Tool —" [selected]
+            - option "☁️ Azure DevOps"
+            - option "🟦 Jira"
+            - option "🖥️ Local Host"
+        - generic [ref=e227] [cursor=pointer]:
+          - generic [ref=e228]: AIR-1
+          - generic [ref=e229]: Hotel Search
+          - generic [ref=e230]:
+            - generic [ref=e231]: To Do
+            - generic [ref=e232]: Medium
+            - generic [ref=e233]: Task
+      - generic [ref=e235]:
+        - generic [ref=e236]: 📋
+        - generic [ref=e237]: No ticket selected
+        - generic [ref=e238]: Select a Jira ticket from the left panelto view its details and generate test cases

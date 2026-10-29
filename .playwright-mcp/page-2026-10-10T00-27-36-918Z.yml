@@ -1,0 +1,75 @@
+- generic [ref=f4e3]:
+  - banner [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - generic [ref=f4e6]:
+        - generic [ref=f4e7]: H
+        - generic [ref=f4e8]:
+          - generic [ref=f4e9]: Hexaware
+          - generic [ref=f4e10]: Project 10
+      - generic [ref=f4e11]:
+        - generic [ref=f4e12]:
+          - generic [ref=f4e13]: Specs
+          - generic [ref=f4e14]: "7"
+        - generic [ref=f4e15]:
+          - generic [ref=f4e16]: Tests
+          - generic [ref=f4e17]: "27"
+        - generic [ref=f4e18]:
+          - generic [ref=f4e19]: Passed
+          - generic [ref=f4e20]: "2"
+        - generic [ref=f4e21]:
+          - generic [ref=f4e22]: Failed
+          - generic [ref=f4e23]: "6"
+      - generic [ref=f4e24]:
+        - generic [ref=f4e25]: 🟣 Jira
+        - combobox [ref=f4e26] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+        - combobox [ref=f4e27] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGE"
+          - option "PROD"
+        - button "Logout" [ref=f4e28] [cursor=pointer]
+  - navigation [ref=f4e29]:
+    - generic [ref=f4e30]:
+      - button "Dashboard" [ref=f4e31] [cursor=pointer]
+      - button "Requirements" [ref=f4e32] [cursor=pointer]
+      - button "Test Explorer" [ref=f4e33] [cursor=pointer]
+      - button "Test Cases" [active] [ref=f4e34] [cursor=pointer]
+      - button "Test Scripts" [ref=f4e35] [cursor=pointer]
+      - button "Reports" [ref=f4e36] [cursor=pointer]
+      - button "Test Data" [ref=f4e37] [cursor=pointer]
+      - button "Value Added Services" [ref=f4e38] [cursor=pointer]
+      - button "Project Structure" [ref=f4e39] [cursor=pointer]
+  - generic [ref=f4e110]:
+    - generic [ref=f4e111]:
+      - generic [ref=f4e112]:
+        - generic [ref=f4e113]: 🎯
+        - heading "Step 1 — Select a Ticket" [level=3] [ref=f4e114]
+      - generic [ref=f4e115]:
+        - generic [ref=f4e116]:
+          - combobox [ref=f4e117] [cursor=pointer]:
+            - option "📋 AIR — AirBnb1 [kanban]" [selected]
+            - option "📋 BANKING — Banking [kanban]"
+            - option "📋 CSX — CSX [kanban]"
+            - option "📋 GUID — Guidewire [kanban]"
+            - option "📋 KM — Kan_Meta [kanban]"
+            - option "📋 META — Meta [kanban]"
+            - option "📋 SCRUM — My Software Team [kanban]"
+            - option "📋 AFS — SAP [kanban]"
+            - option "📋 SNOW — ServiceNow [kanban]"
+            - option "📋 UMB — UMB [kanban]"
+            - option "📋 VB — VB_Bank [kanban]"
+          - combobox [ref=f4e118] [cursor=pointer]:
+            - option "All Issues" [selected]
+            - option "Current Sprint"
+            - option "Backlog"
+            - option "In Progress"
+            - option "Done"
+        - generic [ref=f4e119]: No issues found. Try a different view or project.
+    - generic [ref=f4e120]:
+      - generic [ref=f4e121]: 📋
+      - paragraph [ref=f4e122]: Select a ticket to get started
+      - paragraph [ref=f4e123]:
+        - text: Pick any ticket above, then click
+        - strong [ref=f4e124]: Generate Test Cases

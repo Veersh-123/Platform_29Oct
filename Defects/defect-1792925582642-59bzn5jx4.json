@@ -1,0 +1,14 @@
+{
+  "id": "defect-1792925582642-59bzn5jx4",
+  "defectNumber": 70,
+  "date": "10/25/2026, 4:23:02 PM",
+  "timestamp": 1792925582642,
+  "testCaseName": "LocalHost\\FundsTransfer\\FundsTransfer-Script.spec.ts › FundsTransfer-TC_P01 | End-to-end USD 250 transfer updates balance and appears in filtered history",
+  "severity": "High",
+  "defectType": "Test Execution Failure",
+  "description": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Recipient Account Number') to be visible\u001b[22m\n\n\n   at ..\\pages\\LocalHost\\FundsTransfer\\FundsTransfer-",
+  "expectedResult": "Not specified",
+  "actualResult": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Recipient Account Number') to be visible\u001b[22m\n\n\n   at ..\\pages\\LocalHost\\FundsTransfer\\FundsTransfer-Page.ts:36\n\n  34 |   async enterRecipientAccountNumber(accountNumber: string): Promise<void> {\n  35 |     const recipientAccountNumberInput = this.page.getByLabel(Locators.recipientAccountNumberInput);\n> 36 |     await recipientAccountNumberInput.waitFor({ state: 'visible' });\n     |                                       ^\n  37 |     await recipientAccountNumberInput.fill(accountNumber);\n  38 |   }\n  39 |\n    at FundstransferPage.enterRecipientAccountNumber (C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\pages\\LocalHost\\FundsTransfer\\FundsTransfer-Page.ts:36:39)\n    at FundstransferPage.enterTransferDetails (C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\pages\\LocalHost\\FundsTransfer\\FundsTransfer-Page.ts:49:16)\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\LocalHost\\FundsTransfer\\FundsTransfer-Script.spec.ts:56:22\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\LocalHost\\FundsTransfer\\FundsTransfer-Script.spec.ts:55:3",
+  "status": "Open",
+  "comments": ""
+}

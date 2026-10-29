@@ -1,0 +1,35 @@
+- generic [ref=e6]:
+  - generic [ref=e7]:
+    - generic [ref=e8]: H
+    - heading "Hexaware" [level=1] [ref=e11]
+    - paragraph [ref=e12]: Test Orchestration Platform
+    - generic [ref=e13]: Enterprise Testing
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - heading "Select Test Management Tool" [level=2] [ref=e41]
+        - paragraph [ref=e42]: Choose where your test requirements are stored
+      - generic [ref=e43]:
+        - button "🟣 Jira Connect to your Jira instance for requirement management →" [ref=e44] [cursor=pointer]:
+          - generic [ref=e46]:
+            - generic [ref=e47]: 🟣
+            - generic [ref=e48]:
+              - heading "Jira" [level=3] [ref=e49]
+              - paragraph [ref=e50]: Connect to your Jira instance for requirement management
+            - generic [ref=e51]: →
+        - button "🔵 Azure DevOps Connect to your Azure DevOps instance for work items →" [ref=e52] [cursor=pointer]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: 🔵
+            - generic [ref=e56]:
+              - heading "Azure DevOps" [level=3] [ref=e57]
+              - paragraph [ref=e58]: Connect to your Azure DevOps instance for work items
+            - generic [ref=e59]: →
+        - button "⊗ Not Applicable Skip tool configuration and use local storage →" [ref=e60] [cursor=pointer]:
+          - generic [ref=e62]:
+            - generic [ref=e63]: ⊗
+            - generic [ref=e64]:
+              - heading "Not Applicable" [level=3] [ref=e65]
+              - paragraph [ref=e66]: Skip tool configuration and use local storage
+            - generic [ref=e67]: →
+    - button "← Back to Login" [ref=e68] [cursor=pointer]
+  - paragraph [ref=e37]: 🔒 Your credentials are securely processed and encrypted

@@ -1,0 +1,123 @@
+- generic [ref=f9e2]:
+  - banner [ref=f9e3]:
+    - link [ref=f9e7] [cursor=pointer]:
+      - /url: https://www.umb.com
+      - img "UMB Bank n.a." [ref=f9e8]
+  - text:       
+  - generic [ref=f9e10]:
+    - generic [ref=f9e11]:
+      - generic [ref=f9e12]:
+        - generic [ref=f9e13]: 
+        - generic [ref=f9e15]:
+          - text:      
+          - generic [ref=f9e16]:
+            - group [ref=f9e20]:
+              - generic [ref=f9e21]: Do you already have an account with UMB Bank n.a.? *
+              - generic [ref=f9e24]:
+                - generic [ref=f9e26] [cursor=pointer]:
+                  - radio
+                  - text: "Yes"
+                - generic [ref=f9e28] [cursor=pointer]:
+                  - radio
+                  - text: "No"
+            - generic [ref=f9e30]:
+              - button "Scan" [ref=f9e34] [cursor=pointer]:
+                - generic [ref=f9e35]: Save Time
+                - generic [ref=f9e36]: Scan your government issued ID
+                - generic [ref=f9e37]: "*Optional for minors"
+                - generic [ref=f9e38]: 
+              - generic [ref=f9e42]:
+                - textbox "First Name *" [ref=f9e43]
+                - generic [ref=f9e44]: First Name *
+              - generic [ref=f9e46]:
+                - textbox "Middle Initial" [ref=f9e47]
+                - generic [ref=f9e48]: Middle Initial
+              - generic [ref=f9e50]:
+                - textbox "Last Name *" [ref=f9e51]
+                - generic [ref=f9e52]: Last Name *
+              - generic [ref=f9e54]:
+                - combobox "Suffix" [ref=f9e55]:
+                  - option [selected]
+                  - option "I"
+                  - option "II"
+                  - option "III"
+                  - option "IV"
+                  - option "IX"
+                  - option "JR"
+                  - option "SR"
+                  - option "V"
+                  - option "VI"
+                  - option "VII"
+                  - option "VIII"
+                  - option "X"
+                - generic: Suffix
+            - generic [ref=f9e56]:
+              - generic [ref=f9e58]:
+                - textbox "Date of Birth*" [ref=f9e59]
+                - generic [ref=f9e60]: Date of Birth*
+              - generic [ref=f9e61]:
+                - generic [ref=f9e62]:
+                  - textbox "Social Security Number*" [ref=f9e63]
+                  - generic [ref=f9e64]: Social Security Number*
+                - generic [ref=f9e65]: 
+              - generic [ref=f9e69]:
+                - combobox "Branch*" [ref=f9e70]:
+                  - option [selected]
+                  - option "INTERNET APPLICATION; 1010 GRAND BOULEVARD; KANSAS CITY; MO"
+                - generic: Branch*
+            - iframe [ref=f9e76]:
+              - generic [ref=f10e2]:
+                - generic [ref=f10e3]:
+                  - checkbox "I'm not a robot" [ref=f10e7]
+                  - generic [aria-hidden] [ref=f10e11]: I'm not a robot
+                  - generic [ref=f10e13]:
+                    - text: This site is exceeding
+                    - link "reCAPTCHA Enterprise free quota" [ref=f10e14] [cursor=pointer]:
+                      - /url: https://cloud.google.com/recaptcha/docs/billing-information
+                    - text: .
+                - generic [ref=f10e15]: reCAPTCHA
+          - text: 
+        - generic [ref=f9e77]:
+          - button "Back" [ref=f9e80] [cursor=pointer]:
+            - generic [ref=f9e81]: 
+          - button "Next" [ref=f9e83] [cursor=pointer]
+      - generic [ref=f9e86]:
+        - list [ref=f9e90]:
+          - listitem [ref=f9e91]:
+            - link " Start" [ref=f9e92] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f9e93]: 
+              - generic [ref=f9e95]: Start
+          - listitem [ref=f9e96]:
+            - link " Personal Information" [ref=f9e97] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f9e98]: 
+              - generic [ref=f9e100]: Personal Information
+          - listitem [ref=f9e101]:
+            - link " Account Selection" [ref=f9e102] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f9e103]: 
+              - generic [ref=f9e105]: Account Selection
+          - listitem [ref=f9e106]:
+            - link " Disclosure Information" [ref=f9e107] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f9e108]: 
+              - generic [ref=f9e110]: Disclosure Information
+          - listitem [ref=f9e111]:
+            - link " Confirmation" [ref=f9e112] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f9e113]: 
+              - generic [ref=f9e115]: Confirmation
+        - generic [ref=f9e116]:
+          - generic [ref=f9e117]: Need help ?
+          - generic [ref=f9e118]:
+            - generic [ref=f9e119]:
+              - generic [ref=f9e120]: 
+              - paragraph [ref=f9e121]: 888-860-5626
+            - generic [ref=f9e122]:
+              - generic [ref=f9e123]: 
+              - paragraph [ref=f9e124]: Monday - Friday, 8:00 a.m. to 5:00 p.m. CT
+    - generic [ref=f9e127]:
+      - paragraph [ref=f9e129]: UMB Bank n.a.©2026 All Rights Reserved
+      - generic [ref=f9e130]: 
+      - img "EHL" [ref=f9e134]

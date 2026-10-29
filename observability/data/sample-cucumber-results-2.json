@@ -1,0 +1,551 @@
+[
+  {
+    "description": "User Login Feature",
+    "id": "user-login",
+    "name": "User Login",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "name": "Valid login with correct credentials",
+        "description": "",
+        "id": "user-login;valid-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 3,
+        "steps": [
+          {
+            "name": "user navigates to login page",
+            "keyword": "Given ",
+            "line": 4,
+            "match": {
+              "location": "steps/login.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "user enters valid email",
+            "keyword": "When ",
+            "line": 5,
+            "match": {
+              "location": "steps/login.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "name": "user enters correct password",
+            "keyword": "And ",
+            "line": 6,
+            "match": {
+              "location": "steps/login.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "name": "user clicks login button",
+            "keyword": "And ",
+            "line": 7,
+            "match": {
+              "location": "steps/login.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000000
+            }
+          },
+          {
+            "name": "user should see dashboard",
+            "keyword": "Then ",
+            "line": 8,
+            "match": {
+              "location": "steps/login.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          }
+        ]
+      },
+      {
+        "name": "Invalid login with wrong password",
+        "description": "",
+        "id": "user-login;invalid-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 10,
+        "steps": [
+          {
+            "name": "user navigates to login page",
+            "keyword": "Given ",
+            "line": 11,
+            "match": {
+              "location": "steps/login.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "user enters valid email",
+            "keyword": "When ",
+            "line": 12,
+            "match": {
+              "location": "steps/login.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "name": "user enters incorrect password",
+            "keyword": "And ",
+            "line": 13,
+            "match": {
+              "location": "steps/login.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "name": "user clicks login button",
+            "keyword": "And ",
+            "line": 14,
+            "match": {
+              "location": "steps/login.js:20"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5000000000,
+              "error_message": "AssertionError: Expected error message 'Invalid credentials' but got 'Login failed'"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Shopping Cart Feature",
+    "id": "shopping-cart",
+    "name": "Shopping Cart",
+    "keyword": "Feature",
+    "line": 20,
+    "elements": [
+      {
+        "name": "Add item to cart",
+        "description": "",
+        "id": "shopping-cart;add-item",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 22,
+        "steps": [
+          {
+            "name": "user is on product page",
+            "keyword": "Given ",
+            "line": 23,
+            "match": {
+              "location": "steps/cart.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2500000000
+            }
+          },
+          {
+            "name": "user selects a product",
+            "keyword": "When ",
+            "line": 24,
+            "match": {
+              "location": "steps/cart.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "name": "user clicks add to cart",
+            "keyword": "And ",
+            "line": 25,
+            "match": {
+              "location": "steps/cart.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "name": "item should appear in cart",
+            "keyword": "Then ",
+            "line": 26,
+            "match": {
+              "location": "steps/cart.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          }
+        ]
+      },
+      {
+        "name": "Remove item from cart",
+        "description": "",
+        "id": "shopping-cart;remove-item",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 28,
+        "steps": [
+          {
+            "name": "user has items in cart",
+            "keyword": "Given ",
+            "line": 29,
+            "match": {
+              "location": "steps/cart.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "user clicks remove button",
+            "keyword": "When ",
+            "line": 30,
+            "match": {
+              "location": "steps/cart.js:50"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3000000000,
+              "error_message": "TimeoutError: Element not found within 5000ms"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Checkout with valid payment",
+        "description": "",
+        "id": "shopping-cart;checkout",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 32,
+        "steps": [
+          {
+            "name": "user is on cart page",
+            "keyword": "Given ",
+            "line": 33,
+            "match": {
+              "location": "steps/cart.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "user clicks proceed to checkout",
+            "keyword": "When ",
+            "line": 34,
+            "match": {
+              "location": "steps/cart.js:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "name": "user enters payment details",
+            "keyword": "And ",
+            "line": 35,
+            "match": {
+              "location": "steps/cart.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "user clicks pay",
+            "keyword": "And ",
+            "line": 36,
+            "match": {
+              "location": "steps/cart.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000000
+            }
+          },
+          {
+            "name": "order should be confirmed",
+            "keyword": "Then ",
+            "line": 37,
+            "match": {
+              "location": "steps/cart.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "User Profile Feature",
+    "id": "user-profile",
+    "name": "User Profile",
+    "keyword": "Feature",
+    "line": 40,
+    "elements": [
+      {
+        "name": "Edit user profile",
+        "description": "",
+        "id": "user-profile;edit-profile",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 42,
+        "steps": [
+          {
+            "name": "user is logged in",
+            "keyword": "Given ",
+            "line": 43,
+            "match": {
+              "location": "steps/profile.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000000
+            }
+          },
+          {
+            "name": "user navigates to profile",
+            "keyword": "When ",
+            "line": 44,
+            "match": {
+              "location": "steps/profile.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "name": "user updates email",
+            "keyword": "And ",
+            "line": 45,
+            "match": {
+              "location": "steps/profile.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "user clicks save",
+            "keyword": "And ",
+            "line": 46,
+            "match": {
+              "location": "steps/profile.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "name": "profile should be updated",
+            "keyword": "Then ",
+            "line": 47,
+            "match": {
+              "location": "steps/profile.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          }
+        ]
+      },
+      {
+        "name": "Change password",
+        "description": "",
+        "id": "user-profile;change-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 49,
+        "steps": [
+          {
+            "name": "user is on profile settings",
+            "keyword": "Given ",
+            "line": 50,
+            "match": {
+              "location": "steps/profile.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "user enters old password",
+            "keyword": "When ",
+            "line": 51,
+            "match": {
+              "location": "steps/profile.js:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "name": "user enters new password",
+            "keyword": "And ",
+            "line": 52,
+            "match": {
+              "location": "steps/profile.js:70"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 2000000000,
+              "error_message": "ValidationError: Password must contain at least one number"
+            }
+          }
+        ]
+      },
+      {
+        "name": "View user preferences",
+        "description": "",
+        "id": "user-profile;view-preferences",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 54,
+        "steps": [
+          {
+            "name": "user is logged in",
+            "keyword": "Given ",
+            "line": 55,
+            "match": {
+              "location": "steps/profile.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000000
+            }
+          },
+          {
+            "name": "user navigates to preferences",
+            "keyword": "When ",
+            "line": 56,
+            "match": {
+              "location": "steps/profile.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "name": "preferences should be visible",
+            "keyword": "Then ",
+            "line": 57,
+            "match": {
+              "location": "steps/profile.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Search Feature",
+    "id": "search",
+    "name": "Search",
+    "keyword": "Feature",
+    "line": 60,
+    "elements": [
+      {
+        "name": "Search for products",
+        "description": "",
+        "id": "search;search-products",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "line": 62,
+        "steps": [
+          {
+            "name": "user is on home page",
+            "keyword": "Given ",
+            "line": 63,
+            "match": {
+              "location": "steps/search.js:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "user enters search term",
+            "keyword": "When ",
+            "line": 64,
+            "match": {
+              "location": "steps/search.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "name": "user clicks search button",
+            "keyword": "And ",
+            "line": 65,
+            "match": {
+              "location": "steps/search.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "name": "search results should be displayed",
+            "keyword": "Then ",
+            "line": 66,
+            "match": {
+              "location": "steps/search.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "id": "defect-1793000433002-1hpwmaa6a",
+  "defectNumber": 63,
+  "date": "10/26/2026, 1:10:33 PM",
+  "timestamp": 1793000433002,
+  "testCaseName": "CSX-1\\CSX-1-Script.spec.ts › CSX-1-TC_P01: Estimate emissions for Groceries from <redacted:startCity> to <redacted:endCity> at 2500 Tons",
+  "severity": "High",
+  "defectType": "Test Execution Failure",
+  "description": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=combobox[name=\"Goods\"]') to be visible\u001b[22m\n\n\n   at ..\\pages\\CSX-1-Page.ts:9\n\n   7 |   async naviga",
+  "expectedResult": "Not specified",
+  "actualResult": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('role=combobox[name=\"Goods\"]') to be visible\u001b[22m\n\n\n   at ..\\pages\\CSX-1-Page.ts:9\n\n   7 |   async navigate(): Promise<void> {\n   8 |     await this.page.goto('https://www.csx.com/index.cfm/about-us/sustainability/environment/carbon-estimator/');\n>  9 |     await this.page.locator(Locators.goods).waitFor({ state: 'visible' });\n     |                                             ^\n  10 |     await this.page.locator(Locators.startCity).waitFor({ state: 'visible' });\n  11 |     await this.page.locator(Locators.endCity).waitFor({ state: 'visible' });\n  12 |     await this.page.locator(Locators.freightVolume).waitFor({ state: 'visible' });\n    at Csx1Page.navigate (C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\pages\\CSX-1-Page.ts:9:45)\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\CSX-1\\CSX-1-Script.spec.ts:27:5\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\CSX-1\\CSX-1-Script.spec.ts:26:3",
+  "status": "Open",
+  "comments": ""
+}

@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-09-04T12:00:00Z",
+  "total": 8,
+  "passed": 6,
+  "failed": 2,
+  "skipped": 2,
+  "passRate": 75,
+  "duration": 18000,
+  "tests": [
+    {
+      "name": "User Login - Successful login with valid credentials",
+      "status": "passed",
+      "duration": 5500,
+      "file": "features/user-login.feature",
+      "steps": 4
+    },
+    {
+      "name": "User Login - Failed login with invalid credentials",
+      "status": "failed",
+      "duration": 6000,
+      "file": "features/user-login.feature",
+      "steps": 4,
+      "error": "AssertionError: expected 'Welcome' to equal 'Error: Invalid credentials'"
+    },
+    {
+      "name": "Search Functionality - Basic search",
+      "status": "passed",
+      "duration": 6500,
+      "file": "features/search-functionality.feature",
+      "steps": 3
+    },
+    {
+      "name": "Search Functionality - Advanced search with filters",
+      "status": "skipped",
+      "duration": 0,
+      "file": "features/search-functionality.feature",
+      "steps": 3,
+      "reason": "Pending implementation"
+    },
+    {
+      "name": "Search Functionality - Empty search results",
+      "status": "failed",
+      "duration": 6000,
+      "file": "features/search-functionality.feature",
+      "steps": 3,
+      "error": "TimeoutError: Waiting for element to appear failed after 10000ms"
+    }
+  ],
+  "summary": {
+    "features": {
+      "passed": 1,
+      "failed": 1,
+      "total": 2
+    },
+    "scenarios": {
+      "passed": 3,
+      "failed": 2,
+      "skipped": 2,
+      "total": 8
+    },
+    "averageExecutionTime": 2250,
+    "slowestTest": "Search Functionality - Advanced search with filters"
+  }
+}

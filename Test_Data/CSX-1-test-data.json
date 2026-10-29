@@ -1,0 +1,64 @@
+{
+  "storyId": "CSX-1",
+  "summary": "CSX_CarbonEstimator",
+  "generatedOn": "2026-10-26T06:00:41.667Z",
+  "baseUrl": "",
+  "testCases": [
+    {
+      "testCaseId": "CSX-1-TC_P01",
+      "label": "CSX-1-TC_P01 — Estimate emissions for Groceries from Birmingham to Boston at 2500 Tons",
+      "title": "Estimate emissions for Groceries from Birmingham to Boston at 2500 Tons",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.csx.com/index.cfm/about-us/sustainability/environment/carbon-estimator/",
+        "goods": "Groceries",
+        "startCity": "Birmingham",
+        "endCity": "Boston",
+        "freightVolume": "2500 Tons",
+        "maximumEstimateExclusive": 300,
+        "estimateUnit": "tons"
+      }
+    },
+    {
+      "testCaseId": "CSX-1-TC_P02",
+      "label": "CSX-1-TC_P02 — Generate the specified estimate when selections are entered in a different order",
+      "title": "Generate the specified estimate when selections are entered in a different order",
+      "type": "Positive",
+      "data": {
+        "url": "https://www.csx.com/index.cfm/about-us/sustainability/environment/carbon-estimator/",
+        "goods": "Groceries",
+        "startCity": "Birmingham",
+        "endCity": "Boston",
+        "freightVolume": "2500 Tons",
+        "selectionOrder": [
+          "Birmingham Start City",
+          "Boston End City",
+          "Groceries",
+          "2500 Tons"
+        ],
+        "maximumEstimateExclusive": 300,
+        "estimateUnit": "tons"
+      }
+    },
+    {
+      "testCaseId": "CSX-1-TC_N01",
+      "label": "CSX-1-TC_N01 — Do not display a completed estimate when Goods is not selected",
+      "title": "Do not display a completed estimate when Goods is not selected",
+      "type": "Negative",
+      "data": {
+        "url": "https://www.csx.com/index.cfm/about-us/sustainability/environment/carbon-estimator/",
+        "goods": null,
+        "startCity": "Birmingham",
+        "endCity": "Boston",
+        "freightVolume": "2500 Tons"
+      }
+    }
+  ],
+  "metadata": {
+    "generatedOn": "2026-10-26T06:00:41.668Z",
+    "totalCases": 3,
+    "positive": 2,
+    "negative": 1,
+    "edge": 0
+  }
+}

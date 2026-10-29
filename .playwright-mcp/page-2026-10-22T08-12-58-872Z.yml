@@ -1,0 +1,95 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - link [ref=f1e7] [cursor=pointer]:
+      - /url: https://www.umb.com
+      - img "UMB Bank n.a." [ref=f1e8]
+  - text:       
+  - generic [ref=f1e10]:
+    - generic [ref=f1e11]:
+      - generic [ref=f1e12]:
+        - generic [ref=f1e13]: 
+        - generic [ref=f1e14]:
+          - text: 
+          - generic [ref=f1e15]:
+            - generic [ref=f1e18]: Before You Apply
+            - text: 
+            - generic [ref=f1e20]:
+              - paragraph [ref=f1e21]: Thank you for choosing UMB Bank.
+              - paragraph [ref=f1e22]: Before you apply, please check to ensure you meet the minimum requirements of a UMB loan, which includes being a resident of the United States with documentation to confirm your identity.
+              - paragraph [ref=f1e23]: "Please have the following items ready when you begin your application:"
+              - paragraph
+              - list [ref=f1e24]:
+                - listitem [ref=f1e25]: State-issued ID (driver's license, military ID)
+                - listitem [ref=f1e26]: Passport
+                - listitem [ref=f1e27]: Social Security Number
+                - listitem [ref=f1e28]: U.S. citizenship or resident alien status
+                - listitem [ref=f1e29]: Joint applicant's information (if necessary)
+              - paragraph [ref=f1e30]: For your security, the system will log you off if there is no activity for 15 minutes.
+              - paragraph [ref=f1e31]: "Important Information About Procedures for Applying a Loan To help the government fight the funding of terrorism and money laundering activities, Federal Law requires all financial institutions to obtain, verify and record information that identifies each person who opens an account. What This Means to You: When you open a new account, we will ask for your name, address, date of birth and other information that will allow us to identify you. We may also ask to see your driver's license or other identifying documents."
+              - paragraph [ref=f1e32]:
+                - text: Our Privacy Policy Protection of your privacy is important to us. To read more about how we protect your personal information, review our
+                - link "privacy policy" [ref=f1e33] [cursor=pointer]:
+                  - /url: javascript:showPopupNewWindow('https://p1.aprimocdn.net/umb/d1e7ba95-481f-4f38-a672-b0750000cd7e/UMB_Privacy_Notice_Original_file.pdf');
+                - text: .
+              - paragraph [ref=f1e34]:
+                - strong [ref=f1e35]: Your Credit History
+              - paragraph [ref=f1e36]: As part of processing your application we will request a credit report and use the information contained in it to evaluate your loan application.
+              - paragraph
+            - generic [ref=f1e37]:
+              - separator [ref=f1e38]
+              - heading [level=5] [ref=f1e39]:
+                - strong [ref=f1e40]: Electronic Disclosure and Consent
+              - generic [ref=f1e41]: The Electronic Disclosure and Consent contains important information that you are entitled to receive before you consent to transact business with us electronically. Please read this notice carefully and print or download a copy for your files.
+              - button "Electronic Disclosure and Consent " [ref=f1e43] [cursor=pointer]:
+                - generic [ref=f1e44]: Electronic Disclosure and Consent
+                - generic [ref=f1e45]: 
+              - strong [ref=f1e48]:
+                - checkbox "* I have read the Electronic Disclosure and Consent and I consent to the use of electronic records in connection with this application." [disabled]
+                - generic [ref=f1e49]: "*"
+                - text: I have read the Electronic Disclosure and Consent and I consent to the use of electronic records in connection with this application.
+            - text:   
+          - text:   
+        - generic [ref=f1e53]:
+          - button "Back" [disabled] [ref=f1e56]:
+            - generic [ref=f1e57]: 
+          - button "Next" [ref=f1e59] [cursor=pointer]
+      - generic [ref=f1e62]:
+        - list [ref=f1e66]:
+          - listitem [ref=f1e67]:
+            - link " Start" [ref=f1e68] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f1e69]: 
+              - generic [ref=f1e71]: Start
+          - listitem [ref=f1e72]:
+            - link " Personal Information" [ref=f1e73] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f1e74]: 
+              - generic [ref=f1e76]: Personal Information
+          - listitem [ref=f1e77]:
+            - link " Account Selection" [ref=f1e78] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f1e79]: 
+              - generic [ref=f1e81]: Account Selection
+          - listitem [ref=f1e82]:
+            - link " Disclosure Information" [ref=f1e83] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f1e84]: 
+              - generic [ref=f1e86]: Disclosure Information
+          - listitem [ref=f1e87]:
+            - link " Confirmation" [ref=f1e88] [cursor=pointer]:
+              - /url: "#!"
+              - generic [ref=f1e89]: 
+              - generic [ref=f1e91]: Confirmation
+        - generic [ref=f1e92]:
+          - generic [ref=f1e93]: Need help ?
+          - generic [ref=f1e94]:
+            - generic [ref=f1e95]:
+              - generic [ref=f1e96]: 
+              - paragraph [ref=f1e97]: 888-860-5626
+            - generic [ref=f1e98]:
+              - generic [ref=f1e99]: 
+              - paragraph [ref=f1e100]: Monday - Friday, 8:00 a.m. to 5:00 p.m. CT
+    - generic [ref=f1e103]:
+      - paragraph [ref=f1e105]: UMB Bank n.a.©2026 All Rights Reserved
+      - generic [ref=f1e106]: 
+      - img "EHL" [ref=f1e110]

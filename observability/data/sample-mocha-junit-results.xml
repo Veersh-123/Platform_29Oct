@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Guidewire PolicyCenter Test Suite" tests="120" failures="18" errors="7" skipped="8" time="892.45" timestamp="2024-11-10T14:30:00">
+  
+  <!-- Policy Management Tests (25 tests) -->
+  <testcase classname="PolicyCenter.PolicyManagement" name="Create New Auto Policy" time="8.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Update Existing Policy Coverage" time="6.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Cancel Policy with Refund" time="5.12">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Renew Policy Before Expiration" time="7.89">
+    <failure message="Policy renewal failed: Premium calculation error" type="AssertionError">
+AssertionError: Expected premium to be calculated correctly
+    at PolicyRenewalTest.validatePremium (test/policy/renewal-test.js:45)
+    at PolicyRenewalTest.testRenewalProcess (test/policy/renewal-test.js:32)
+    at Context.it (test/policy/renewal-test.js:18)
+Stack trace indicates premium calculation service returned null
+Expected: $1,245.67
+Actual: null
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Create Commercial Auto Policy" time="9.12">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Add Additional Driver" time="4.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Remove Vehicle from Policy" time="3.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Change Policy Address" time="5.34">
+    <failure message="Address validation service returned invalid response" type="ValidationError">
+ValidationError: Address validation failed for ZIP code 99999
+    at AddressValidator.validate (src/validators/address-validator.js:23)
+    at PolicyManagementTest.updateAddress (test/policy/address-test.js:34)
+    at Context.it (test/policy/address-test.js:19)
+Invalid ZIP code provided: 99999
+Expected format: 5-digit ZIP or ZIP+4
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Document Generation" time="7.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Effective Date Change" time="4.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Multi-State Policy Creation" time="11.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Lapse Processing" time="6.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Reinstate Lapsed Policy" time="8.34">
+    <failure message="Reinstatement eligibility check failed" type="BusinessRuleError">
+BusinessRuleError: Policy cannot be reinstated due to unpaid premiums
+    at ReinstatementService.checkEligibility (src/services/reinstatement-service.js:67)
+    at PolicyManagementTest.testReinstatement (test/policy/reinstatement-test.js:45)
+    at Context.it (test/policy/reinstatement-test.js:23)
+Outstanding premium amount: $2,567.89
+Grace period expired: 2024-10-15
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Transfer Between Agents" time="5.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Batch Policy Updates" time="15.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Audit Process" time="9.87">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Emergency Contact Updates" time="3.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Comparison Tool" time="7.12">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Search and Filter" time="4.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Export to PDF" time="6.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Email Notifications" time="3.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Archive Process" time="8.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Data Migration" time="12.34">
+    <error message="Database connection timeout during migration" type="DatabaseError">
+DatabaseError: Connection timeout while migrating policy data
+    at MigrationService.migratePolicy (src/services/migration-service.js:89)
+    at PolicyManagementTest.testMigration (test/policy/migration-test.js:56)
+    at Context.it (test/policy/migration-test.js:34)
+Migration batch size: 1000 policies
+Timeout threshold: 30 seconds
+    </error>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Duplicate Detection" time="7.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy Validation Rules" time="5.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.PolicyManagement" name="Policy History Tracking" time="4.67">
+  </testcase>
+  
+  <!-- Underwriting Tests (20 tests) -->
+  <testcase classname="PolicyCenter.Underwriting" name="Auto Underwriting Rules Validation" time="4.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Risk Assessment Score Calculation" time="3.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="High Risk Driver Evaluation" time="9.34">
+    <failure message="High risk evaluation service timeout" type="TimeoutError">
+TimeoutError: Underwriting service did not respond within 10 seconds
+    at UnderwritingService.evaluateRisk (src/services/underwriting-service.js:78)
+    at HighRiskTest.testEvaluation (test/underwriting/high-risk-test.js:23)
+    at Context.it (test/underwriting/high-risk-test.js:12)
+Service endpoint: https://underwriting.guidewire.com/api/evaluate
+Request timeout: 10000ms
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Credit Score Impact Assessment" time="5.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Commercial Lines Underwriting" time="8.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Young Driver Risk Analysis" time="6.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Multi-Vehicle Discount Eligibility" time="4.12">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Senior Driver Benefits" time="3.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Telematics Data Analysis" time="7.56">
+    <failure message="Telematics service integration failed" type="IntegrationError">
+IntegrationError: Unable to retrieve telematics data for driver analysis
+    at TelematicsService.fetchData (src/services/telematics-service.js:123)
+    at UnderwritingTest.analyzeDrivingBehavior (test/underwriting/telematics-test.js:67)
+    at Context.it (test/underwriting/telematics-test.js:45)
+Device ID: TMT_12345678
+API endpoint: https://telematics.partner.com/api/v2/data
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Prior Insurance Verification" time="6.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Occupation Risk Classification" time="4.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Geographic Risk Assessment" time="5.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Vehicle Safety Rating Impact" time="3.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Underwriter Assignment Logic" time="4.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Automatic Approval Thresholds" time="2.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Manual Review Queue" time="6.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Risk Factor Weighting" time="5.12">
+    <failure message="Risk calculation model returned inconsistent results" type="CalculationError">
+CalculationError: Risk score calculation mismatch between old and new models
+    at RiskCalculator.calculateScore (src/calculators/risk-calculator.js:234)
+    at UnderwritingTest.validateRiskScore (test/underwriting/risk-test.js:89)
+    at Context.it (test/underwriting/risk-test.js:56)
+Old model score: 742
+New model score: 687
+Variance threshold: ±5%
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Underwriting Guidelines Compliance" time="7.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Declination Letter Generation" time="4.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Underwriting" name="Reunderwriting Process" time="8.90">
+  </testcase>
+  
+  <!-- Claims Processing Tests (20 tests) -->
+  <testcase classname="PolicyCenter.Claims" name="Create New Claim Record" time="5.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Update Claim Status" time="4.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Calculate Settlement Amount" time="6.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Process Payment to Claimant" time="8.91">
+    <error message="Database connection failed during payment processing" type="DatabaseError">
+DatabaseError: Connection to payment database lost
+    at PaymentProcessor.processPayment (src/processors/payment-processor.js:156)
+    at ClaimsTest.processClaimPayment (test/claims/payment-test.js:67)
+    at Context.it (test/claims/payment-test.js:34)
+Connection string: jdbc:oracle:thin:@//db.guidewire.com:1521/PCDB
+Error code: ORA-03113
+    </error>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Adjuster Assignment Logic" time="3.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Claim Investigation Process" time="12.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Medical Provider Network Validation" time="7.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Injury Claim Processing" time="9.67">
+    <failure message="Medical records validation failed" type="ValidationError">
+ValidationError: Required medical documentation is missing
+    at MedicalValidator.validateRecords (src/validators/medical-validator.js:45)
+    at ClaimsTest.processInjuryClaim (test/claims/injury-test.js:78)
+    at Context.it (test/claims/injury-test.js:34)
+Missing documents: X-ray reports, physician notes
+Claim number: CLM_20241110_001
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Property Damage Assessment" time="8.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Rental Car Authorization" time="4.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Total Loss Vehicle Valuation" time="11.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Salvage Value Calculation" time="6.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Subrogation Process Initiation" time="7.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Claims Fraud Detection" time="9.45">
+    <failure message="Fraud detection service unavailable" type="ServiceError">
+ServiceError: External fraud detection API is not responding
+    at FraudDetectionService.analyzePattern (src/services/fraud-service.js:123)
+    at ClaimsTest.detectFraud (test/claims/fraud-test.js:56)
+    at Context.it (test/claims/fraud-test.js:34)
+Service URL: https://fraud-api.external.com/v1/analyze
+Response timeout: 15 seconds
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Claims Reserve Management" time="5.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Claim Closure Process" time="4.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Reopened Claim Handling" time="6.12">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Claims Reporting and Analytics" time="8.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Claims Document Management" time="5.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Claims" name="Claims Communication Tracking" time="3.89">
+  </testcase>
+  
+  <!-- Agent Portal Tests (15 tests) -->
+  <testcase classname="PolicyCenter.AgentPortal" name="Agent Login Authentication" time="2.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Search Customer Policies" time="3.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Generate Policy Quote" time="7.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Submit Application for Review" time="5.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Agent Commission Calculation" time="6.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Customer Information Management" time="4.12">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Policy Bind and Issue" time="8.67">
+    <failure message="Policy binding failed due to missing signatures" type="BusinessRuleError">
+BusinessRuleError: Cannot bind policy without all required signatures
+    at PolicyBinder.validateSignatures (src/services/policy-binder.js:89)
+    at AgentPortalTest.bindPolicy (test/portal/bind-test.js:45)
+    at Context.it (test/portal/bind-test.js:23)
+Missing signatures: Insured, Co-Insured
+Policy application ID: APP_20241110_567
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Agent Dashboard Metrics" time="3.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Lead Management System" time="5.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Customer Communication Tools" time="4.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Agent Performance Reports" time="7.89">
+    <skipped message="Performance reporting module under maintenance">
+Performance reporting service temporarily unavailable
+Maintenance window: 2024-11-10 15:00-17:00 EST
+Expected completion: 17:00 EST
+    </skipped>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Multi-Company Quote Comparison" time="9.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Agent Training Module Access" time="2.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Customer Renewal Notifications" time="4.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.AgentPortal" name="Agent Mobile Application" time="6.12">
+    <error message="Mobile API authentication failed" type="AuthenticationError">
+AuthenticationError: Mobile API key validation failed
+    at MobileAuthService.validateApiKey (src/services/mobile-auth.js:67)
+    at AgentPortalTest.testMobileAccess (test/portal/mobile-test.js:34)
+    at Context.it (test/portal/mobile-test.js:19)
+API key format invalid or expired
+Expected format: AGT_YYYYMMDD_XXXXXXXXXXXX
+    </error>
+  </testcase>
+  
+  <!-- Rating Engine Tests (15 tests) -->
+  <testcase classname="PolicyCenter.Rating" name="Auto Premium Calculation" time="4.12">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Multi-Vehicle Discount Application" time="3.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Territory-Based Rate Adjustment" time="2.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Good Driver Discount Validation" time="3.21">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Age-Based Rating Factors" time="2.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Vehicle Year and Model Rating" time="4.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Coverage Limit Impact on Premium" time="3.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Deductible Selection Effects" time="2.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Bundle Discount Calculation" time="5.12">
+    <failure message="Bundle discount rules conflict detected" type="BusinessLogicError">
+BusinessLogicError: Multiple bundle discount rules apply with conflicting results
+    at BundleDiscountEngine.calculateDiscount (src/engines/bundle-engine.js:156)
+    at RatingTest.testBundleDiscount (test/rating/bundle-test.js:67)
+    at Context.it (test/rating/bundle-test.js:34)
+Conflicting rules: AUTO_HOME_BUNDLE, MULTI_POLICY_DISCOUNT
+Rule priority resolution required
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Loyalty Discount Application" time="3.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Rate Table Version Management" time="4.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Rating Override Functionality" time="5.23">
+    <failure message="Rating override exceeds authorized limit" type="AuthorizationError">
+AuthorizationError: Override percentage exceeds agent authority limit
+    at RatingOverride.validateOverride (src/services/rating-override.js:89)
+    at RatingTest.testOverride (test/rating/override-test.js:45)
+    at Context.it (test/rating/override-test.js:23)
+Requested override: 25%
+Agent authority limit: 15%
+Manager approval required
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Surcharge Application Logic" time="4.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Rating Audit Trail" time="3.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Rating" name="Dynamic Pricing Model" time="7.89">
+    <error message="Pricing model service connection failed" type="ConnectionError">
+ConnectionError: Unable to connect to dynamic pricing service
+    at PricingModelService.connect (src/services/pricing-service.js:234)
+    at RatingTest.testDynamicPricing (test/rating/dynamic-test.js:56)
+    at Context.it (test/rating/dynamic-test.js:34)
+Service endpoint: https://pricing.analytics.com/api/v3
+Connection timeout: 10 seconds
+    </error>
+  </testcase>
+  
+  <!-- Integration Tests (12 tests) -->
+  <testcase classname="PolicyCenter.Integration" name="DMV Record Lookup" time="12.45">
+    <skipped message="DMV service unavailable during maintenance window">
+DMV integration service is in maintenance mode
+Scheduled maintenance: 2024-11-10 14:00-16:00 EST
+Test will be retried after maintenance completion
+    </skipped>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="Credit Score API Integration" time="8.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="Document Management System Sync" time="6.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="Payment Gateway Integration" time="9.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="VIN Decoder Service" time="4.56">
+    <failure message="VIN decoder API returned invalid data format" type="DataFormatError">
+DataFormatError: VIN decoder response format has changed
+    at VinDecoderService.parseResponse (src/services/vin-decoder.js:123)
+    at IntegrationTest.decodeVin (test/integration/vin-test.js:45)
+    at Context.it (test/integration/vin-test.js:23)
+Expected field 'modelYear' not found in response
+VIN: 1HGCM82633A123456
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="Insurance Score Provider" time="7.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="CLUE Report Integration" time="11.34">
+    <skipped message="CLUE service rate limit exceeded">
+CLUE report service has reached daily rate limit
+Current usage: 1000/1000 requests
+Reset time: 2024-11-11 00:00:00 EST
+    </skipped>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="ISO Symbol Lookup" time="5.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="Regulatory Filing System" time="8.78">
+    <error message="Regulatory filing service authentication expired" type="AuthenticationError">
+AuthenticationError: SSL certificate for regulatory service has expired
+    at RegulatoryService.authenticate (src/services/regulatory-service.js:67)
+    at IntegrationTest.fileReport (test/integration/regulatory-test.js:34)
+    at Context.it (test/integration/regulatory-test.js:19)
+Certificate expiration: 2024-11-09 23:59:59
+Service URL: https://regulatory.state.gov/api/filing
+    </error>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="Email Service Provider" time="3.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="SMS Notification Service" time="2.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Integration" name="Geocoding Service" time="4.12">
+    <failure message="Geocoding service returned ambiguous results" type="DataAmbiguityError">
+DataAmbiguityError: Multiple geocoding results for address
+    at GeocodingService.resolveAddress (src/services/geocoding-service.js:89)
+    at IntegrationTest.geocodeAddress (test/integration/geocoding-test.js:56)
+    at Context.it (test/integration/geocoding-test.js:34)
+Address: 123 Main St, Springfield
+Matches found: 12 (multiple states)
+    </failure>
+  </testcase>
+  
+  <!-- Workflow Tests (8 tests) -->
+  <testcase classname="PolicyCenter.Workflow" name="Policy Approval Workflow" time="9.87">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Workflow" name="Cancellation Request Processing" time="7.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Workflow" name="Endorsement Approval Chain" time="11.23">
+    <failure message="Workflow step timeout in approval chain" type="WorkflowTimeout">
+WorkflowTimeout: Approval step 'ManagerApproval' exceeded maximum wait time
+    at WorkflowEngine.executeStep (src/workflow/workflow-engine.js:234)
+    at EndorsementTest.testApprovalChain (test/workflow/endorsement-test.js:89)
+    at Context.it (test/workflow/endorsement-test.js:45)
+Workflow ID: WF_ENDORSE_20241110_001
+Step: ManagerApproval
+Timeout: 300 seconds
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Workflow" name="Claims Approval Workflow" time="8.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Workflow" name="Underwriting Decision Workflow" time="12.78">
+    <failure message="Underwriting workflow stuck in pending state" type="WorkflowStateError">
+WorkflowStateError: Workflow unable to progress from pending state
+    at WorkflowEngine.validateTransition (src/workflow/workflow-engine.js:178)
+    at WorkflowTest.testUnderwritingDecision (test/workflow/underwriting-workflow-test.js:67)
+    at Context.it (test/workflow/underwriting-workflow-test.js:34)
+Current state: PENDING_MEDICAL_REVIEW
+Expected transition: APPROVED or DECLINED
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Workflow" name="Renewal Processing Workflow" time="9.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Workflow" name="Document Generation Workflow" time="6.78">
+    <error message="Document template service unavailable" type="ServiceError">
+ServiceError: Document template service is not responding
+    at DocumentService.generateDocument (src/services/document-service.js:145)
+    at WorkflowTest.testDocumentGeneration (test/workflow/document-workflow-test.js:45)
+    at Context.it (test/workflow/document-workflow-test.js:23)
+Template service URL: https://templates.internal.com/api/generate
+Service status: DOWN
+    </error>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Workflow" name="Escalation Workflow Process" time="7.23">
+  </testcase>
+  
+  <!-- Reporting Tests (15 tests) -->
+  <testcase classname="PolicyCenter.Reporting" name="Policy Summary Report Generation" time="5.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Premium Collection Report" time="4.78">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Claims Loss Ratio Analysis" time="8.90">
+    <skipped message="Report service scheduled for upgrade">
+Reporting service is being upgraded to version 2.4.1
+Estimated completion: 2024-11-10 16:30 EST
+Test execution postponed until service is available
+    </skipped>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Agent Performance Dashboard" time="7.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Underwriting Metrics Report" time="6.45">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Financial Performance Report" time="9.67">
+    <failure message="Financial data aggregation timeout" type="TimeoutError">
+TimeoutError: Report generation exceeded maximum processing time
+    at ReportGenerator.aggregateFinancialData (src/generators/report-generator.js:234)
+    at ReportingTest.generateFinancialReport (test/reporting/financial-test.js:67)
+    at Context.it (test/reporting/financial-test.js:34)
+Data range: 2024-01-01 to 2024-11-10
+Records to process: 2,456,789
+Timeout limit: 60 seconds
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Regulatory Compliance Report" time="8.34">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Customer Satisfaction Survey Report" time="5.12">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Claims Frequency Analysis" time="7.89">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Premium Audit Report" time="6.78">
+    <skipped message="Audit data not available for current period">
+Premium audit data collection in progress
+Data availability: 2024-11-12 09:00 EST
+Current completion: 67%
+    </skipped>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Territory Performance Analysis" time="9.23">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Product Line Profitability Report" time="8.45">
+    <failure message="Profitability calculation model error" type="CalculationError">
+CalculationError: Negative profitability values detected in calculation
+    at ProfitabilityCalculator.calculateProfitability (src/calculators/profitability-calculator.js:167)
+    at ReportingTest.testProfitabilityReport (test/reporting/profitability-test.js:56)
+    at Context.it (test/reporting/profitability-test.js:34)
+Product line: Commercial Auto
+Calculated value: -$234,567.89
+Expected range: $0 to $10,000,000
+    </failure>
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Renewal Rate Trending Report" time="5.67">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Commission Calculation Report" time="4.56">
+  </testcase>
+  
+  <testcase classname="PolicyCenter.Reporting" name="Executive Summary Dashboard" time="7.12">
+    <skipped message="Executive dashboard requires additional security clearance">
+Executive dashboard access restricted during security audit
+Security review period: 2024-11-08 to 2024-11-15
+Temporary access suspension for non-critical reports
+    </skipped>
+  </testcase>
+  
+  <!-- System Properties for test environment -->
+  <properties>
+    <property name="guidewire.version" value="10.2.1"/>
+    <property name="java.version" value="11.0.16"/>
+    <property name="database.version" value="Oracle 19c"/>
+    <property name="test.environment" value="QA"/>
+    <property name="application.server" value="WebLogic 14.1.1"/>
+    <property name="browser" value="Chrome 119.0"/>
+    <property name="test.suite.id" value="PC_REGRESSION_20241110"/>
+    <property name="execution.user" value="qa_automation"/>
+  </properties>
+  
+  <!-- System output logs -->
+  <system-out><![CDATA[
+Test Suite Execution Started: 2024-11-10T14:30:00Z
+Environment: Guidewire PolicyCenter QA Environment
+Browser: Chrome 119.0.6045.105
+Test Data: Refreshed from production snapshot (2024-11-09)
+Database Connection: Established to PCDB_QA
+License Check: Valid (expires 2024-12-31)
+]]></system-out>
+  
+  <!-- System error logs -->
+  <system-err><![CDATA[
+WARN: DMV service timeout in 1 test case
+ERROR: Database connection lost during payment processing test
+INFO: 2 tests skipped due to service maintenance
+]]></system-err>
+
+</testsuite>

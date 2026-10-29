@@ -1,0 +1,145 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link [ref=e5] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e7]:
+      - paragraph [ref=e8]
+      - paragraph [ref=e9]:
+        - link "CSX $50.79 -0.88 (-1.703)" [ref=e10] [cursor=pointer]:
+          - /url: https://investors.csx.com/stock-information/default.aspx
+      - paragraph [ref=e13]:
+        - link "/ ShipCSX" [ref=e14] [cursor=pointer]:
+          - /url: https://www.shipcsx.com
+        - text: "/ REPORT AN EMERGENCY: 1-800-232-0144 /"
+        - link [ref=e15] [cursor=pointer]:
+          - /url: /index.cfm/about-us/company-overview/website-accessibility/
+          - img "Accessibility Icon" [ref=e16]
+      - list [ref=e17]:
+        - listitem [ref=e18]: About Us
+        - listitem [ref=e19]: Community
+        - listitem [ref=e20]: Customers
+        - listitem [ref=e21]: Suppliers
+        - listitem [ref=e22]: Investors
+        - listitem [ref=e23]: Working at CSX
+    - img [ref=e25] [cursor=pointer]
+  - generic [ref=e26]:
+    - list [ref=e28]:
+      - listitem [ref=e29]:
+        - link "About Us" [ref=e30] [cursor=pointer]:
+          - /url: /index.cfm/about-us/
+      - listitem [ref=e31]:
+        - text: /
+        - link "Sustainability" [ref=e32] [cursor=pointer]:
+          - /url: /index.cfm/about-us/sustainability/
+      - listitem [ref=e33]:
+        - text: /
+        - link "Environment" [ref=e34] [cursor=pointer]:
+          - /url: /index.cfm/about-us/sustainability/environment/
+      - listitem [ref=e35]: /Carbon Estimator
+    - list [ref=e38]:
+      - listitem [ref=e39]:
+        - link "Environment" [ref=e40] [cursor=pointer]:
+          - /url: /index.cfm/about-us/sustainability/environment
+      - listitem [ref=e41]:
+        - link "Environmental Management System" [ref=e42] [cursor=pointer]:
+          - /url: /index.cfm/about-us/sustainability/environment/environmental-management-system
+      - listitem [ref=e43]:
+        - link "Environmental Policy" [ref=e44] [cursor=pointer]:
+          - /url: /index.cfm/about-us/sustainability/environment/environmental-policy
+      - listitem [ref=e45]:
+        - link "Carbon Calculator" [ref=e46] [cursor=pointer]:
+          - /url: /index.cfm/about-us/sustainability/environment/carbon-calculator
+    - generic [ref=e47]:
+      - heading "Carbon Estimator" [level=1] [ref=e48]
+      - separator [ref=e49]
+      - paragraph [ref=e51]: CSX is committed to helping protect the environment. Use this calculator to see the amount of CO2 saved when goods are moved on our rails. You can select from everyday items, choose the distance they’ll travel, and select the freight volume. Change any of the variables to get a different outcome.
+      - generic [ref=e52]:
+        - paragraph [ref=e55] [cursor=pointer]: BASIC
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - paragraph [ref=e58]: "Step 1: Goods"
+            - separator [ref=e59]
+            - paragraph [ref=e60]: "CSX trains carry goods from our everyday lives. Pick an Item:"
+          - generic [ref=e61]:
+            - generic [ref=e62] [cursor=pointer]
+            - generic [ref=e65] [cursor=pointer]
+            - generic [ref=e68] [cursor=pointer]
+            - generic [ref=e71] [cursor=pointer]
+          - generic [ref=e74]: "Step 2: Distance"
+          - generic [ref=e75]: "Step 3: Freight Volume"
+          - generic [ref=e76]:
+            - link "View Sustainability Report":
+              - /url: /index.cfm/about-us/responsibility/corporate-social-responsibility-report/
+              - paragraph [ref=e78] [cursor=pointer]: View Sustainability Report
+          - heading "Learn more about the CSX sustainability efforts:" [level=2] [ref=e80]
+          - list [ref=e81]:
+            - listitem [ref=e82]:
+              - link "CSX Fuel Efficiency" [ref=e83] [cursor=pointer]:
+                - /url: https://www.csx.com/index.cfm/about-us/the-csx-advantage/fuel-efficiency/
+            - listitem [ref=e84]:
+              - text: EPA Emission factor for diesel fuel mobile combustion = 10.21 kg CO2 /gal
+              - link "GHG Emission Factors Hub | US EPA" [ref=e85] [cursor=pointer]:
+                - /url: https://www.epa.gov/climateleadership/ghg-emission-factors-hub/
+            - listitem [ref=e86]:
+              - text: "* Per the"
+              - link "EPA Greenhouse Gas Equivalencies Calculator" [ref=e87] [cursor=pointer]:
+                - /url: https://www.epa.gov/energy/greenhouse-gas-equivalencies-calculator
+  - generic [ref=e88]:
+    - paragraph [ref=e90]:
+      - link [ref=e91] [cursor=pointer]:
+        - /url: http://www.facebook.com/OfficialCSX
+        - img "Facebook" [ref=e92]
+      - link [ref=e93] [cursor=pointer]:
+        - /url: http://twitter.com/CSX
+        - img "Twitter" [ref=e94]
+      - link [ref=e95] [cursor=pointer]:
+        - /url: http://linkedin.com/company/csx-transportation
+      - link [ref=e96] [cursor=pointer]:
+        - /url: http://instagram.com/OfficialCSX
+        - img "Instagram" [ref=e97]
+      - link [ref=e98] [cursor=pointer]:
+        - /url: http://youtube.com/HowTomorrowMoves
+        - img "YouTube" [ref=e99]
+    - generic [ref=e100]:
+      - list [ref=e102]:
+        - listitem [ref=e103]:
+          - link "Employees" [ref=e104] [cursor=pointer]:
+            - /url: /index.cfm/working-at-csx/employees/
+        - listitem [ref=e105]:
+          - link "Retirees" [ref=e106] [cursor=pointer]:
+            - /url: /index.cfm/working-at-csx/retiree-gateway/
+        - listitem [ref=e107]:
+          - link "ShipCSX Log In" [ref=e108] [cursor=pointer]:
+            - /url: https://shipcsx.com/public/ec.shipcsxpublic/Main
+      - list [ref=e110]:
+        - listitem [ref=e111]:
+          - link "Company Store" [ref=e112] [cursor=pointer]:
+            - /url: http://www.csxstore.com/
+        - listitem [ref=e113]:
+          - link "Contact Us" [ref=e114] [cursor=pointer]:
+            - /url: /index.cfm/about-us/contact-us/
+        - listitem [ref=e115]:
+          - link "Mobile Site" [ref=e116] [cursor=pointer]:
+            - /url: "?mobileFormat=true"
+      - list [ref=e118]:
+        - listitem [ref=e119]:
+          - link "Privacy" [ref=e120] [cursor=pointer]:
+            - /url: /index.cfm/about-the-site/privacy
+        - listitem [ref=e121]:
+          - link "Terms of Use" [ref=e122] [cursor=pointer]:
+            - /url: /index.cfm/about-the-site/terms-of-use
+        - listitem [ref=e123]:
+          - link "Corporate Structure" [ref=e124] [cursor=pointer]:
+            - /url: /index.cfm/about-the-site/corporate-structure
+        - listitem [ref=e125]:
+          - link "CSX Responsible Disclosure Policy" [ref=e126] [cursor=pointer]:
+            - /url: /index.cfm/about-us/contact-us/csx-responsible-disclosure-policy/
+      - generic [ref=e127]:
+        - paragraph [ref=e128]: EMAIL SIGN-UP
+        - paragraph [ref=e129]:
+          - link "Subscribe to receive CSX Press Releases" [ref=e131] [cursor=pointer]:
+            - /url: https://investors.csx.com/resources/investor-email-alerts/default.aspx
+    - generic [ref=e132]:
+      - generic [ref=e133]: © 2024 CSX Corporation
+      - link [ref=e135] [cursor=pointer]:
+        - /url: https://csxgateway.csx.com/Pages/default.aspx

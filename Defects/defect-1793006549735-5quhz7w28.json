@@ -1,0 +1,14 @@
+{
+  "id": "defect-1793006549735-5quhz7w28",
+  "defectNumber": 65,
+  "date": "10/26/2026, 2:52:29 PM",
+  "timestamp": 1793006549735,
+  "testCaseName": "CSX-1\\CSX-1-Script.spec.ts › CSX-1-TC_P01: Estimate emissions for Groceries from <redacted:startCity> to <redacted:endCity> at 2500 Tons",
+  "severity": "Medium",
+  "defectType": "Test Execution Failure",
+  "description": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('role=combobox[name=\"Goods\"]') to be visible\u001b[22m\n\n\n   at ..\\pages\\CSX-1-Page.ts:50\n\n  48 ",
+  "expectedResult": "Not specified",
+  "actualResult": "Error: locator.waitFor: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('role=combobox[name=\"Goods\"]') to be visible\u001b[22m\n\n\n   at ..\\pages\\CSX-1-Page.ts:50\n\n  48 |     await this.page.goto('https://www.csx.com/index.cfm/about-us/sustainability/environment/');\n  49 |     await this.page.locator(Locators.carbonEstimatorLink).click();\n> 50 |     await this.page.locator(Locators.goods).waitFor({ state: 'visible' });\n     |                                             ^\n  51 |     await this.page.locator(Locators.startCity).waitFor({ state: 'visible' });\n  52 |     await this.page.locator(Locators.endCity).waitFor({ state: 'visible' });\n  53 |     await this.page.locator(Locators.freightVolume).waitFor({ state: 'visible' });\n    at Csx1Page.navigate (C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\pages\\CSX-1-Page.ts:50:45)\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\CSX-1\\CSX-1-Script.spec.ts:27:5\n    at C:\\Users\\Jitendra\\Downloads\\Latest_Play1\\Platform-2-main\\tests\\CSX-1\\CSX-1-Script.spec.ts:26:3",
+  "status": "Open",
+  "comments": ""
+}

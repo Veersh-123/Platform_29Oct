@@ -1,0 +1,181 @@
+- generic [ref=f5e2]:
+  - generic [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - generic [ref=f5e5]: T
+      - generic [ref=f5e6]:
+        - generic [ref=f5e7]: TEST DASHBOARD
+        - generic [ref=f5e8]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f5e9]:
+      - generic [ref=f5e10]:
+        - generic [ref=f5e11]: Browser
+        - combobox [ref=f5e12] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f5e13]:
+        - generic [ref=f5e14]: Environment
+        - combobox [ref=f5e15] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Signed in" [ref=f5e16] [cursor=pointer]:
+        - generic [ref=f5e17]: A
+        - generic [ref=f5e18]: Admin User
+        - button "✕" [ref=f5e19]
+      - generic "Backend server status" [ref=f5e20] [cursor=pointer]: Server :4000
+  - generic [ref=f5e23]:
+    - generic [ref=f5e24]:
+      - generic [ref=f5e25]: TEST DASHBOARD
+      - generic [ref=f5e26]:
+        - generic [ref=f5e27] [cursor=pointer]: Dashboard
+        - generic [ref=f5e28] [cursor=pointer]: Requirements
+        - generic [ref=f5e29] [cursor=pointer]: Test Cases
+        - generic [ref=f5e30] [cursor=pointer]: Test Design
+        - generic [ref=f5e31] [cursor=pointer]: Test Execution
+        - generic [ref=f5e32] [cursor=pointer]: History & Trends
+        - generic [ref=f5e33] [cursor=pointer]: Test Data
+        - generic [ref=f5e34] [cursor=pointer]: Defects
+        - generic [ref=f5e35] [cursor=pointer]: Value Added Services
+    - generic [ref=f5e38]:
+      - generic [ref=f5e39]:
+        - generic [ref=f5e40]: Work Summary
+        - generic [ref=f5e43]:
+          - generic [ref=f5e44]:
+            - generic [ref=f5e46]: Total Tests
+            - generic [ref=f5e47]: "27"
+            - generic [ref=f5e48]: All spec test cases
+          - generic [ref=f5e49]:
+            - generic [ref=f5e51]: Passed Tests
+            - generic [ref=f5e52]: "2"
+            - generic [ref=f5e53]: Last run results
+          - generic [ref=f5e54]:
+            - generic [ref=f5e56]: Failed Tests
+            - generic [ref=f5e57]: "6"
+            - generic [ref=f5e58]: Last run results
+          - generic [ref=f5e59]:
+            - generic [ref=f5e61]: Pass Rate
+            - generic [ref=f5e62]: 25%
+      - generic [ref=f5e65]:
+        - generic [ref=f5e66]: Metrics Overview
+        - generic [ref=f5e69]:
+          - generic [ref=f5e70]:
+            - generic [ref=f5e71]: 📁
+            - generic [ref=f5e72]:
+              - generic [ref=f5e73]: Spec Files
+              - generic [ref=f5e74]: "7"
+          - generic [ref=f5e75]:
+            - generic [ref=f5e76]: 🧪
+            - generic [ref=f5e77]:
+              - generic [ref=f5e78]: Test Suites
+              - generic [ref=f5e79]: "1"
+          - generic [ref=f5e80]:
+            - generic [ref=f5e81]: 📦
+            - generic [ref=f5e82]:
+              - generic [ref=f5e83]: Page Objects
+              - generic [ref=f5e84]: "0"
+          - generic [ref=f5e85]:
+            - generic [ref=f5e86]: ⚙️
+            - generic [ref=f5e87]:
+              - generic [ref=f5e88]: Automated Test Cases
+              - generic [ref=f5e89]: "27"
+          - generic [ref=f5e90]:
+            - generic [ref=f5e91]: 🎭
+            - generic [ref=f5e92]:
+              - generic [ref=f5e93]: Framework
+              - generic [ref=f5e94]: Playwright
+              - generic [ref=f5e95]: TypeScript
+          - generic [ref=f5e96]:
+            - generic [ref=f5e97]: 🎯
+            - generic [ref=f5e98]:
+              - generic [ref=f5e99]: Automation Coverage
+              - generic [ref=f5e100]: 73%
+          - generic [ref=f5e103]:
+            - generic [ref=f5e104]: 📈
+            - generic [ref=f5e105]:
+              - generic [ref=f5e106]: Execution Trend
+              - generic [ref=f5e107]: 📉 High Failure Rate
+              - generic [ref=f5e108]: "Last: 10/7/2026, 8:02:09 PM"
+          - generic [ref=f5e109]:
+            - generic [ref=f5e110]: 🔑
+            - generic [ref=f5e111]:
+              - generic [ref=f5e112]: Token Utilization
+              - generic [ref=f5e113]: 27%
+              - generic [ref=f5e114]: 5,440 / 20,000 tokens used
+      - generic [ref=f5e115]:
+        - generic [ref=f5e116]: Project Info
+        - generic [ref=f5e119]:
+          - generic [ref=f5e120]:
+            - generic [ref=f5e121]: Story ID
+            - generic [ref=f5e122]: –
+          - generic [ref=f5e123]:
+            - generic [ref=f5e124]: Story Name
+            - generic [ref=f5e125]: JiraStory1
+          - generic [ref=f5e126]:
+            - generic [ref=f5e127]: Platform
+            - generic [ref=f5e128]: –
+          - generic [ref=f5e129]:
+            - generic [ref=f5e130]: Framework
+            - generic [ref=f5e131]: Playwright · TypeScript
+          - generic [ref=f5e132]:
+            - generic [ref=f5e133]: Target App URL
+            - generic [ref=f5e134]: https://vb-bank-demo.vercel.app
+          - generic [ref=f5e135]:
+            - generic [ref=f5e136]: Test Data Files
+            - generic [ref=f5e137]: "8"
+          - generic [ref=f5e138]:
+            - generic [ref=f5e139]: Skipped Tests
+            - generic [ref=f5e140]: –
+          - generic [ref=f5e141]:
+            - generic [ref=f5e142]: Jira Link
+            - link "https://jittestuser.atlassian.net//browse/AIR-1" [ref=f5e144] [cursor=pointer]:
+              - /url: https://jittestuser.atlassian.net//browse/AIR-1
+      - generic [ref=f5e145]:
+        - generic [ref=f5e146]:
+          - generic [ref=f5e148]: Token Utility
+          - button "↻ Refresh" [ref=f5e149] [cursor=pointer]
+          - button "🔄 Reset" [ref=f5e150] [cursor=pointer]
+        - generic [ref=f5e151]:
+          - generic [ref=f5e152]:
+            - generic [ref=f5e153]: "Default Budget:"
+            - generic [ref=f5e154]: 10,000
+            - generic [ref=f5e155]: tokens per stage
+            - generic [ref=f5e156]: "Total Consumed:"
+            - generic [ref=f5e157]: 5,440
+            - generic [ref=f5e158]: "|"
+            - generic [ref=f5e159]: 27%
+          - generic [ref=f5e160]:
+            - generic [ref=f5e161]:
+              - generic [ref=f5e162]: 📋 Jira Context
+              - generic [ref=f5e163]:
+                - generic [ref=f5e164]: 3,520
+                - generic [ref=f5e165]: / 1,500
+            - generic [ref=f5e168]:
+              - generic [ref=f5e169]: 🧪 Test Cases
+              - generic [ref=f5e170]:
+                - generic [ref=f5e171]: "0"
+                - generic [ref=f5e172]: / 3,000
+            - generic [ref=f5e174]:
+              - generic [ref=f5e175]: 📐 Test Design
+              - generic [ref=f5e176]:
+                - generic [ref=f5e177]: "720"
+                - generic [ref=f5e178]: / 3,000
+            - generic [ref=f5e181]:
+              - generic [ref=f5e182]: ⚡ Script Generation
+              - generic [ref=f5e183]:
+                - generic [ref=f5e184]: 1,200
+                - generic [ref=f5e185]: / 4,000
+            - generic [ref=f5e188]:
+              - generic [ref=f5e189]: ▶ Dry Run
+              - generic [ref=f5e190]:
+                - generic [ref=f5e191]: "0"
+                - generic [ref=f5e192]: / 3,000
+            - generic [ref=f5e194]:
+              - generic [ref=f5e195]: 🔍 Failure Analysis
+              - generic [ref=f5e196]:
+                - generic [ref=f5e197]: "0"
+                - generic [ref=f5e198]: / 2,500
+            - generic [ref=f5e200]:
+              - generic [ref=f5e201]: 🔧 Script Maintenance
+              - generic [ref=f5e202]:
+                - generic [ref=f5e203]: "0"
+                - generic [ref=f5e204]: / 3,000

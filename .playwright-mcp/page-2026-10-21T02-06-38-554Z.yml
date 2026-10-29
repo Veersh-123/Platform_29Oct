@@ -1,0 +1,155 @@
+- generic [ref=f76e1]:
+  - generic [ref=f76e2]:
+    - generic [ref=f76e3]:
+      - link:
+        - /url: admin.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - img [ref=f76e4] [cursor=pointer]
+      - link "ParaBank":
+        - /url: index.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - img "ParaBank" [ref=f76e5] [cursor=pointer]
+      - paragraph [ref=f76e6]: Experience the difference
+    - generic [ref=f76e7]:
+      - list [ref=f76e8]:
+        - listitem [ref=f76e9]: Solutions
+        - listitem [ref=f76e10]:
+          - link "About Us" [ref=f76e11] [cursor=pointer]:
+            - /url: about.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - listitem [ref=f76e12]:
+          - link "Services" [ref=f76e13] [cursor=pointer]:
+            - /url: services.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - listitem [ref=f76e14]:
+          - link "Products" [ref=f76e15] [cursor=pointer]:
+            - /url: http://www.parasoft.com/jsp/products.jsp
+        - listitem [ref=f76e16]:
+          - link "Locations" [ref=f76e17] [cursor=pointer]:
+            - /url: http://www.parasoft.com/jsp/pr/contacts.jsp
+        - listitem [ref=f76e18]:
+          - link "Admin Page" [ref=f76e19] [cursor=pointer]:
+            - /url: admin.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+      - list [ref=f76e20]:
+        - listitem [ref=f76e21]:
+          - link "home" [ref=f76e22] [cursor=pointer]:
+            - /url: index.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - listitem [ref=f76e23]:
+          - link "about" [ref=f76e24] [cursor=pointer]:
+            - /url: about.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - listitem [ref=f76e25]:
+          - link "contact" [ref=f76e26] [cursor=pointer]:
+            - /url: contact.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+    - generic [ref=f76e27]:
+      - generic [ref=f76e28]:
+        - heading "Customer Login" [level=2] [ref=f76e29]
+        - generic [ref=f76e30]:
+          - generic [ref=f76e31]:
+            - paragraph [ref=f76e32]: Username
+            - textbox [active] [ref=f76e34]
+            - paragraph [ref=f76e35]: Password
+            - textbox [ref=f76e37]
+            - button "Log In" [ref=f76e39] [cursor=pointer]
+          - paragraph [ref=f76e40]:
+            - link "Forgot login info?" [ref=f76e41] [cursor=pointer]:
+              - /url: lookup.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+          - paragraph [ref=f76e42]:
+            - link "Register" [ref=f76e43] [cursor=pointer]:
+              - /url: register.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+      - generic [ref=f76e44]:
+        - heading "Signing up is easy!" [level=1] [ref=f76e45]
+        - paragraph [ref=f76e46]: If you have an account with us you can sign-up for free instant online access. You will have to provide some personal information.
+        - table [ref=f76e48]:
+          - rowgroup [ref=f76e49]:
+            - row [ref=f76e50]:
+              - cell "First Name:" [ref=f76e51]
+              - cell [ref=f76e52]:
+                - textbox [ref=f76e53]
+              - cell [ref=f76e54]
+            - row [ref=f76e55]:
+              - cell "Last Name:" [ref=f76e56]
+              - cell [ref=f76e57]:
+                - textbox [ref=f76e58]
+              - cell [ref=f76e59]
+            - row [ref=f76e60]:
+              - cell "Address:" [ref=f76e61]
+              - cell [ref=f76e62]:
+                - textbox [ref=f76e63]
+              - cell [ref=f76e64]
+            - row [ref=f76e65]:
+              - cell "City:" [ref=f76e66]
+              - cell [ref=f76e67]:
+                - textbox [ref=f76e68]
+              - cell [ref=f76e69]
+            - row [ref=f76e70]:
+              - cell "State:" [ref=f76e71]
+              - cell [ref=f76e72]:
+                - textbox [ref=f76e73]
+              - cell [ref=f76e74]
+            - row [ref=f76e75]:
+              - cell "Zip Code:" [ref=f76e76]
+              - cell [ref=f76e77]:
+                - textbox [ref=f76e78]
+              - cell [ref=f76e79]
+            - row [ref=f76e80]:
+              - 'cell "Phone #:" [ref=f76e81]'
+              - cell [ref=f76e82]:
+                - textbox [ref=f76e83]
+              - cell [ref=f76e84]
+            - row [ref=f76e85]:
+              - cell "SSN:" [ref=f76e86]
+              - cell [ref=f76e87]:
+                - textbox [ref=f76e88]
+              - cell [ref=f76e89]
+            - row [ref=f76e90]:
+              - cell [ref=f76e91]
+            - row [ref=f76e92]:
+              - cell "Username:" [ref=f76e93]
+              - cell [ref=f76e94]:
+                - textbox [ref=f76e95]
+              - cell [ref=f76e96]
+            - row [ref=f76e97]:
+              - cell "Password:" [ref=f76e98]
+              - cell [ref=f76e99]:
+                - textbox [ref=f76e100]
+              - cell [ref=f76e101]
+            - row [ref=f76e102]:
+              - cell "Confirm:" [ref=f76e103]
+              - cell [ref=f76e104]:
+                - textbox [ref=f76e105]
+              - cell [ref=f76e106]
+            - row [ref=f76e107]:
+              - cell [ref=f76e108]
+              - cell [ref=f76e109]:
+                - button "Register" [ref=f76e110] [cursor=pointer]
+  - generic [ref=f76e112]:
+    - list [ref=f76e113]:
+      - listitem [ref=f76e114]:
+        - link "Home" [ref=f76e115] [cursor=pointer]:
+          - /url: index.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - text: "|"
+      - listitem [ref=f76e116]:
+        - link "About Us" [ref=f76e117] [cursor=pointer]:
+          - /url: about.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - text: "|"
+      - listitem [ref=f76e118]:
+        - link "Services" [ref=f76e119] [cursor=pointer]:
+          - /url: services.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - text: "|"
+      - listitem [ref=f76e120]:
+        - link "Products" [ref=f76e121] [cursor=pointer]:
+          - /url: http://www.parasoft.com/jsp/products.jsp
+        - text: "|"
+      - listitem [ref=f76e122]:
+        - link "Locations" [ref=f76e123] [cursor=pointer]:
+          - /url: http://www.parasoft.com/jsp/pr/contacts.jsp
+        - text: "|"
+      - listitem [ref=f76e124]:
+        - link "Site Map" [ref=f76e125] [cursor=pointer]:
+          - /url: sitemap.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+        - text: "|"
+      - listitem [ref=f76e126]:
+        - link "Contact Us" [ref=f76e127] [cursor=pointer]:
+          - /url: contact.htm;jsessionid=3FFF84C923944E941C0B46650813C482
+    - paragraph [ref=f76e128]: © Parasoft. All rights reserved.
+    - list [ref=f76e129]:
+      - listitem [ref=f76e130]: "Visit us at:"
+      - listitem [ref=f76e131]:
+        - link "www.parasoft.com" [ref=f76e132] [cursor=pointer]:
+          - /url: http://www.parasoft.com/

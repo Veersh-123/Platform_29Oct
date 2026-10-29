@@ -1,0 +1,282 @@
+- generic [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph
+    - generic [ref=e5]:
+      - generic:
+        - generic:
+          - paragraph
+          - paragraph
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - generic:
+          - paragraph
+          - generic [ref=e9]:
+            - img "FDIC logo" [ref=e10]
+            - paragraph [ref=e15]: FDIC-Insured - Backed by the full faith and credit of the U.S. Government
+          - paragraph
+        - navigation [ref=e17]:
+          - list [ref=e18]:
+            - listitem [ref=e19]:
+              - img "location" [ref=e21]
+              - link "ATM or Branch" [ref=e22] [cursor=pointer]:
+                - /url: https://locations.umb.com
+            - listitem [ref=e23]:
+              - img "phone" [ref=e25]
+              - link "Contact Us" [ref=e26] [cursor=pointer]:
+                - /url: /contact-us
+        - paragraph [ref=e345]:
+          - generic [ref=e348]:
+            - textbox "Search field with suggestions. To begin navigating suggestions, while focused, press Down Arrow. To send, press Enter." [ref=e351]:
+              - /placeholder: Search
+            - button "Search" [ref=e353] [cursor=pointer]
+      - generic [ref=e30]:
+        - link "UMB Financial Home" [ref=e32] [cursor=pointer]:
+          - /url: /home
+          - img "UMB Logo" [ref=e33]
+        - navigation [ref=e37]:
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - link "Personal" [ref=e40] [cursor=pointer]:
+                - /url: /personal-banking
+              - button "Personal" [ref=e41] [cursor=pointer]
+            - listitem [ref=e42]:
+              - link "Business" [ref=e43] [cursor=pointer]:
+                - /url: /business-banking
+              - button "Business" [ref=e44] [cursor=pointer]
+            - listitem [ref=e45]:
+              - link "Institutional" [ref=e46] [cursor=pointer]:
+                - /url: /institutional-banking
+              - button "Institutional" [ref=e47] [cursor=pointer]
+        - link "Login" [ref=e52] [cursor=pointer]:
+          - /url: /umb-login
+    - article [ref=e55]:
+      - generic [ref=e56]:
+        - heading "Personal Loans" [level=1] [ref=e59]
+        - heading "Personal loans to fit your needs" [level=2] [ref=e62]
+        - paragraph [ref=e69]: Apply for a UMB personal loan with a competitive interest rate to help with your financial goals.
+        - generic [ref=e75]:
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - article [ref=e80]:
+                - generic [ref=e81]: SVG
+              - generic [ref=e90]:
+                - heading "Lower-rate alternative to credit cards" [level=4] [ref=e91]
+                - paragraph [ref=e92]: If you have a current UMB deposit account¹, an unsecured personal loan may be useful to pay down or consolidate debt, cover an unexpected expense, or fund a special project or purchase.
+            - generic [ref=e93]:
+              - article [ref=e94]:
+                - generic [ref=e95]: SVG
+              - generic [ref=e106]:
+                - heading "Simpler process than other lending solutions" [level=4] [ref=e107]
+                - paragraph [ref=e108]: We can help finance whatever life throws your way.
+            - generic [ref=e109]:
+              - article [ref=e110]:
+                - generic [ref=e111]: SVG
+              - generic [ref=e125]:
+                - heading "No collateral required" [level=4] [ref=e126]
+                - paragraph [ref=e127]: For loans between $2,000 to $25,000²
+            - link "Apply now" [active] [ref=e129] [cursor=pointer]:
+              - /url: https://www.originatewebcenter.com/uopen/originate/welcome.do?auth=ede58515b09ff9c5&_gl=1*1nclh4k*_gcl_au*OTExOTEwMzcxLjE3OTIzODcxMzE.*_ga*MjY1ODY2OTQwLjE3OTIzODcxMzI.*_ga_FEL5JTYE2C*czE3OTIzODcxMzIkbzEkZzAkdDE3OTIzODcxMzIkajYwJGwwJGgw
+          - article [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e135]: Image
+              - img "Man standing by an open car trunk talking to a boy holding a soccer ball" [ref=e137]
+        - generic [ref=e142]:
+          - article [ref=e145]:
+            - generic [ref=e146]:
+              - generic [ref=e147]: Image
+              - img "Stylized calculator icon with \"123\" on display against a dark blue background" [ref=e149]
+          - generic [ref=e151]:
+            - heading "Personal Debt Consolidation Calculator" [level=3] [ref=e152]
+            - paragraph [ref=e154]: Use this debt consolidation calculator to determine how much interest you might save with a new loan.
+            - link "Use calculator" [ref=e155] [cursor=pointer]:
+              - /url: /personal-banking/calculators/debt-consolidation-calculator
+        - heading "ACCOUNT FEATURES" [level=2] [ref=e158]
+        - generic [ref=e162]:
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - article [ref=e166]:
+                - generic [ref=e167]: SVG
+              - text: Convenient online account management
+            - generic [ref=e173]:
+              - article [ref=e174]:
+                - generic [ref=e175]: SVG
+              - text: Transparent fees and charges
+          - generic [ref=e183]:
+            - article [ref=e184]:
+              - generic [ref=e185]: SVG
+            - generic [ref=e191]: One-on-one financial review and assistance
+        - generic [ref=e195]:
+          - heading "Other Products and Services" [level=3] [ref=e196]
+          - generic [ref=e198]:
+            - link "Checking" [ref=e200] [cursor=pointer]:
+              - /url: /personal-banking/checking-accounts
+              - generic [ref=e201]:
+                - article [ref=e202]:
+                  - img "umb-icon-checking" [ref=e204]
+                - generic [ref=e205]: Checking
+            - link "Credit Cards" [ref=e207] [cursor=pointer]:
+              - /url: /personal-banking/credit-cards
+              - generic [ref=e208]:
+                - article [ref=e209]:
+                  - img "umb-icon-credit-card" [ref=e211]
+                - generic [ref=e212]: Credit Cards
+            - link "Financial Planning" [ref=e214] [cursor=pointer]:
+              - /url: /wealth-management/financial-planning
+              - generic [ref=e215]:
+                - article [ref=e216]:
+                  - img "umb-icon-financial-planning" [ref=e218]
+                - generic [ref=e219]: Financial Planning
+            - link "Home Equity Loans" [ref=e221] [cursor=pointer]:
+              - /url: /personal-banking/loans/home-equity-loans
+              - generic [ref=e222]:
+                - article [ref=e223]:
+                  - img "cash-pin-map" [ref=e225]
+                - generic [ref=e226]: Home Equity Loans
+            - link "Financial Education" [ref=e228] [cursor=pointer]:
+              - /url: /personal-banking/financial-education
+              - generic [ref=e229]:
+                - article [ref=e230]:
+                  - img "study-light-idea" [ref=e232]
+                - generic [ref=e233]: Financial Education
+            - link "Calculators" [ref=e235] [cursor=pointer]:
+              - /url: /personal-banking/calculators
+              - generic [ref=e236]:
+                - article [ref=e237]:
+                  - img "calculator app" [ref=e239]
+                - generic [ref=e240]: Calculators
+          - link "View All" [ref=e241] [cursor=pointer]:
+            - /url: /personal-banking/products-services
+        - generic [ref=e247]:
+          - paragraph [ref=e248]: Subject to credit and collateral approval.
+          - list [ref=e249]:
+            - listitem [ref=e250]: Must be a current UMB customer.
+            - listitem [ref=e251]: Must be 18 years or older to apply. No discounts apply. Additional terms and conditions may apply. See a UMB personal banker for more information.
+    - list [ref=e254]:
+      - listitem [ref=e255]:
+        - link "Home" [ref=e256] [cursor=pointer]:
+          - /url: /
+        - text: /
+      - listitem [ref=e257]:
+        - link "Personal Banking" [ref=e258] [cursor=pointer]:
+          - /url: /personal-banking
+        - text: /
+      - listitem [ref=e259]:
+        - link "Loans and Lines of Credit" [ref=e260] [cursor=pointer]:
+          - /url: /personal-banking/loans
+        - text: /
+      - listitem [ref=e261]: Personal Loans
+    - contentinfo [ref=e262]:
+      - navigation [ref=e265]:
+        - list [ref=e266]:
+          - listitem [ref=e267]:
+            - heading "About Us" [level=2] [ref=e268]
+            - list [ref=e269]:
+              - listitem [ref=e270]:
+                - link "About UMB" [ref=e271] [cursor=pointer]:
+                  - /url: /about-umb
+              - listitem [ref=e272]:
+                - link "Corporate Citizenship" [ref=e273] [cursor=pointer]:
+                  - /url: /about-umb/corporate-citizenship
+              - listitem [ref=e274]:
+                - link "Investor Relations" [ref=e275] [cursor=pointer]:
+                  - /url: https://investorrelations.umb.com/
+          - listitem [ref=e276]:
+            - heading "Careers" [level=2] [ref=e277]
+            - list [ref=e278]:
+              - listitem [ref=e279]:
+                - link "Search Careers" [ref=e280] [cursor=pointer]:
+                  - /url: https://umb.wd1.myworkdayjobs.com/UMBExternal
+              - listitem [ref=e281]:
+                - link "Working at UMB" [ref=e282] [cursor=pointer]:
+                  - /url: /careers
+          - listitem [ref=e283]:
+            - heading "Resources" [level=2] [ref=e284]
+            - list [ref=e285]:
+              - listitem [ref=e286]:
+                - link "Industry News" [ref=e287] [cursor=pointer]:
+                  - /url: /about-umb/industry-news
+              - listitem [ref=e288]:
+                - link "UMB Blog" [ref=e289] [cursor=pointer]:
+                  - /url: https://blog.umb.com
+              - listitem [ref=e290]:
+                - link "HSAs/Flex Accounts" [ref=e291] [cursor=pointer]:
+                  - /url: /hsa
+              - listitem [ref=e292]:
+                - link "Privacy & Security" [ref=e293] [cursor=pointer]:
+                  - /url: /privacy-security
+              - listitem [ref=e294]:
+                - link "Terms & Conditions" [ref=e295] [cursor=pointer]:
+                  - /url: /terms-conditions
+          - listitem [ref=e296]:
+            - heading "Help" [level=2] [ref=e297]
+            - list [ref=e298]:
+              - listitem [ref=e299]:
+                - link "Holiday & Weather Closures" [ref=e300] [cursor=pointer]:
+                  - /url: /holiday-schedule
+              - listitem [ref=e301]:
+                - link "Online Banking Enrollment" [ref=e302] [cursor=pointer]:
+                  - /url: https://securebanking.umb.com/umb/sdk/EnrollmentE2E
+              - listitem [ref=e303]:
+                - link "HSA/Flex Account Online Access" [ref=e304] [cursor=pointer]:
+                  - /url: https://myhsa.umb.com/sign-up/validate-identity
+              - listitem [ref=e305]:
+                - generic [ref=e306]: "Routing Number: 101000695"
+              - listitem [ref=e307]:
+                - generic [ref=e308]: "SWIFT BIC: UMKCUS44"
+              - listitem [ref=e309]:
+                - link "Contact Us" [ref=e310] [cursor=pointer]:
+                  - /url: /contact-us
+      - generic [ref=e312]:
+        - generic [ref=e313]: Also of Interest
+        - list [ref=e314]:
+          - listitem [ref=e315]:
+            - link "Business Banking in Kansas City" [ref=e316] [cursor=pointer]:
+              - /url: https://www.umb.com/business-banking
+          - listitem [ref=e317]:
+            - link "Private Wealth and Wealth Management" [ref=e318] [cursor=pointer]:
+              - /url: https://www.umb.com/wealth-management
+          - listitem [ref=e319]:
+            - link "Estate Planning and Trust Management Services" [ref=e320] [cursor=pointer]:
+              - /url: https://www.umb.com/wealth-management/trusts-and-estate-planning
+      - generic [ref=e324]:
+        - list "UMB Social media" [ref=e327]:
+          - listitem [ref=e328]:
+            - link "facebook opens in a new window" [ref=e329] [cursor=pointer]:
+              - /url: http://www.facebook.com/UMBBank
+          - listitem [ref=e330]:
+            - link "linkedin opens in a new window" [ref=e331] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/umbbank/
+          - listitem [ref=e332]:
+            - link "instagram opens in a new window" [ref=e333] [cursor=pointer]:
+              - /url: http://www.instagram.com/UMBBank
+          - listitem [ref=e334]:
+            - link "pinterest opens in a new window" [ref=e335] [cursor=pointer]:
+              - /url: https://www.pinterest.com/umbbank/
+          - listitem [ref=e336]:
+            - link "email opens in a new window" [ref=e337] [cursor=pointer]:
+              - /url: /contact-us
+        - generic [ref=e338]:
+          - paragraph [ref=e339]: © 2026 UMB Financial Corporation. All Rights Reserved.
+          - paragraph [ref=e340]:
+            - generic [ref=e341]:
+              - text: Bank deposit products provided by UMB Bank n.a., Member FDIC. Equal Housing Lender
+              - img "Equal Housing Lender Logo" [ref=e342]
+            - text: When you click links marked with the symbol
+            - img "leaving website arrow icon" [ref=e343]
+            - text: ", you will leave UMB's website and go to websites that are not controlled by or affiliated with UMB. We have provided these links for your convenience. However, we do not endorse or guarantee any products or services you may view on other sites. Other websites may not follow the same privacy policies and security procedures that UMB does, so please review their policies and procedures carefully."
+  - dialog "Privacy" [ref=e359]:
+    - generic [ref=e361]:
+      - generic [ref=e364]:
+        - text: We process your personal information to measure and improve our sites and service, to assist our marketing campaigns and to provide personalised content and advertising. By clicking the button on the right, you can exercise your privacy rights. For more information see our privacy notice
+        - link "Online Privacy Notice, opens in a new tab" [ref=e365] [cursor=pointer]:
+          - /url: https://www.umb.com/privacy-security/online-privacy-notice
+          - text: Online Privacy Notice
+      - generic [ref=e367]:
+        - button "Your Privacy Rights, Opens the preference center dialog" [ref=e368] [cursor=pointer]: Your Privacy Rights
+        - button "Reject All" [ref=e369] [cursor=pointer]
+        - button "Accept All Cookies" [ref=e370] [cursor=pointer]
+    - button "Close" [ref=e372] [cursor=pointer]
+  - button "Feedback" [ref=e373] [cursor=pointer]

@@ -1,0 +1,69 @@
+- generic [ref=f20e19]:
+  - generic [ref=f20e20]:
+    - generic [ref=f20e21]:
+      - generic [ref=f20e22]: T
+      - generic [ref=f20e23]:
+        - generic [ref=f20e24]: TEST DASHBOARD
+        - generic [ref=f20e25]: Enterprise Test Automation Platform powered by Playwright
+    - generic [ref=f20e26]:
+      - generic [ref=f20e27]:
+        - generic [ref=f20e28]: Browser
+        - combobox [ref=f20e29] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+      - generic [ref=f20e30]:
+        - generic [ref=f20e31]: Environment
+        - combobox [ref=f20e32] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGING"
+          - option "PROD"
+      - generic "Signed in" [ref=f20e214] [cursor=pointer]:
+        - generic [ref=f20e215]: A
+        - generic [ref=f20e216]: Admin User
+        - button "✕" [ref=f20e217]
+      - generic "Backend server status" [ref=f20e33] [cursor=pointer]: Server :4000
+  - generic [ref=f20e36]:
+    - generic [ref=f20e37]:
+      - generic [ref=f20e38]: TEST DASHBOARD
+      - generic [ref=f20e39]:
+        - generic [ref=f20e40] [cursor=pointer]: Dashboard
+        - generic [ref=f20e41] [cursor=pointer]: Requirements
+        - generic [ref=f20e42] [cursor=pointer]: Test Cases
+        - generic [ref=f20e43] [cursor=pointer]: Test Design
+        - generic [ref=f20e44] [cursor=pointer]: Test Execution
+        - generic [ref=f20e45] [cursor=pointer]: History & Trends
+        - generic [ref=f20e46] [cursor=pointer]: Test Data
+        - generic [ref=f20e47] [cursor=pointer]: Defects
+        - generic [ref=f20e48] [cursor=pointer]: Value Added Services
+    - generic [ref=f20e855]:
+      - generic [ref=f20e856]:
+        - generic [ref=f20e857]: 🐞 Defects Log
+        - textbox "🔍 Search defects..." [ref=f20e858]
+        - combobox [ref=f20e859]:
+          - option "All Status" [selected]
+          - option "Open"
+          - option "In Progress"
+          - option "Resolved"
+          - option "Closed"
+        - button "➕ Create Defect" [ref=f20e860] [cursor=pointer]
+        - button "📥 Export XLSX" [ref=f20e861] [cursor=pointer]
+        - button "🔄 Refresh" [ref=f20e862] [cursor=pointer]
+      - generic [ref=f20e863]:
+        - table [ref=f20e864]:
+          - rowgroup [ref=f20e865]:
+            - row [ref=f20e866]:
+              - columnheader "📅 Date" [ref=f20e867]
+              - columnheader "🧪 Test Case Id" [ref=f20e868]
+              - columnheader "🐛 Defect Description" [ref=f20e869]
+              - columnheader "✅ Expected Result" [ref=f20e870]
+              - columnheader "❌ Actual Result" [ref=f20e871]
+              - columnheader "⚠️ Severity" [ref=f20e872]
+              - columnheader "📊 Status" [ref=f20e873]
+              - columnheader "💬 Comments" [ref=f20e874]
+              - columnheader "⚙️ Actions" [ref=f20e875]
+          - rowgroup
+        - generic [ref=f20e877]:
+          - generic [ref=f20e878]: 🐞
+          - paragraph [ref=f20e879]: No defects logged yet
+          - paragraph [ref=f20e880]: Run tests in the Execution tab to log defects

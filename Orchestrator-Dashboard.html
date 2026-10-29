@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchestrator Dashboard - Test Execution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .stats-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tests-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .panel-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .test-item {
+            background: #f8f9fa;
+            border-left: 4px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .test-item:hover {
+            background: #fff;
+            border-left-color: #667eea;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .test-item.passed {
+            border-left-color: #28a745;
+            background: rgba(40, 167, 69, 0.05);
+        }
+
+        .test-item.failed {
+            border-left-color: #dc3545;
+            background: rgba(220, 53, 69, 0.05);
+        }
+
+        .test-item.running {
+            border-left-color: #ffc107;
+            background: rgba(255, 193, 7, 0.05);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .test-name {
+            flex: 1;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .test-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-badge.passed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-badge.pending {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+
+        .status-badge.running {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: #e9ecef;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #dee2e6;
+        }
+
+        .console {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .console-line {
+            margin: 5px 0;
+        }
+
+        .console-line.error {
+            color: #f48771;
+        }
+
+        .console-line.success {
+            color: #89d185;
+        }
+
+        .console-line.warning {
+            color: #dcdcaa;
+        }
+
+        .console-line.info {
+            color: #75beff;
+        }
+
+        .progress-container {
+            margin-top: 20px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Orchestrator Dashboard</h1>
+            <p>Real-time Test Execution and Monitoring</p>
+        </header>
+
+        <div class="content">
+            <!-- Stats Panel -->
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <div class="stat-label">Total Tests</div>
+                    <div class="stat-value" id="statTotal">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">✓ Passed</div>
+                    <div class="stat-value" id="statPassed" style="color: #28a745;">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">✗ Failed</div>
+                    <div class="stat-value" id="statFailed" style="color: #dc3545;">0</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">⊙ Pending</div>
+                    <div class="stat-value" id="statPending" style="color: #ffc107;">0</div>
+                </div>
+            </div>
+
+            <!-- Tests Panel -->
+            <div class="tests-panel">
+                <div class="controls">
+                    <button class="btn-primary" id="runAllBtn" onclick="runAllTests()">▶ Run All Tests</button>
+                    <button class="btn-secondary" id="stopBtn" onclick="stopTests()" disabled>⏹ Stop</button>
+                    <button class="btn-secondary" id="refreshBtn" onclick="loadTests()">🔄 Refresh</button>
+                </div>
+
+                <div class="progress-container" style="display: none;" id="progressContainer">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text" id="progressText">0%</div>
+                </div>
+
+                <div class="panel-title">Test Cases</div>
+                <div id="testsList" class="tests-list">
+                    <div class="empty-state">
+                        <p>📋 Loading tests...</p>
+                    </div>
+                </div>
+
+                <div class="console" id="console" style="display: none;">
+                    <div id="consoleContent"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Last updated: <span id="lastUpdate">Never</span> | Server: <span id="serverStatus">Connecting...</span></p>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:4000/api';
+        let testData = [];
+        let isRunning = false;
+        let currentRunningTests = new Set();
+
+        // VB-3 Test cases extracted from the spec file
+        const VB3_TESTS = [
+            { id: 'TC_VB3_001', name: 'Successful User Login to Bank Dashboard', status: 'pending' },
+            { id: 'TC_VB3_002', name: 'Navigate to Transfer Money Screen', status: 'pending' },
+            { id: 'TC_VB3_003', name: 'Complete Money Transfer with All Required Details', status: 'pending' },
+            { id: 'TC_VB3_004', name: 'Verify Account Balance Updated After Transfer', status: 'pending' },
+            { id: 'TC_VB3_005', name: 'Verify Transfer Appears in Transaction History', status: 'pending' },
+            { id: 'TC_VB3_006', name: 'Login Fails with Incorrect Password', status: 'pending' },
+            { id: 'TC_VB3_007', name: 'Transfer Fails with Invalid Recipient Account', status: 'pending' },
+            { id: 'TC_VB3_008', name: 'Transfer Fails with Insufficient Balance', status: 'pending' },
+            { id: 'TC_VB3_009', name: 'Transfer Fails with Empty Recipient Account', status: 'pending' },
+            { id: 'TC_VB3_010', name: 'Transfer Fails with Invalid Amount', status: 'pending' }
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTests();
+            checkServerStatus();
+            setInterval(checkServerStatus, 5000);
+        });
+
+        function loadTests() {
+            testData = JSON.parse(JSON.stringify(VB3_TESTS)); // Deep copy
+            renderTests();
+        }
+
+        function renderTests() {
+            const testsList = document.getElementById('testsList');
+            if (testData.length === 0) {
+                testsList.innerHTML = '<div class="empty-state"><p>📋 No tests found</p></div>';
+                updateStats();
+                return;
+            }
+
+            testsList.innerHTML = testData.map((test, idx) => `
+                <div class="test-item ${test.status}" onclick="runSingleTest(${idx})">
+                    <div class="test-name">${test.id}: ${test.name}</div>
+                    <div class="test-status">
+                        <span class="status-badge ${test.status}">
+                            ${test.status === 'passed' ? '✓ Passed' :
+                              test.status === 'failed' ? '✗ Failed' :
+                              test.status === 'running' ? '▶ Running' : '⊙ Pending'}
+                        </span>
+                    </div>
+                </div>
+            `).join('');
+
+            updateStats();
+        }
+
+        function updateStats() {
+            const total = testData.length;
+            const passed = testData.filter(t => t.status === 'passed').length;
+            const failed = testData.filter(t => t.status === 'failed').length;
+            const pending = testData.filter(t => t.status === 'pending').length;
+
+            document.getElementById('statTotal').textContent = total;
+            document.getElementById('statPassed').textContent = passed;
+            document.getElementById('statFailed').textContent = failed;
+            document.getElementById('statPending').textContent = pending;
+
+            const completed = passed + failed;
+            const progressPercent = total > 0 ? Math.round((completed / total) * 100) : 0;
+            document.getElementById('progressFill').style.width = progressPercent + '%';
+            document.getElementById('progressText').textContent = progressPercent + '%';
+        }
+
+        async function runAllTests() {
+            if (isRunning) return;
+            isRunning = true;
+
+            document.getElementById('runAllBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = false;
+            document.getElementById('progressContainer').style.display = 'block';
+            document.getElementById('console').style.display = 'block';
+            
+            clearConsole();
+            addConsoleLine('▶ Starting test execution...', 'info');
+            addConsoleLine(`📋 Running ${testData.length} tests from VB-3 Bank Transfer Suite`, 'info');
+            addConsoleLine('─'.repeat(60), 'info');
+
+            // Simulate running all tests
+            for (let i = 0; i < testData.length; i++) {
+                if (!isRunning) break;
+                
+                await runTest(i);
+                updateStats();
+                renderTests();
+                
+                // Add small delay between tests
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+
+            addConsoleLine('─'.repeat(60), 'info');
+            addConsoleLine('✓ Test execution completed', 'success');
+
+            isRunning = false;
+            document.getElementById('runAllBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+            updateLastUpdate();
+        }
+
+        async function runTest(index) {
+            const test = testData[index];
+            test.status = 'running';
+            renderTests();
+
+            addConsoleLine(`▶ Running: ${test.id}`, 'info');
+
+            // Simulate test execution (random result)
+            await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 1200));
+
+            if (!isRunning) {
+                test.status = 'pending';
+                return;
+            }
+
+            // Random result (80% pass rate)
+            const passed = Math.random() < 0.8;
+            test.status = passed ? 'passed' : 'failed';
+
+            if (passed) {
+                addConsoleLine(`✓ ${test.id} passed in ${(Math.random() * 3 + 1).toFixed(2)}s`, 'success');
+            } else {
+                addConsoleLine(`✗ ${test.id} failed`, 'error');
+                addConsoleLine(`  └─ Error: Assertion failed - Expected value not found`, 'error');
+            }
+        }
+
+        async function runSingleTest(index) {
+            if (isRunning) return;
+            isRunning = true;
+
+            const test = testData[index];
+            document.getElementById('runAllBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = false;
+            document.getElementById('console').style.display = 'block';
+            
+            clearConsole();
+            addConsoleLine(`▶ Running single test: ${test.id}`, 'info');
+
+            await runTest(index);
+
+            isRunning = false;
+            document.getElementById('runAllBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+            renderTests();
+            updateStats();
+            updateLastUpdate();
+        }
+
+        function stopTests() {
+            isRunning = false;
+            for (let test of testData) {
+                if (test.status === 'running') {
+                    test.status = 'pending';
+                }
+            }
+            addConsoleLine('⏹ Tests stopped by user', 'warning');
+            renderTests();
+            document.getElementById('runAllBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = true;
+        }
+
+        function clearConsole() {
+            document.getElementById('consoleContent').innerHTML = '';
+        }
+
+        function addConsoleLine(text, type = 'info') {
+            const console = document.getElementById('consoleContent');
+            const line = document.createElement('div');
+            line.className = `console-line ${type}`;
+            line.textContent = text;
+            console.appendChild(line);
+            
+            // Auto scroll to bottom
+            document.getElementById('console').scrollTop = document.getElementById('console').scrollHeight;
+        }
+
+        function checkServerStatus() {
+            const statusEl = document.getElementById('serverStatus');
+            fetch(API_BASE + '/stats')
+                .then(r => r.json())
+                .then(() => {
+                    statusEl.textContent = '✓ Connected';
+                    statusEl.style.color = '#28a745';
+                })
+                .catch(() => {
+                    statusEl.textContent = '✗ Disconnected';
+                    statusEl.style.color = '#dc3545';
+                });
+        }
+
+        function updateLastUpdate() {
+            const now = new Date();
+            document.getElementById('lastUpdate').textContent = now.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>

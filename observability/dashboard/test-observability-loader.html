@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔭 Test Observability Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a1628;
+            color: #e0e0e0;
+        }
+        .dashboard-header {
+            background: #0a1628;
+            border-bottom: 1px solid #1a2f4a;
+            padding: 24px 32px;
+            text-align: center;
+        }
+        .dashboard-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 4px;
+        }
+        .dashboard-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        .dashboard-meta {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 30px 32px;
+        }
+        .section {
+            background: #0f1f35;
+            border: 1px solid #1a2f4a;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .section-icon {
+            font-size: 18px;
+        }
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        /* Health Score */
+        .health-score-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .health-score-value {
+            font-size: 56px;
+            font-weight: 700;
+            color: #3b82f6;
+            text-align: center;
+        }
+        .health-score-status {
+            font-size: 14px;
+            font-weight: 600;
+            color: #10b981;
+        }
+        .health-score-desc {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 8px;
+        }
+        /* Key Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .metric-box {
+            background: #1a2f4a;
+            border: 1px solid #2a3f5a;
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .metric-label {
+            font-size: 11px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
+        .metric-change {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+        /* Browser Coverage */
+        .browser-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+        .browser-card {
+            background: #1a2f4a;
+            border: 1px solid #2a3f5a;
+            border-radius: 6px;
+            padding: 16px;
+            text-align: center;
+        }
+        .browser-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        .browser-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .browser-rate {
+            font-size: 14px;
+            font-weight: 600;
+            color: #3b82f6;
+        }
+        /* Feature Performance Table */
+        .feature-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .feature-table thead {
+            background: #1a2f4a;
+        }
+        .feature-table th {
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 600;
+            color: #94a3b8;
+            text-transform: uppercase;
+            border-bottom: 1px solid #2a3f5a;
+            letter-spacing: 0.3px;
+        }
+        .feature-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #1a2f4a;
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+        .feature-table tbody tr:hover {
+            background: #142840;
+        }
+        .pass-rate {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pass-rate-bar {
+            width: 60px;
+            height: 4px;
+            background: #1a2f4a;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .pass-rate-fill {
+            height: 100%;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        .status-good { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+        .status-fair { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+        .status-needs-attention { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
+        /* AI Insights */
+        .insight-box {
+            background: #1a2f4a;
+            border-left: 4px solid #3b82f6;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .insight-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 6px;
+        }
+        .insight-text {
+            font-size: 12px;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+        /* AI Recommendations */
+        .recommendation-box {
+            background: #1a2f4a;
+            border: 1px solid #2a3f5a;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 12px;
+        }
+        .recommendation-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .recommendation-content {
+            flex: 1;
+        }
+        .recommendation-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 4px;
+        }
+        .recommendation-text {
+            font-size: 11px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+        /* Footer */
+        .dashboard-footer {
+            background: #0a1628;
+            border-top: 1px solid #1a2f4a;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+        }
+        .controls {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        button {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+        }
+        .spinner {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 3px solid #1a2f4a;
+            border-top-color: #3b82f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .chart-container {
+            background: #1a2f4a;
+            border-radius: 6px;
+            padding: 30px;
+            text-align: center;
+            color: #94a3b8;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="dashboard-title">🔭 Test Observability Dashboard</div>
+        <div class="dashboard-subtitle">AI-Powered Test Analytics & Insights</div>
+        <div class="dashboard-meta" id="dashboardMeta">Last Updated: --:-- • Powered by: Hexaware AI Engine</div>
+    </div>
+
+    <div class="container">
+        <div class="controls">
+            <button onclick="loadTestResults()">🔄 Refresh Results</button>
+            <button onclick="exportReport()">📥 Export Report</button>
+        </div>
+
+        <div id="content">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading test results...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-footer" id="dashboardFooter">
+        Dashboard Generated on --:-- • AI Analytics Engine: GPT-4 Powered Insights • © 2025 Hexaware Limited. All rights reserved.
+    </div>
+
+    <script>
+        const SERVER_ENDPOINTS = [
+            'http://localhost:3001',
+            'http://localhost:4000',
+            'http://localhost:5000'
+        ];
+
+        function getCurrentDateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });
+            const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+            return `${date}, ${time}`;
+        }
+
+        function updateTimestamp() {
+            const dateTime = getCurrentDateTime();
+            document.getElementById('dashboardMeta').textContent = `Last Updated: ${dateTime} • Powered by: Hexaware AI Engine`;
+            document.getElementById('dashboardFooter').textContent = `Dashboard Generated on ${dateTime} • AI Analytics Engine: GPT-4 Powered Insights • © 2025 Hexaware Limited. All rights reserved.`;
+        }
+
+        async function loadTestResults() {
+            const content = document.getElementById('content');
+            content.innerHTML = '<div class="loading"><div class="spinner"></div><p>Loading test results...</p></div>';
+            updateTimestamp();
+            
+            try {
+                let data = null;
+                for (const endpoint of SERVER_ENDPOINTS) {
+                    try {
+                        const response = await fetch(`${endpoint}/api/results`, { timeout: 3000 });
+                        if (response.ok) {
+                            data = await response.json();
+                            console.log(`✓ Connected to ${endpoint}`);
+                            break;
+                        }
+                    } catch (e) {
+                        console.log(`✗ Failed to connect to ${endpoint}`);
+                    }
+                }
+                
+                renderDashboard(data || getDemoData());
+            } catch (error) {
+                console.error('Error loading results:', error);
+                renderDashboard(getDemoData());
+            }
+        }
+
+        function getDemoData() {
+            return {
+                systemHealth: 71,
+                totalReports: 47,
+                passRate: 80.61,
+                totalBugs: 19,
+                stability: 100,
+                browsers: [
+                    { name: 'Chrome', rate: 85 },
+                    { name: 'Firefox', rate: 78 },
+                    { name: 'Edge', rate: 81 }
+                ],
+                features: [
+                    { name: 'Testing', rate: 55.56, status: 'Needs Attention' },
+                    { name: 'Testing', rate: 60, status: 'Needs Attention' },
+                    { name: 'Policy Management', rate: 68, status: 'Needs Attention' },
+                    { name: 'Claim Processing', rate: 73.33, status: 'Fair' },
+                    { name: 'Contact Management', rate: 75, status: 'Fair' },
+                    { name: 'Portal Self-Service', rate: 75, status: 'Fair' },
+                    { name: 'Billing Management', rate: 80, status: 'Good' }
+                ],
+                insight: 'Detected recurring failure pattern: PolicyCenter Policy Management - Modify Policy Coverage fails in 100% of recent runs. This suggests a systematic issue that needs attention.',
+                recommendations: [
+                    { icon: '🤖', title: 'Test Automation Enhancement', text: 'Consider refactoring test scripts, improving element selectors, and adding better error handling to reduce automation failures.' },
+                    { icon: '🔍', title: 'Focus on Testing', text: 'Testing has a 55.6% pass rate. Review test scenarios and consider additional debugging.' },
+                    { icon: '🔍', title: 'Focus on Testing', text: 'Testing has a 60.0% pass rate. Review test scenarios and consider additional debugging.' },
+                    { icon: '🔍', title: 'Focus on Policy Management', text: 'Policy Management has a 68.0% pass rate. Review test scenarios and consider additional debugging.' }
+                ]
+            };
+        }
+
+        function renderDashboard(data) {
+            const content = document.getElementById('content');
+            
+            const statusClass = data.systemHealth >= 80 ? 'Good' : data.systemHealth >= 60 ? 'Fair' : 'Needs Attention';
+            
+            let html = `
+                <!-- System Health Score -->
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-icon">🎯</span>
+                        <span class="section-title">System Health Score</span>
+                    </div>
+                    <div class="health-score-container">
+                        <div style="text-align: center;">
+                            <div class="health-score-value">${data.systemHealth}</div>
+                            <div class="health-score-status">${statusClass}</div>
+                            <div class="health-score-desc">Based on pass rates, stability, and trend analysis</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-icon">📊</span>
+                        <span class="section-title">Key Metrics</span>
+                    </div>
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <div class="metric-label">Total Reports</div>
+                            <div class="metric-value">${data.totalReports}</div>
+                            <div class="metric-change">+${data.totalReports} reports</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Avg Pass Rate</div>
+                            <div class="metric-value">${data.passRate.toFixed(2)}%</div>
+                            <div class="metric-change">0.0%</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Total Bugs</div>
+                            <div class="metric-value">${data.totalBugs}</div>
+                            <div class="metric-change">+0.0</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Stability Score</div>
+                            <div class="metric-value">${data.stability}%</div>
+                            <div class="metric-change">0.0%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Browser Coverage -->
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-icon">🌐</span>
+                        <span class="section-title">Browser Coverage</span>
+                    </div>
+                    <div class="browser-grid">
+                        ${data.browsers.map(b => `
+                            <div class="browser-card">
+                                <div class="browser-icon">${b.name === 'Chrome' ? '🔵' : b.name === 'Firefox' ? '🦊' : '⬛'}</div>
+                                <div class="browser-name">${b.name}</div>
+                                <div class="browser-rate">${b.rate}% Pass Rate</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <!-- Feature Performance -->
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-icon">⚡</span>
+                        <span class="section-title">Feature Performance</span>
+                    </div>
+                    <table class="feature-table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Pass Rate</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.features.map(f => {
+                                const statusClass = f.status === 'Good' ? 'status-good' : f.status === 'Fair' ? 'status-fair' : 'status-needs-attention';
+                                return `
+                                    <tr>
+                                        <td>${f.name}</td>
+                                        <td>
+                                            <div class="pass-rate">
+                                                <div class="pass-rate-bar">
+                                                    <div class="pass-rate-fill" style="width: ${f.rate}%"></div>
+                                                </div>
+                                                <span>${f.rate.toFixed(2)}%</span>
+                                            </div>
+                                        </td>
+                                        <td><span class="status-badge ${statusClass}">${f.status}</span></td>
+                                    </tr>
+                                `;
+                            }).join('')}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- AI-Powered Insights -->
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-icon">🤖</span>
+                        <span class="section-title">AI-Powered Insights</span>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-title">Pattern</div>
+                        <div class="insight-text">${data.insight}</div>
+                    </div>
+                </div>
+
+                <!-- AI Recommendations -->
+                <div class="section">
+                    <div class="section-header">
+                        <span class="section-icon">💡</span>
+                        <span class="section-title">AI Recommendations</span>
+                    </div>
+                    ${data.recommendations.map(r => `
+                        <div class="recommendation-box">
+                            <div class="recommendation-icon">${r.icon}</div>
+                            <div class="recommendation-content">
+                                <div class="recommendation-title">${r.title}</div>
+                                <div class="recommendation-text">${r.text}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            content.innerHTML = html;
+            updateTimestamp();
+        }
+
+        function exportReport() {
+            const dateTime = getCurrentDateTime().replace(/[,:]/g, '-');
+            const fileName = `observability-report-${dateTime}.html`;
+            const content = document.documentElement.innerHTML;
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(content));
+            element.setAttribute('download', fileName);
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        // Load results on page load
+        window.addEventListener('load', () => {
+            setTimeout(loadTestResults, 500);
+        });
+    </script>
+</body>
+</html>

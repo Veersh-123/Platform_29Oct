@@ -1,0 +1,278 @@
+[
+  {
+    "uri": "features/user-login.feature",
+    "id": "user-login",
+    "keyword": "Feature",
+    "name": "User Login",
+    "description": "    Test user authentication and login functionality",
+    "line": 1,
+    "elements": [
+      {
+        "id": "user-login;successful-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "name": "Successful login with valid credentials",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the login page",
+            "line": 7,
+            "match": {
+              "location": "steps/login-steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter valid email and password",
+            "line": 8,
+            "match": {
+              "location": "steps/login-steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click the login button",
+            "line": 9,
+            "match": {
+              "location": "steps/login-steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should be redirected to the dashboard",
+            "line": 10,
+            "match": {
+              "location": "steps/login-steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "user-login;failed-login-with-invalid-credentials",
+        "keyword": "Scenario",
+        "name": "Failed login with invalid credentials",
+        "description": "",
+        "line": 12,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the login page",
+            "line": 13,
+            "match": {
+              "location": "steps/login-steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter invalid email and password",
+            "line": 14,
+            "match": {
+              "location": "steps/login-steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click the login button",
+            "line": 15,
+            "match": {
+              "location": "steps/login-steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see an error message",
+            "line": 16,
+            "match": {
+              "location": "steps/login-steps.ts:50"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 2000000000,
+              "error_message": "AssertionError: expected 'Welcome' to equal 'Error: Invalid credentials'"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/search-functionality.feature",
+    "id": "search-functionality",
+    "keyword": "Feature",
+    "name": "Search Functionality",
+    "description": "    Test search and filter capabilities",
+    "line": 1,
+    "elements": [
+      {
+        "id": "search-functionality;basic-search",
+        "keyword": "Scenario",
+        "name": "Basic search",
+        "description": "",
+        "line": 6,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am logged in",
+            "line": 7,
+            "match": {
+              "location": "steps/search-steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I search for \"test automation\"",
+            "line": 8,
+            "match": {
+              "location": "steps/search-steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see results",
+            "line": 9,
+            "match": {
+              "location": "steps/search-steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1500000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-functionality;advanced-search-with-filters",
+        "keyword": "Scenario",
+        "name": "Advanced search with filters",
+        "description": "",
+        "line": 11,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am logged in",
+            "line": 12,
+            "match": {
+              "location": "steps/search-steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I search for \"automation\" with filters",
+            "line": 13,
+            "match": {
+              "location": "steps/search-steps.ts:40"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see filtered results",
+            "line": 14,
+            "match": {
+              "location": "steps/search-steps.ts:50"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "search-functionality;empty-search-results",
+        "keyword": "Scenario",
+        "name": "Empty search results",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am logged in",
+            "line": 17,
+            "match": {
+              "location": "steps/search-steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I search for \"xyz123nonexistent\"",
+            "line": 18,
+            "match": {
+              "location": "steps/search-steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see no results message",
+            "line": 19,
+            "match": {
+              "location": "steps/search-steps.ts:60"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1500000000,
+              "error_message": "TimeoutError: Waiting for element to appear failed after 10000ms"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

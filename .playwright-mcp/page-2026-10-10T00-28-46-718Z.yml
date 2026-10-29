@@ -1,0 +1,108 @@
+- generic [ref=f4e3]:
+  - banner [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - generic [ref=f4e6]:
+        - generic [ref=f4e7]: H
+        - generic [ref=f4e8]:
+          - generic [ref=f4e9]: Hexaware
+          - generic [ref=f4e10]: Project 10
+      - generic [ref=f4e11]:
+        - generic [ref=f4e12]:
+          - generic [ref=f4e13]: Specs
+          - generic [ref=f4e14]: "7"
+        - generic [ref=f4e15]:
+          - generic [ref=f4e16]: Tests
+          - generic [ref=f4e17]: "27"
+        - generic [ref=f4e18]:
+          - generic [ref=f4e19]: Passed
+          - generic [ref=f4e20]: "2"
+        - generic [ref=f4e21]:
+          - generic [ref=f4e22]: Failed
+          - generic [ref=f4e23]: "6"
+      - generic [ref=f4e24]:
+        - generic [ref=f4e25]: 🟣 Jira
+        - combobox [ref=f4e26] [cursor=pointer]:
+          - option "Chromium" [selected]
+          - option "Firefox"
+          - option "WebKit"
+        - combobox [ref=f4e27] [cursor=pointer]:
+          - option "DEV" [selected]
+          - option "STAGE"
+          - option "PROD"
+        - button "Logout" [ref=f4e28] [cursor=pointer]
+  - navigation [ref=f4e29]:
+    - generic [ref=f4e30]:
+      - button "Dashboard" [ref=f4e31] [cursor=pointer]
+      - button "Requirements" [ref=f4e32] [cursor=pointer]
+      - button "Test Explorer" [ref=f4e33] [cursor=pointer]
+      - button "Test Cases" [ref=f4e34] [cursor=pointer]
+      - button "Test Scripts" [ref=f4e35] [cursor=pointer]
+      - button "Reports" [ref=f4e36] [cursor=pointer]
+      - button "Test Data" [ref=f4e37] [cursor=pointer]
+      - button "Value Added Services" [ref=f4e38] [cursor=pointer]
+      - button "Project Structure" [ref=f4e39] [cursor=pointer]
+  - generic [ref=f4e125]:
+    - generic [ref=f4e126]:
+      - generic [ref=f4e127]:
+        - heading "Test Scripts" [level=1] [ref=f4e128]
+        - paragraph [ref=f4e129]: Generate and manage POM-based test automation code
+      - button "✕ Close" [active] [ref=f4e130] [cursor=pointer]
+    - generic [ref=f4e131]:
+      - generic [ref=f4e132]:
+        - heading "⚡ Generate Test Scripts (POM Workflow)" [level=3] [ref=f4e133]:
+          - generic [ref=f4e134]: ⚡
+          - text: Generate Test Scripts (POM Workflow)
+        - paragraph [ref=f4e135]: "Follows instruction.md & Orchestrator-Agent process: reads saved test cases, then generates Locators → Page Objects → Test Data → Test Scripts"
+      - generic [ref=f4e136]:
+        - generic [ref=f4e137]:
+          - generic [ref=f4e138]:
+            - generic "Centralized CSS/aria selectors" [ref=f4e139]: 📍 Locators
+            - generic [ref=f4e140]: →
+          - generic [ref=f4e141]:
+            - generic "POM classes importing locators" [ref=f4e142]: 📄 Page Objects
+            - generic [ref=f4e143]: →
+          - generic [ref=f4e144]:
+            - generic "JSON test vectors" [ref=f4e145]: 📊 Test Data
+            - generic [ref=f4e146]: →
+          - generic "Playwright spec importing pages + data" [ref=f4e148]: 🧪 Test Scripts
+        - generic [ref=f4e149]:
+          - generic [ref=f4e150]:
+            - generic [ref=f4e151]: Story / Issue Key
+            - generic [ref=f4e152]:
+              - textbox "e.g. VB-3" [ref=f4e153]
+              - combobox [ref=f4e154]:
+                - option "— Saved Specs —" [selected]
+                - option "AIR-1"
+                - option "BANKING-9"
+                - option "GUID-1"
+                - option "KAN-1"
+                - option "KAN-8"
+                - option "SNOW-1"
+                - option "VB-1"
+                - option "VB-2"
+                - option "VB-3"
+          - button "⚡ Generate" [disabled] [ref=f4e155]
+    - generic [ref=f4e156]:
+      - generic [ref=f4e158]:
+        - generic [ref=f4e159]: Folders
+        - button "📍Locators" [ref=f4e160] [cursor=pointer]
+        - button "📄Pages" [ref=f4e161] [cursor=pointer]
+        - button "🧪Tests" [ref=f4e162] [cursor=pointer]
+        - button "🛠️Utils" [ref=f4e163] [cursor=pointer]
+        - button "📊Test Data" [ref=f4e164] [cursor=pointer]
+      - generic [ref=f4e166]:
+        - generic [ref=f4e168]:
+          - generic [ref=f4e169]: Files
+          - generic [ref=f4e171]:
+            - button "Air1.locators.ts" [ref=f4e172] [cursor=pointer]
+            - button "AirbnbSearchPage.locators.ts" [ref=f4e173] [cursor=pointer]
+            - button "Banking9.locators.ts" [ref=f4e174] [cursor=pointer]
+            - button "CSXCarbonEstimatorPage.locators.ts" [ref=f4e175] [cursor=pointer]
+            - button "ProductFormPage.locators.ts" [ref=f4e176] [cursor=pointer]
+            - button "README.md" [ref=f4e177] [cursor=pointer]
+            - button "UMBLoanPage.locators.ts" [ref=f4e178] [cursor=pointer]
+            - button "VBBankFundsTransferPage.locators.ts" [ref=f4e179] [cursor=pointer]
+            - button "index.ts" [ref=f4e180] [cursor=pointer]
+        - generic [ref=f4e182]:
+          - generic [ref=f4e183]: File Viewer
+          - generic [ref=f4e186]: Select a file to view

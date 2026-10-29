@@ -1,0 +1,195 @@
+- generic [active] [ref=f28e1]:
+  - dialog "Sign In" [ref=f28e3]:
+    - generic [ref=f28e4]:
+      - generic [ref=f28e5]: H
+      - generic [ref=f28e6]:
+        - generic [ref=f28e7]: Hexaware
+        - generic [ref=f28e8]: Enterprise Test Automation Platform powered by Playwright
+        - generic [ref=f28e9]: Orchestrate. Automate. Accelerate.
+    - generic [ref=f28e11]: Enter your credentials to access the dashboard
+    - generic [ref=f28e12]:
+      - generic [ref=f28e13]: User ID
+      - textbox "User ID" [ref=f28e14]:
+        - /placeholder: Enter your user ID
+    - generic [ref=f28e15]:
+      - generic [ref=f28e16]: Password
+      - textbox "Password" [ref=f28e17]:
+        - /placeholder: Enter your password
+    - button "Sign In" [ref=f28e18] [cursor=pointer]
+  - generic [ref=f28e19]:
+    - generic [ref=f28e20]:
+      - generic [ref=f28e21]:
+        - generic [ref=f28e22]: H
+        - generic [ref=f28e23]:
+          - generic [ref=f28e24]: Hexaware
+          - generic [ref=f28e25]: Enterprise Test Automation Platform powered by Playwright
+      - generic [ref=f28e26]:
+        - generic [ref=f28e27]:
+          - generic [ref=f28e28]: Browser
+          - combobox [ref=f28e29] [cursor=pointer]:
+            - option "Chromium" [selected]
+            - option "Firefox"
+            - option "WebKit"
+        - generic [ref=f28e30]:
+          - generic [ref=f28e31]: Environment
+          - combobox [ref=f28e32] [cursor=pointer]:
+            - option "DEV" [selected]
+            - option "STAGING"
+            - option "PROD"
+        - generic "Backend server status" [ref=f28e33] [cursor=pointer]: Server
+    - generic [ref=f28e36]:
+      - generic [ref=f28e37]:
+        - generic [ref=f28e38]: Hexaware
+        - generic [ref=f28e39]:
+          - generic [ref=f28e40] [cursor=pointer]: Dashboard
+          - generic [ref=f28e41] [cursor=pointer]: Requirements
+          - generic [ref=f28e42] [cursor=pointer]: Test Cases
+          - generic [ref=f28e43] [cursor=pointer]: Automation Studio
+          - generic [ref=f28e44] [cursor=pointer]: Test Execution
+          - generic [ref=f28e45] [cursor=pointer]: History & Trends
+          - generic [ref=f28e46] [cursor=pointer]: Test Data
+          - generic [ref=f28e47] [cursor=pointer]: Defects
+          - generic [ref=f28e48] [cursor=pointer]: Value Added Services
+      - generic [ref=f28e51]:
+        - generic [ref=f28e52]:
+          - generic [ref=f28e53]: Work Summary
+          - generic [ref=f28e56]:
+            - generic [ref=f28e57]:
+              - generic [ref=f28e59]: Total Tests
+              - generic [ref=f28e60]: "23"
+              - generic [ref=f28e61]: All spec test cases
+            - generic [ref=f28e62]:
+              - generic [ref=f28e64]: Passed Tests
+              - generic [ref=f28e65]: –
+              - generic [ref=f28e66]: Last run results
+            - generic [ref=f28e67]:
+              - generic [ref=f28e69]: Failed Tests
+              - generic [ref=f28e70]: –
+              - generic [ref=f28e71]: Last run results
+            - generic [ref=f28e72]:
+              - generic [ref=f28e74]: Pass Rate
+              - generic [ref=f28e75]: No runs
+        - generic [ref=f28e77]:
+          - generic [ref=f28e78]: Metrics Overview
+          - generic [ref=f28e81]:
+            - generic [ref=f28e82]:
+              - generic [ref=f28e83]: 📁
+              - generic [ref=f28e84]:
+                - generic [ref=f28e85]: Spec Files
+                - generic [ref=f28e86]: "6"
+            - generic [ref=f28e87]:
+              - generic [ref=f28e88]: 🧪
+              - generic [ref=f28e89]:
+                - generic [ref=f28e90]: Test Suites
+                - generic [ref=f28e91]: "5"
+            - generic [ref=f28e92]:
+              - generic [ref=f28e93]: 📦
+              - generic [ref=f28e94]:
+                - generic [ref=f28e95]: Page Objects
+                - generic [ref=f28e96]: "0"
+            - generic [ref=f28e97]:
+              - generic [ref=f28e98]: ⚙️
+              - generic [ref=f28e99]:
+                - generic [ref=f28e100]: Automated Test Cases
+                - generic [ref=f28e101]: "23"
+            - generic [ref=f28e102]:
+              - generic [ref=f28e103]: 🎭
+              - generic [ref=f28e104]:
+                - generic [ref=f28e105]: Framework
+                - generic [ref=f28e106]: Playwright
+                - generic [ref=f28e107]: TypeScript
+            - generic [ref=f28e108]:
+              - generic [ref=f28e109]: 🎯
+              - generic [ref=f28e110]:
+                - generic [ref=f28e111]: Automation Coverage
+                - generic [ref=f28e112]: N/A
+            - generic [ref=f28e114]:
+              - generic [ref=f28e115]: 📈
+              - generic [ref=f28e116]:
+                - generic [ref=f28e117]: Execution Trend
+                - generic [ref=f28e118]: No runs yet
+                - generic [ref=f28e119]: "Last: 10/19/2026, 5:42:51 PM"
+            - generic [ref=f28e120]:
+              - generic [ref=f28e121]: 🔑
+              - generic [ref=f28e122]:
+                - generic [ref=f28e123]: Token Utilization
+                - generic [ref=f28e124]: 16%
+                - generic [ref=f28e125]: 3,120 / 20,000 tokens used
+        - generic [ref=f28e126]:
+          - generic [ref=f28e127]: Project Info
+          - generic [ref=f28e130]:
+            - generic [ref=f28e131]:
+              - generic [ref=f28e132]: Story ID
+              - generic [ref=f28e133]: –
+            - generic [ref=f28e134]:
+              - generic [ref=f28e135]: Story Name
+              - generic [ref=f28e136]: JiraStory1
+            - generic [ref=f28e137]:
+              - generic [ref=f28e138]: Platform
+              - generic [ref=f28e139]: –
+            - generic [ref=f28e140]:
+              - generic [ref=f28e141]: Framework
+              - generic [ref=f28e142]: Playwright · TypeScript
+            - generic [ref=f28e143]:
+              - generic [ref=f28e144]: Target App URL
+              - generic [ref=f28e145]: https://vb-bank-demo.vercel.app
+            - generic [ref=f28e146]:
+              - generic [ref=f28e147]: Test Data Files
+              - generic [ref=f28e148]: "4"
+            - generic [ref=f28e149]:
+              - generic [ref=f28e150]: Skipped Tests
+              - generic [ref=f28e151]: –
+            - generic [ref=f28e152]:
+              - generic [ref=f28e153]: Jira Link
+              - link "https://jittestuser.atlassian.net//browse/AIR-1" [ref=f28e155] [cursor=pointer]:
+                - /url: https://jittestuser.atlassian.net//browse/AIR-1
+        - generic [ref=f28e156]:
+          - generic [ref=f28e157]:
+            - generic [ref=f28e159]: Token Utility
+            - button "↻ Refresh" [ref=f28e160] [cursor=pointer]
+            - button "🔄 Reset" [ref=f28e161] [cursor=pointer]
+          - generic [ref=f28e162]:
+            - generic [ref=f28e163]:
+              - generic [ref=f28e164]: "Default Budget:"
+              - generic [ref=f28e165]: 10,000
+              - generic [ref=f28e166]: tokens per stage
+              - generic [ref=f28e167]: "Total Consumed:"
+              - generic [ref=f28e168]: "0"
+              - generic [ref=f28e169]: "|"
+              - generic [ref=f28e170]: 0%
+            - generic [ref=f28e171]:
+              - generic [ref=f28e172]:
+                - generic [ref=f28e173]: 📋 Jira Context
+                - generic [ref=f28e174]:
+                  - generic [ref=f28e175]: "0"
+                  - generic [ref=f28e176]: / 1,500
+              - generic [ref=f28e178]:
+                - generic [ref=f28e179]: 🧪 Test Cases
+                - generic [ref=f28e180]:
+                  - generic [ref=f28e181]: "0"
+                  - generic [ref=f28e182]: / 3,000
+              - generic [ref=f28e184]:
+                - generic [ref=f28e185]: 📐 Test Design
+                - generic [ref=f28e186]:
+                  - generic [ref=f28e187]: "0"
+                  - generic [ref=f28e188]: / 3,000
+              - generic [ref=f28e190]:
+                - generic [ref=f28e191]: ⚡ Script Generation
+                - generic [ref=f28e192]:
+                  - generic [ref=f28e193]: "0"
+                  - generic [ref=f28e194]: / 4,000
+              - generic [ref=f28e196]:
+                - generic [ref=f28e197]: ▶ Dry Run
+                - generic [ref=f28e198]:
+                  - generic [ref=f28e199]: "0"
+                  - generic [ref=f28e200]: / 3,000
+              - generic [ref=f28e202]:
+                - generic [ref=f28e203]: 🔍 Failure Analysis
+                - generic [ref=f28e204]:
+                  - generic [ref=f28e205]: "0"
+                  - generic [ref=f28e206]: / 2,500
+              - generic [ref=f28e208]:
+                - generic [ref=f28e209]: 🔧 Script Maintenance
+                - generic [ref=f28e210]:
+                  - generic [ref=f28e211]: "0"
+                  - generic [ref=f28e212]: / 3,000

@@ -1,0 +1,1 @@
+- generic [active] [ref=e1]: "{\"provider\":\"copilot\",\"model\":\"claude-haiku-5-5\",\"supported\":true,\"configured\":true,\"availableProviders\":[\"groq\",\"ollama\",\"openai\",\"claude\",\"copilot\"],\"authenticated\":true,\"account\":\"jitu1602\",\"authType\":\"user\",\"message\":\"jitu1602\"}"

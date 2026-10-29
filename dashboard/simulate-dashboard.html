@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulate Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: monospace; background: #0a1628; color: #e0e0e0; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { margin-bottom: 20px; }
+        .section { background: #0f1f35; border: 1px solid #1a2f4a; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+        .section-title { font-size: 14px; font-weight: 600; margin-bottom: 15px; color: #60a5fa; }
+        .test-item { background: #0a1628; border: 1px solid #1a2f4a; border-radius: 6px; padding: 10px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        .test-name { flex: 1; font-size: 12px; color: #cbd5e1; }
+        button { padding: 4px 12px; border-radius: 4px; border: none; font-size: 10px; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+        .run-btn { background: linear-gradient(135deg, #10b981, #059669); color: white; }
+        .run-btn:hover { opacity: 0.85; }
+        .run-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .console { background: #050e1a; border: 1px solid #1a2f4a; border-radius: 6px; padding: 10px; height: 300px; overflow-y: auto; font-size: 11px; }
+        .log { margin: 2px 0; padding: 2px; }
+        .info { color: #60a5fa; }
+        .success { color: #10b981; }
+        .error { color: #f87171; }
+        .loading { animation: pulse 1.5s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Dashboard Simulator</h1>
+        
+        <div class="section">
+            <div class="section-title">Test Cases</div>
+            <div id="testCases"></div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Console Output</div>
+            <div class="console" id="console"></div>
+        </div>
+    </div>
+
+    <script>
+        const SERVER = 'http://localhost:4000';
+        const console_el = document.getElementById('console');
+        const testCases_el = document.getElementById('testCases');
+
+        function log(msg, type = 'info') {
+            const el = document.createElement('div');
+            el.className = `log ${type}`;
+            el.textContent = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            console_el.appendChild(el);
+            console_el.scrollTop = console_el.scrollHeight;
+            console.log(`[${type.toUpperCase()}]`, msg);
+        }
+
+        async function loadTestCases() {
+            log('Loading test cases from VB-3-Script.spec.ts...', 'info');
+            try {
+                const res = await fetch(`${SERVER}/api/parse-test-file?file=tests/VB-3/VB-3-Script.spec.ts`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                
+                const data = await res.json();
+                log(`Loaded ${data.tests.length} test cases`, 'success');
+                
+                testCases_el.innerHTML = data.tests.map((tc, idx) => {
+                    return `
+                        <div class="test-item">
+                            <div class="test-name">${tc.name}</div>
+                            <button class="run-btn" onclick="runTest('${tc.name}', this)">▶ Run</button>
+                        </div>
+                    `;
+                }).join('');
+                
+            } catch (e) {
+                log(`Failed to load test cases: ${e.message}`, 'error');
+            }
+        }
+
+        async function runTest(testName, btn) {
+            log(`=== Running: ${testName} ===`, 'info');
+            
+            btn.disabled = true;
+            btn.textContent = '⏳ Running…';
+            const originalText = btn.textContent;
+
+            try {
+                const file = 'tests/VB-3/VB-3-Script.spec.ts';
+                log(`Sending request to ${SERVER}/api/run-tests/file`, 'info');
+                log(`File: ${file}`, 'info');
+                log(`Test: ${testName}`, 'info');
+                
+                const res = await fetch(`${SERVER}/api/run-tests/file`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ file, testName })
+                });
+
+                log(`Response status: ${res.status}`, 'info');
+
+                if (!res.ok) {
+                    const errorText = await res.text();
+                    log(`HTTP Error: ${res.status}`, 'error');
+                    log(`Response: ${errorText.substring(0, 200)}`, 'error');
+                    throw new Error(`HTTP ${res.status}`);
+                }
+
+                if (!res.body) {
+                    throw new Error('No response body');
+                }
+
+                const reader = res.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '', doneData = null;
+                let messageCount = 0;
+
+                log('Streaming test output...', 'info');
+                btn.classList.add('loading');
+
+                while (true) {
+                    const { value, done } = await reader.read();
+                    if (done) {
+                        log(`Stream ended after ${messageCount} messages`, 'success');
+                        break;
+                    }
+
+                    buffer += decoder.decode(value, { stream: true });
+                    const parts = buffer.split('\n\n');
+                    buffer = parts.pop();
+
+                    for (const part of parts) {
+                        if (!part.trim()) continue;
+                        messageCount++;
+
+                        const dl = part.split('\n').find(l => l.startsWith('data:'));
+                        if (!dl) continue;
+
+                        try {
+                            const msg = JSON.parse(dl.slice(5));
+                            if (msg.type === 'log') {
+                                log(`[OUTPUT] ${msg.data.substring(0, 100)}`, 'info');
+                            } else if (msg.type === 'error') {
+                                log(`[ERROR] ${msg.data}`, 'error');
+                            } else if (msg.type === 'done') {
+                                doneData = msg.data;
+                                log(`[DONE] Exit code: ${msg.data.exitCode}`, 'info');
+                            }
+                        } catch (e) {
+                            log(`Parse error: ${e.message}`, 'error');
+                        }
+                    }
+                }
+
+                const ok = doneData && doneData.exitCode === 0;
+                if (ok) {
+                    log('✅ TEST PASSED', 'success');
+                    btn.textContent = '✅ Passed';
+                } else {
+                    log('❌ TEST FAILED', 'error');
+                    btn.textContent = '❌ Failed';
+                }
+
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.textContent = '▶ Run';
+                    btn.classList.remove('loading');
+                }, 2500);
+
+            } catch (e) {
+                log(`Error: ${e.message}`, 'error');
+                log(e.stack, 'error');
+                btn.disabled = false;
+                btn.textContent = '❌ Error';
+                btn.classList.remove('loading');
+                setTimeout(() => {
+                    btn.textContent = '▶ Run';
+                }, 2500);
+            }
+        }
+
+        // Load test cases on page load
+        window.addEventListener('load', () => {
+            log('Page loaded, initializing...', 'success');
+            loadTestCases();
+        });
+    </script>
+</body>
+</html>

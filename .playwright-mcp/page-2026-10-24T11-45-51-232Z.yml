@@ -1,0 +1,1 @@
+- generic [active] [ref=e1]: "{\"provider\":\"kiro\",\"model\":\"claude-haiku-5.5\",\"supported\":true,\"configured\":true,\"availableProviders\":[\"groq\",\"ollama\",\"openai\",\"claude\",\"kiro\",\"copilot\"]}"

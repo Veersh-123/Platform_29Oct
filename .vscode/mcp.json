@@ -1,0 +1,74 @@
+{
+	"inputs": [],
+	"servers": {
+		"my-mcp-server-742f83e6": {
+			"url": "https://api.githubcopilot.com/mcp/",
+			"type": "http"
+		},
+		"playwright": {
+			"command": "npx",
+			"args": [
+				"@playwright/mcp@latest"
+			],
+			"type": "stdio"
+		},
+		"github-server": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"@octokit/rest@14.0.0"
+			],
+			"env": {}
+		},
+		"my-mcp-server-992c91b7": {
+			"url": "https://api.githubcopilot.com/mcp/",
+			"type": "http"
+		},
+		"my-mcp-server-a353a5ca": {
+			"url": "playwright",
+			"type": "http"
+		},
+		"my-mcp-server-faf0f154": {
+			"type": "stdio",
+			"command": "https://cloud.uipath.com/infoHexa/InfosysDefault/orchestrator_/",
+			"args": []
+		},
+		"my-mcp-server-00f0dbb5": {
+			"url": "https://cloud.uipath.com/infoHexa/InfosysDefault/orchestrator_/",
+			"type": "http"
+		},
+		"my-mcp-server-a7e769ac": {
+			"url": "https://cloud.uipath.com/infoHexa/InfosysDefault/orchestrator_/",
+			"type": "http"
+		},
+		
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "browser_click",
+        "browser_wait_for"
+      ]
+    },
+    "playwright-ai-healer": {
+      "command": "node",
+      "args": [
+        "C:/Users/Jitendra/Downloads/Plaform/MCP/AugmentHeal/playwright-ai-healer/dist/mcp/server.js"
+      ],
+      "env": {
+        "AI_PROVIDER": "openai",
+        "OPENAI_API_KEY": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICYih4keEZ6x1xWWKuSvnpyySyGTAhkDFZ3fbX1J+APB",
+        "HEALER_MAX_RETRIES": "3",
+        "HEALER_LOG_DIR": "./healing-logs"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "get_page_snapshot"
+      ]
+    }
+  }
+	}
+}

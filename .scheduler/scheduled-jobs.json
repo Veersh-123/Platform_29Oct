@@ -1,0 +1,35 @@
+[
+  {
+    "name": "ss",
+    "suiteId": "suite_1792423124735",
+    "suite": "Smoke",
+    "environment": "Dev",
+    "browser": "Chromium",
+    "frequency": "Daily",
+    "startDate": "2026-10-20",
+    "startTime": "20:03",
+    "nextRunAt": "2026-10-29T14:33:00.000Z",
+    "tests": [
+      {
+        "caseId": "UMB-3-TC_N01 - Error when SSN has invalid length",
+        "file": "tests/UMB-3/UMB-3-Script.spec.ts",
+        "testName": "UMB-3-TC_N01 - Error when SSN has invalid length"
+      }
+    ],
+    "id": "job-1792423145821-oo4dq5",
+    "enabled": true,
+    "status": "scheduled",
+    "createdAt": "2026-10-19T15:19:05.821Z",
+    "lastRunAt": "2026-10-28T15:39:40.637Z",
+    "lastRunStatus": "failed",
+    "lastRunResults": [
+      {
+        "testName": "UMB-3-TC_N01 - Error when SSN has invalid length",
+        "file": "tests/UMB-3/UMB-3-Script.spec.ts",
+        "status": "failed",
+        "exitCode": 1
+      }
+    ],
+    "lastError": "1 of 1 scheduled test(s) failed."
+  }
+]

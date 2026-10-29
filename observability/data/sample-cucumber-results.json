@@ -1,0 +1,291 @@
+[
+  {
+    "uri": "features/authentication.feature",
+    "id": "user-authentication",
+    "keyword": "Feature",
+    "name": "User Authentication",
+    "description": "Test user login and authentication flows",
+    "line": 1,
+    "elements": [
+      {
+        "id": "user-authentication;successful-login",
+        "keyword": "Scenario",
+        "name": "User successfully logs in with valid credentials",
+        "description": "",
+        "line": 5,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the login page",
+            "line": 6,
+            "result": {
+              "status": "passed",
+              "duration": 2500000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter valid email and password",
+            "line": 7,
+            "result": {
+              "status": "passed",
+              "duration": 1800000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the dashboard",
+            "line": 8,
+            "result": {
+              "status": "passed",
+              "duration": 2200000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "user-authentication;failed-login-invalid-credentials",
+        "keyword": "Scenario",
+        "name": "Login fails with invalid credentials",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the login page",
+            "line": 11,
+            "result": {
+              "status": "passed",
+              "duration": 2400000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I enter invalid email and password",
+            "line": 12,
+            "result": {
+              "status": "passed",
+              "duration": 1900000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see an error message",
+            "line": 13,
+            "result": {
+              "status": "passed",
+              "duration": 1800000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/policy-management.feature",
+    "id": "policy-management",
+    "keyword": "Feature",
+    "name": "Policy Management",
+    "description": "Test policy creation and modification flows",
+    "line": 1,
+    "elements": [
+      {
+        "id": "policy-management;create-new-policy",
+        "keyword": "Scenario",
+        "name": "Create a new insurance policy",
+        "description": "",
+        "line": 5,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am logged in as an agent",
+            "line": 6,
+            "result": {
+              "status": "passed",
+              "duration": 3200000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I create a new auto insurance policy",
+            "line": 7,
+            "result": {
+              "status": "passed",
+              "duration": 4500000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The policy should be saved successfully",
+            "line": 8,
+            "result": {
+              "status": "passed",
+              "duration": 2100000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "policy-management;modify-policy-coverage",
+        "keyword": "Scenario",
+        "name": "Modify Policy Coverage",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have an existing policy",
+            "line": 11,
+            "result": {
+              "status": "passed",
+              "duration": 2800000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I modify the coverage options",
+            "line": 12,
+            "result": {
+              "status": "failed",
+              "duration": 3100000000,
+              "error_message": "Element not clickable at point (234, 156). Other element would receive the click: <div class=\"overlay\">...</div>"
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The changes should be reflected in the policy",
+            "line": 13,
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "policy-management;renew-policy",
+        "keyword": "Scenario",
+        "name": "Renew an existing policy",
+        "description": "",
+        "line": 15,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have an expiring policy",
+            "line": 16,
+            "result": {
+              "status": "passed",
+              "duration": 2600000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I initiate the renewal process",
+            "line": 17,
+            "result": {
+              "status": "passed",
+              "duration": 4200000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The policy should be renewed for another year",
+            "line": 18,
+            "result": {
+              "status": "passed",
+              "duration": 2500000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/claims-processing.feature",
+    "id": "claims-processing",
+    "keyword": "Feature",
+    "name": "Claims Processing",
+    "description": "Test insurance claim submission and processing",
+    "line": 1,
+    "elements": [
+      {
+        "id": "claims-processing;file-new-claim",
+        "keyword": "Scenario",
+        "name": "File a new insurance claim",
+        "description": "",
+        "line": 5,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am logged in as a customer",
+            "line": 6,
+            "result": {
+              "status": "passed",
+              "duration": 2900000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I file a new claim for a covered incident",
+            "line": 7,
+            "result": {
+              "status": "passed",
+              "duration": 5100000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "The claim should be submitted successfully",
+            "line": 8,
+            "result": {
+              "status": "passed",
+              "duration": 2800000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "claims-processing;track-claim-status",
+        "keyword": "Scenario",
+        "name": "Track claim status",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have filed a claim",
+            "line": 11,
+            "result": {
+              "status": "passed",
+              "duration": 2700000000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I check the claim status",
+            "line": 12,
+            "result": {
+              "status": "passed",
+              "duration": 3400000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see the current status and estimated resolution time",
+            "line": 13,
+            "result": {
+              "status": "passed",
+              "duration": 1900000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
